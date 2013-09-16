@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,8 +12,11 @@
       <script src="js/html5shiv.js"></script>
       <script src="js/respond.min.js"></script>
     <![endif]-->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+    <script src="js/controller.js"></script>
   </head>
-  <body>
+  <body ng-controller="FairCountsController">
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -38,6 +41,12 @@
       <div class="main-title">
         <h1>FairCounts</h1>
         <p class="lead">Hello there.</p>
+        <ul class="list-unstyled">
+          <li class="expense-paid-{{expense.paid}}" ng-repeat="expense in expenses">
+            <input type="checkbox" ng-model="expense.paid">
+            {{expense.name}} ({{expense.amount}}{{expense.currency}})
+          </li>
+        </ul>
       </div>
 
     </div>
