@@ -47,16 +47,21 @@
 
     <div class="container">
 
-      <div class="main-title">
+      <div class="main-title jumbotron">
+        <div class="container">
+        </div>
         <h1>FairCounts</h1>
         <p class="lead">Hello there.</p>
-        <ul class="list-unstyled">
-          <li class="expense-paid-{{expense.paid}}" ng-repeat="expense in expenses">
-            <input type="checkbox" ng-model="expense.paid">
-            {{expense.name}} ({{expense.amount}}{{expense.currency}})
-          </li>
-        </ul>
+        <p><a class="btn btn-primary btn-lg">Login</a></p>
       </div>
+      
+      <h3>My expenses</h3>
+      <ul class="list-unstyled">
+        <li class="expense-paid-{{expense.paid}}" ng-repeat="expense in expenses">
+        <input type="checkbox" ng-model="expense.paid">
+          {{expense.name}} ({{expense.amount}}{{expense.currency}})
+        </li>
+      </ul>
 
     </div>
 
