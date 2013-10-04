@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+    <head>
+        <meta charset="utf-8">
+        <title>FairCounts</title>
+        <link href="css/style2.css" rel="stylesheet" media="screen">
+        <link href="css/styleComputer.css" rel="stylesheet" media="screen and (min-width: 920px)">
+        <link href="css/styleTablet.css" rel="stylesheet" media="screen and (max-width: 919px) and (min-width : 480px)">
+        <link href="css/styleSmartphone.css" rel="stylesheet" media="screen and (max-width: 480px)">
+        <link href="css/icons.css" rel="stylesheet" media="screen">
+    </head>
+    <body ng-controller="FairCountsController">
+        <nav>
+            <div id="navContent">
+                <div class="linkList">
+                    <div class="link"><span class="icon icon-single icon-white icon-40 home"></span></div>
+                    <div class="link"><span class="icon icon-single icon-white icon-40 group"></span></div>
+                    <div class="link"><span class="icon icon-single icon-white icon-40 stats"></span></div>
+                    <div class="link"><span class="icon icon-single icon-white icon-40 info"></span></div>
+                </div>
+                <div class="user"><span class="name">John Doe</span><span class="icon icon-white icon-20 down"></span></div>
+                <div class="mobileNav"><span class="icon icon-white icon-40 menu"></span></div>
+            </div>
+        </nav>
+        <div id="content">
+            <div id="totalBalance" class="positive">Total balance <span class="totBalance">+15.20$</span></div>
+            <div id="rightColumn">
+                <div class="stats"></div>
+            </div>
+            <div id="leftColumn">
+                <div id="newGroup"><span class="emphasize">+</span> New group</div>
+                <div class="folder">
+                    <div class="positive folderBalance">
+                        <span class="folBalance">+5.03$</span>
+                        <span class="folTitle">John's Birthday</span>
+                    </div>
+                    <ul class="expenses">
+                        <li><span class="expBalance negative">-10$</span>Presents</li>
+                        <li><span class="expBalance positive">+13$</span>Food</li>
+                        <li class="moreExpenses">2 more ...</li>
+                    </ul>
+                    <div class="addExpense">Add an expense <div class="plusExpense">+</div></div>
+                </div>
+                <div class="folder">
+                    <div class="negative folderBalance">
+                        <span class="folBalance">-8.28$</span>
+                        <span class="folTitle">New York</span>
+                    </div>
+                    <ul class="expenses">
+                        <li><span class="expBalance negative">-10$</span>Shake Shack</li>
+                        <li><span class="expBalance positive">+13$</span>Empire State Building</li>
+                        <li class="moreExpenses">4 more ...</li>
+                    </ul>
+                    <div class="addExpense">Add an expense <div class="plusExpense">+</div></div>
+                </div>
+            </div>
+            
+        </div>
+    </body>
+</html>

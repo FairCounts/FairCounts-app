@@ -1,0 +1,216 @@
+@font-face {
+    font-family: 'SousSansProUltraLight';
+    src: url('../fonts/SourceSansPro/SourceSansPro-ExtraLight.eot?') format('eot'), url('../fonts/SourceSansPro/SourceSansPro-ExtraLight.woff') format('woff'), url('../fonts/SourceSansPro/SourceSansPro-ExtraLight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SousSansProRegular';
+    src: url('../fonts/SourceSansPro/SourceSansPro-Regular.eot?') format('eot'), url('../fonts/SourceSansPro/SourceSansPro-Regular.woff') format('woff'), url('../fonts/SourceSansPro/SourceSansPro-Regular.ttf') format('truetype');
+}
+
+body {
+    margin: 0;
+    background: #F2F2F2;
+    font-family: "SousSansProRegular", sans-serif;
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    background: #434343;
+}
+
+#navContent {
+    margin: auto;
+}
+
+nav .linkList {
+    float: left;
+    padding-top: 14px;
+}
+
+nav .linkList .link {
+    position: relative;
+    float: left;
+    margin: 0 20px 0 20px;
+}
+
+nav #navContent .user {
+    text-align: right;
+    color: white;
+    font-family: "SousSansProUltraLight", sans-serif;
+    font-size: 24px;
+    padding-top: 22px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: relative;
+    padding-right: 25px;
+}
+
+nav #navContent .user .down {
+    padding-left: 8px;
+    position: absolute;
+    right: 0px;
+}
+
+nav #navContent .mobileNav {
+    display: none;
+}
+
+#content {
+    margin: auto;
+    padding: 30px 10px;
+}
+
+#content #totalBalance {
+    height: 50px;
+    padding: 20px 30px 0 30px;
+    margin-bottom: 30px;
+    color: white;
+    font-size: 26px;
+}
+
+#content #totalBalance.positive {
+    background: #1FCC56;
+}
+
+#content #totalBalance.negative {
+    background: #F05348;
+}
+
+#content #totalBalance .totBalance {
+    float:right;
+    font-size: 40px;
+    margin-top: -10px;
+}
+
+#content #leftColumn {
+    width: 48%;
+}
+
+#content #rightColumn {
+    float: right;
+    width: 48%;
+}
+
+#content #newGroup {
+    width: 100%;
+    height: 40px;
+    background: #434343;
+    padding: 0 0 34px 0;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
+#content span.emphasize {
+    font-size: 60px;
+    vertical-align: middle;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#content div.folder {
+    width: 100%;
+    background: white;
+    margin: 20px 0;
+}
+
+#content .folder .folderBalance {
+    width: 100%;
+    height: 34px;
+    padding: 20px 0 10px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: white;
+    font-size: 22px;
+}
+
+#content .folder .folderBalance .folBalance {
+    float: right;
+    font-size: 36px;
+    margin: -10px 20px 0 0;  
+}
+
+#content .folder .folderBalance .folTitle {
+    margin-left: 20px;
+}
+
+#content .folder .folderBalance.positive {
+    background: #1FCC56;
+}
+
+#content .folder .folderBalance.negative {
+    background: #F05348;
+}
+
+#content .folder .expenses {
+    list-style: none;
+    margin: 0;
+    padding: 10px 10px 5px 20px;
+    color: #434343;
+    font-size: 18px;
+}
+
+#content .folder .expenses .expBalance {
+    float: right;
+    margin-right: 10px;
+}
+
+#content .folder .expenses li {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-top: 5px;
+    height: 26px;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+#content .folder .expenses .expBalance.positive {
+    color: #1FCC56;
+}
+
+#content .folder .expenses .expBalance.negative {
+    color: #F05348;
+}
+
+#content .folder .expenses .moreExpenses {
+    color: #A7A7A7;
+    font-family: "SousSansProUltraLight", sans-serif;
+    font-style: italic;
+    border: none;
+}
+
+#content .folder .addExpense span.emphasize {
+    font-size: 30px;
+    vertical-align: middle;
+    line-height: 34px;
+    margin-right: 5px;
+}
+
+#content .folder .addExpense {
+    text-align: right;
+    color: #00ADA7;
+    padding-bottom: 9px;
+}
+
+#content .folder .addExpense .plusExpense {
+    background: #00ADA7;
+    width: 40px;
+    height: 40px;
+    float: right;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 5px 0 0 0;
+    margin: -10px 0 0 10px;
+}
+
+#content .stats {
+    width: 100%;
+    height: 300px;
+    background: white;
+}

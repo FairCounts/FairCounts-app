@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'LigatureSymbols';
+    src: url('../fonts/LigatureSymbols/LigatureSymbols-2.11.eot?') format('eot'), url('../fonts/LigatureSymbols/LigatureSymbols-2.11.woff') format('woff'), url('../fonts/LigatureSymbols/LigatureSymbols-2.11.ttf') format('truetype');
+}
+
+/**
+ * Icon font
+ */
+.icon:before {
+    font-family: "LigatureSymbols";
+}
+
+.icon-single:before {
+    display: block;
+}
+
+.icon-darkgrey:before {
+    color: #434343;
+}
+
+.icon-white:before {
+    color: #ffffff;
+}
+
+.icon-20:before {
+    font-size: 20px;
+}
+
+.icon-40:before {
+    font-size: 40px;
+}
+
+.icon.home:before {
+    content: "\E072";
+}
+
+.icon.group:before {
+    content: "\E05c";
+}
+
+.icon.stats:before {
+    content: "\E05b";
+}
+
+.icon.down:before {
+    content: "\E03e";
+}
+
+.icon.info:before {
+    content: "\E075";
+}
+
+.icon.menu:before {
+    content: "\E08e";
+}
