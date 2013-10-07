@@ -1,17 +1,17 @@
 @font-face {
-    font-family: 'SousSansProUltraLight';
+    font-family: 'SourceSansProUltraLight';
     src: url('../fonts/SourceSansPro/SourceSansPro-ExtraLight.eot?') format('eot'), url('../fonts/SourceSansPro/SourceSansPro-ExtraLight.woff') format('woff'), url('../fonts/SourceSansPro/SourceSansPro-ExtraLight.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'SousSansProRegular';
+    font-family: 'SourceSansProRegular';
     src: url('../fonts/SourceSansPro/SourceSansPro-Regular.eot?') format('eot'), url('../fonts/SourceSansPro/SourceSansPro-Regular.woff') format('woff'), url('../fonts/SourceSansPro/SourceSansPro-Regular.ttf') format('truetype');
 }
 
 body {
     margin: 0;
     background: #F2F2F2;
-    font-family: "SousSansProRegular", sans-serif;
+    font-family: "SourceSansProRegular", sans-serif;
 }
 
 nav {
@@ -38,7 +38,7 @@ nav .linkList .link {
 nav #navContent .user {
     text-align: right;
     color: white;
-    font-family: "SousSansProUltraLight", sans-serif;
+    font-family: "SourceSansProUltraLight", sans-serif;
     font-size: 24px;
     padding-top: 22px;
     overflow: hidden;
@@ -57,6 +57,10 @@ nav #navContent .user .down {
 nav #navContent .mobileNav {
     display: none;
 }
+
+/*
+ * MAIN PAGE
+ */
 
 #content {
     margin: auto;
@@ -179,7 +183,7 @@ nav #navContent .mobileNav {
 
 #content .folder .expenses .moreExpenses {
     color: #A7A7A7;
-    font-family: "SousSansProUltraLight", sans-serif;
+    font-family: "SourceSansProUltraLight", sans-serif;
     font-style: italic;
     border: none;
 }
@@ -213,4 +217,85 @@ nav #navContent .mobileNav {
     width: 100%;
     height: 300px;
     background: white;
+}
+
+/*
+ * FORMS
+ */
+
+#basicForm {
+    position: relative;
+    width: 400px;
+    margin: auto;
+    padding: 10px;
+    padding-bottom: 50px;
+    background: white;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+}
+
+#basicForm h1 {
+    color: #434343;
+    margin: 25px 0 20px 60px;
+}
+
+#basicForm  input[type=text], #basicForm  input[type=password], #basicForm  input[type=email] {
+    display: block;
+    position: absolute;
+    width: 230px;
+    height: 40px;
+    padding: 0 0 0 10px;
+    left: 40px;
+    background: #F7F7F7;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    -webkit-transition: background 0.3s ease-in;
+    -moz-transition: background 0.3s ease-in;
+    -o-transition: background 0.3s ease-in;
+    -ms-transition: background 0.3s ease-in;
+    transition: background 0.3s ease-in;
+}
+
+#basicForm .preInput {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #434343;
+}
+
+#basicForm .preInput span.icon {
+    position: relative;
+    top: 7px;
+    left: 13px;
+}
+
+#basicForm .preInput span.mail {
+    left: 11px;
+}
+
+#basicForm #mail, #basicForm #password {
+    position: relative;
+    height: 40px;
+    width: 280px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+#basicForm input[type=submit] {
+    display: block;
+    width: 280px;
+    height: 50px;
+    background: rgb(0, 173, 167);
+    border: none;
+    color: white;
+    font-size: 24px;
+    outline: none;
+    margin: auto;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    -ms-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
 }

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+    <head>
+        <meta charset="utf-8">
+        <title>FairCounts</title>
+        <link href="css/style2.css" rel="stylesheet" media="screen">
+        <link href="css/styleComputer.css" rel="stylesheet" media="screen and (min-width: 920px)">
+        <link href="css/styleTablet.css" rel="stylesheet" media="screen and (max-width: 919px) and (min-width : 480px)">
+        <link href="css/styleSmartphone.css" rel="stylesheet" media="screen and (max-width: 480px)">
+        <link href="css/icons.css" rel="stylesheet" media="screen">
+    </head>
+    <body ng-controller="FairCountsController">
+        <nav>
+            <div id="navContent">
+                <div class="linkList">
+                    <div class="link"><span class="icon icon-single icon-white icon-40 home"></span></div>
+                    <div class="link"><span class="icon icon-single icon-white icon-40 group"></span></div>
+                    <div class="link"><span class="icon icon-single icon-white icon-40 stats"></span></div>
+                    <div class="link"><span class="icon icon-single icon-white icon-40 info"></span></div>
+                </div>
+                <div class="user"><span class="name">John Doe</span><span class="icon icon-white icon-20 down"></span></div>
+                <div class="mobileNav"><span class="icon icon-white icon-40 menu"></span></div>
+            </div>
+        </nav>
+        <div id="content">
+            <div id="basicForm">
+                <h1>Sign in</h1>
+                <div id="mail">
+                    <div id="mailPreInput" class="preInput"><span class="icon icon-white icon-22 mail"></span></div>
+                    <input type="email" id="mailInput" placeholder="Email address"/>
+                </div>
+                <div id="password">
+                    <div id="passwordPreInput" class="preInput"><span class="icon icon-white icon-22 lock"></span></div>
+                    <input type="password" id="passwordInput" placeholder="Password"/>
+                </div>
+                <input type="submit" value="Sign in"/>
+            </div>
+        </div>
+    </body>
+</html>

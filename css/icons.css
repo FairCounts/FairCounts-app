@@ -8,6 +8,7 @@
  */
 .icon:before {
     font-family: "LigatureSymbols";
+    -webkit-font-smoothing: antialiased;
 }
 
 .icon-single:before {
@@ -24,6 +25,10 @@
 
 .icon-20:before {
     font-size: 20px;
+}
+
+.icon-22:before {
+    font-size: 22px;
 }
 
 .icon-40:before {
@@ -52,4 +57,12 @@
 
 .icon.menu:before {
     content: "\E08e";
+}
+
+.icon.mail:before {
+    content: "\E08a";
+}
+
+.icon.lock:before {
+    content: "\E086";
 }
