@@ -299,3 +299,11 @@ nav #navContent .mobileNav {
     -ms-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in;
 }
+
+#basicForm input[type=submit]:hover, #basicForm input[type=submit]:focus {
+    background: rgb(0, 114, 158);
+}
+
+#basicForm input[type=submit]:active {
+    background: rgb(0, 76, 105);
+}
