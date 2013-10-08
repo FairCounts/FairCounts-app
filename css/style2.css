@@ -74,6 +74,33 @@ nav #navContent .mobileNav {
     color: white;
     font-size: 26px;
 }
+#content #groupBalance {
+    height: 50px;
+    padding: 20px 30px 0 30px;
+    margin-bottom: 30px;
+    color: white;
+    font-size: 26px;
+}
+
+#content #groupName {
+    height: 50px;
+    padding: 20px 30px 0 30px;
+    margin-bottom: 30px;
+    margin-right: 330px;
+    color: black;
+    font-size: 26px;
+    background: white
+}
+
+#content #expenseHeader {
+    height: 50px;
+    padding: 20px 30px 0 30px;
+    margin-bottom: 30px;
+    margin-right: 330px;
+    color: white;
+    font-size: 26px;
+    background: #434343
+}
 
 #content #totalBalance.positive {
     background: #1FCC56;
@@ -89,6 +116,12 @@ nav #navContent .mobileNav {
     margin-top: -10px;
 }
 
+#content #nameSpace .nameSpace {
+    float:right;
+    font-size: 40px;
+    margin-top: -10px;
+}
+
 #content #leftColumn {
     width: 48%;
 }
@@ -96,6 +129,16 @@ nav #navContent .mobileNav {
 #content #rightColumn {
     float: right;
     width: 48%;
+}
+
+#content #rightGroupColumn {
+    float: right;
+    width: 32%;
+}
+
+#content #addExpenseButton {
+    float: right;
+    width: 32%;
 }
 
 #content #newGroup {
