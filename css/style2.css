@@ -310,6 +310,10 @@ a {
     transition: background 0.3s ease-in;
 }
 
+.basicForm  input[type=text]:focus, .basicForm  input[type=password]:focus, .basicForm  input[type=email]:focus {
+    background: #EFF2FF;
+}
+
 .basicForm .preInput {
     position: absolute;
     width: 40px;
