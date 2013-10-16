@@ -327,7 +327,7 @@ a {
     left: 11px;
 }
 
-.basicForm #mail, .basicForm #password {
+.basicForm .inputField {
     position: relative;
     height: 40px;
     width: 280px;
@@ -363,18 +363,25 @@ a {
     background: rgb(0, 76, 105);
 }
 
-#signIn {
+.signInUpForm {
     max-width: 900px;
-    height: 250px ;
 }
 
-#signIn #formSignIn {
+.signInUpForm .formSignInUp {
     position: absolute;
     width: 450px;
     left: 0;
 }
 
-#signIn #socialNetworks {
+#signInForm {
+    height: 250px;
+}
+
+#signUpForm {
+    height: 310px;
+}
+
+.signInUpForm #socialNetworks {
     position: absolute;
     width: 450px;
     right: 0;
@@ -382,7 +389,11 @@ a {
     border-left: 1px solid rgb(230, 230, 230);
 }
 
-#signIn #socialNetworks .button {
+#signUpForm #socialNetworks {
+    margin-top: 70px;
+}
+
+.signInUpForm #socialNetworks .button {
     width: 320px;
     margin: auto;
     margin-top: 15px;
@@ -391,14 +402,14 @@ a {
     font-family: "SourceSansProUltraLight", sans-serif;
 }
 
-#signIn #socialNetworks .buttonContent {
+.signInUpForm #socialNetworks .buttonContent {
     display: inline-block;
     height: 39px;
     vertical-align: bottom;
     color: white;
 }
 
-#signIn #socialNetworks .icon {
+.signInUpForm #socialNetworks .icon {
     display: inline-block;
     width: 40px;
     height: 100%;
@@ -412,38 +423,38 @@ a {
     box-shadow: 1px 0px 0px rgba(100,100,100,0.2);
 }
 
-#signIn #facebookSignIn .icon {
+.signInUpForm #facebookSignIn .icon {
     background: rgb(59, 89, 152);
 }
 
-#signIn #facebookSignIn {
+.signInUpForm #facebookSignIn {
     background: rgb(60, 79, 121);
 }
 
-#signIn #facebookSignIn:hover {
+.signInUpForm #facebookSignIn:hover {
     background: rgb(36, 81, 182);
 }
 
-#signIn #twitterSignIn .icon {
+.signInUpForm #twitterSignIn .icon {
     background: rgb(0, 171, 240);
 }
 
-#signIn #twitterSignIn {
+.signInUpForm #twitterSignIn {
     background: rgb(17, 160, 218);
 }
 
-#signIn #twitterSignIn:hover {
+.signInUpForm #twitterSignIn:hover {
     background: rgb(0, 178, 250);
 }
 
-#signIn #googleSignIn .icon {
+.signInUpForm #googleSignIn .icon {
     background: rgb(193, 50, 34);
 }
 
-#signIn #googleSignIn {
+.signInUpForm #googleSignIn {
     background: rgb(161, 49, 37);
 }
 
-#signIn #googleSignIn:hover {
+.signInUpForm #googleSignIn:hover {
     background: rgb(201, 31, 13);
 }
