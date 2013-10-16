@@ -66,3 +66,15 @@
 .icon.lock:before {
     content: "\E086";
 }
+
+.icon.facebook:before {
+    content: "\E047";
+}
+
+.icon.twitter:before {
+    content: "\E12f";
+}
+
+.icon.gplus:before {
+    content: "\E05a";
+}

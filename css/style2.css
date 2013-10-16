@@ -63,6 +63,10 @@ nav #navContent .mobileNav {
     display: none;
 }
 
+a {
+    text-decoration: none;
+}
+
 /*
  * MAIN PAGE
  */
@@ -271,9 +275,9 @@ nav #navContent .mobileNav {
  * FORMS
  */
 
-#basicForm {
+.basicForm {
     position: relative;
-    width: 400px;
+    max-width: 400px;
     margin: auto;
     padding: 10px;
     padding-bottom: 50px;
@@ -283,12 +287,12 @@ nav #navContent .mobileNav {
     border-radius: 15px;
 }
 
-#basicForm h1 {
+.basicForm h1 {
     color: #434343;
     margin: 25px 0 20px 60px;
 }
 
-#basicForm  input[type=text], #basicForm  input[type=password], #basicForm  input[type=email] {
+.basicForm  input[type=text], .basicForm  input[type=password], .basicForm  input[type=email] {
     display: block;
     position: absolute;
     width: 230px;
@@ -306,24 +310,24 @@ nav #navContent .mobileNav {
     transition: background 0.3s ease-in;
 }
 
-#basicForm .preInput {
+.basicForm .preInput {
     position: absolute;
     width: 40px;
     height: 40px;
     background: #434343;
 }
 
-#basicForm .preInput span.icon {
+.basicForm .preInput span.icon {
     position: relative;
     top: 7px;
     left: 13px;
 }
 
-#basicForm .preInput span.mail {
+.basicForm .preInput span.mail {
     left: 11px;
 }
 
-#basicForm #mail, #basicForm #password {
+.basicForm #mail, .basicForm #password {
     position: relative;
     height: 40px;
     width: 280px;
@@ -331,7 +335,11 @@ nav #navContent .mobileNav {
     margin-bottom: 20px;
 }
 
-#basicForm input[type=submit] {
+.basicForm input[type=submit] {
+    margin: auto;
+}
+
+.basicForm .button {
     display: block;
     width: 280px;
     height: 50px;
@@ -340,7 +348,6 @@ nav #navContent .mobileNav {
     color: white;
     font-size: 24px;
     outline: none;
-    margin: auto;
     -webkit-transition: all 0.3s ease-in;
     -moz-transition: all 0.3s ease-in;
     -o-transition: all 0.3s ease-in;
@@ -348,10 +355,92 @@ nav #navContent .mobileNav {
     transition: all 0.3s ease-in;
 }
 
-#basicForm input[type=submit]:hover, #basicForm input[type=submit]:focus {
+.basicForm .button:hover, .basicForm .button:focus {
     background: rgb(0, 114, 158);
 }
 
-#basicForm input[type=submit]:active {
+.basicForm .button:active {
     background: rgb(0, 76, 105);
+}
+
+#signIn {
+    max-width: 900px;
+    height: 250px ;
+}
+
+#signIn #formSignIn {
+    position: absolute;
+    width: 450px;
+    left: 0;
+}
+
+#signIn #socialNetworks {
+    position: absolute;
+    width: 450px;
+    right: 0;
+    margin-top: 50px;
+}
+
+#signIn #socialNetworks .button {
+    width: 320px;
+    margin: auto;
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-family: "SourceSansProUltraLight", sans-serif;
+}
+
+#signIn #socialNetworks .buttonContent {
+    display: inline-block;
+    height: 39px;
+    vertical-align: bottom;
+}
+
+#signIn #socialNetworks .icon {
+    display: inline-block;
+    width: 40px;
+    height: 100%;
+    padding-left: 13px;
+    margin-right: 10px;
+    vertical-align: middle;
+    -webkit-box-shadow: 1px 0px 0px rgba(100,100,100,0.2);
+    -moz-box-shadow: 1px 0px 0px rgba(100,100,100,0.2);
+    -o-box-shadow: 1px 0px 0px rgba(100,100,100,0.2);
+    -ms-box-shadow: 1px 0px 0px rgba(100,100,100,0.2);
+    box-shadow: 1px 0px 0px rgba(100,100,100,0.2);
+}
+
+#signIn #facebookSignIn .icon {
+    background: rgb(59, 89, 152);
+}
+
+#signIn #facebookSignIn {
+    background: rgb(60, 79, 121);
+}
+
+#signIn #facebookSignIn:hover {
+    background: rgb(36, 81, 182);
+}
+
+#signIn #twitterSignIn .icon {
+    background: rgb(0, 171, 240);
+}
+
+#signIn #twitterSignIn {
+    background: rgb(17, 160, 218);
+}
+
+#signIn #twitterSignIn:hover {
+    background: rgb(0, 178, 250);
+}
+
+#signIn #googleSignIn .icon {
+    background: rgb(193, 50, 34);
+}
+
+#signIn #googleSignIn {
+    background: rgb(161, 49, 37);
+}
+
+#signIn #googleSignIn:hover {
+    background: rgb(201, 31, 13);
 }
