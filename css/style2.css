@@ -369,25 +369,19 @@ a {
 
 .signInUpForm {
     max-width: 900px;
+    padding: 0;
+    padding-bottom: 45px;
 }
 
 .signInUpForm .formSignInUp {
-    position: absolute;
+    float: left;
     width: 450px;
     left: 0;
 }
 
-#signInForm {
-    height: 250px;
-}
-
-#signUpForm {
-    height: 310px;
-}
-
 .signInUpForm #socialNetworks {
-    position: absolute;
-    width: 450px;
+    float: right;
+    width: 449px;
     right: 0;
     margin-top: 50px;
     border-left: 1px solid rgb(230, 230, 230);
