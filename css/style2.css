@@ -118,6 +118,11 @@ nav #navContent .mobileNav {
     background: white;
 }
 
+#content #listFormat{
+	list-style-type: none;
+	font-size: small;
+}
+
 #content #participantsHeader {
     height: 50px;
     width: 228px;

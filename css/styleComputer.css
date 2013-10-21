@@ -5,3 +5,14 @@
 #content {
     width: 900px;
 }
+
+/**
+ * Sign up / Sign in forms
+ */
+#signInForm {
+    height: 250px;
+}
+
+#signUpForm {
+    height: 310px;
+}

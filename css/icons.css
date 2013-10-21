@@ -70,3 +70,16 @@
 .icon.draw:before {
     content: "\E09f";
 }
+
+.icon.facebook:before {
+    content: "\E047";
+}
+
+.icon.twitter:before {
+    content: "\E12f";
+}
+
+.icon.gplus:before {
+    content: "\E05a";
+}
+

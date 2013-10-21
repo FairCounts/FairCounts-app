@@ -26,3 +26,17 @@ nav .linkList {
 nav #navContent .user {
     display: none;
 }
+
+/**
+ * Sign up / Sign in forms
+ */
+
+.signInUpForm .formSignInUp {
+    float: none;
+}
+
+.signInUpForm #socialNetworks {
+    float: none;
+    border-left: none;
+    border-top: 1px solid rgb(230, 230, 230);
+}
