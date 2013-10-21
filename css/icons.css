@@ -66,3 +66,7 @@
 .icon.lock:before {
     content: "\E086";
 }
+
+.icon.draw:before {
+    content: "\E09f";
+}

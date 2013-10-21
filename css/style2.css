@@ -94,7 +94,7 @@ nav #navContent .mobileNav {
     margin-right: 330px;
     color: black;
     font-size: 26px;
-    background: white
+    background: white;
 }
 
 #content #expenseHeader {
@@ -104,8 +104,85 @@ nav #navContent .mobileNav {
     margin-right: 330px;
     color: white;
     font-size: 26px;
-    background: #434343
+    background: #434343;
 }
+
+#content #listBackground {
+    height: 250px;
+    padding: 20px 30px 0 30px;
+    margin-bottom: 30px;
+    margin-right: 330px;
+    margin-top: -30px;
+    color: black;
+    font-size: 26px;
+    background: white;
+}
+
+#content #participantsHeader {
+    height: 50px;
+    width: 228px;
+    padding: 20px 30px 0 30px;
+    margin-bottom: 30px;
+    margin-right: 0px;
+    color: white;
+    font-size: 26px;
+    background: #434343;
+    float: right;
+}
+
+#content #addButtonFooter {
+    height: 50px;
+    width: 228px;
+    padding: 20px 30px 0 30px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    margin-top: -100px;
+    color: white;
+    font-size: 26px;
+    background: #0087AD;
+    float: right;
+    text-align: center;
+}
+
+
+#content #participantsListBackground {
+    height: 320px;
+    padding: 20px 30px 0 30px;
+    margin-bottom: 30px;
+    margin-right: 0px;
+    margin-top: 0px;
+    color: black;
+    font-size: 26px;
+    background: white;
+}
+
+
+#content #addButtonHeader {
+    height: 50px;
+    padding: 20px 30px 0 30px;
+    margin-bottom: 30px;
+    margin-right: 0px;
+    margin-top: -20px;
+    color: white;
+    font-size: 26px;
+    background: #0087AD;
+    float: right;
+}
+
+#content #editButtonHeader {
+    height: 50px;
+    padding: 20px 30px 0 30px;
+    margin-bottom: 30px;
+    margin-right: -30px;
+    margin-top: -20px;
+    line-height: 30px;
+    color: white;
+    text-align: center;
+    font-size: 35px;
+    background: #D9C099;
+    float: right;
+}
+
 
 #content #totalBalance.positive {
     background: #1FCC56;
@@ -143,7 +220,11 @@ nav #navContent .mobileNav {
 
 #content #addExpenseButton {
     float: right;
-    width: 32%;
+    width:35px;
+    padding:10px;
+    background: #0087AD;
+    margin:10px;
+    text-align: center;
 }
 
 #content #newGroup {
