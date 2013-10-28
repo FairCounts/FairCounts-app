@@ -1,0 +1,7 @@
+user_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: UserBundle:Default:index }
+
+test:
+    pattern: /test/
+    defaults:  { _controller: faircounts.user.controller:createAction }

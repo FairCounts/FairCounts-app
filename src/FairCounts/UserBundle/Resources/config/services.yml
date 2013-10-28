@@ -1,0 +1,10 @@
+parameters:
+#    user.example.class: FairCounts\UserBundle\Example
+     faircounts.controller.user.class: FairCounts\UserBundle\Controller\UserController
+
+services:
+#    user.example:
+#        class: %user.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+    faircounts.user.controller:
+        class:     %faircounts.controller.user.class%
