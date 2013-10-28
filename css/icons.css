@@ -75,6 +75,10 @@
     content: "\E086";
 }
 
+.icon.draw:before {
+    content: "\E09f";
+}
+
 .icon.facebook:before {
     content: "\E047";
 }

@@ -63,10 +63,6 @@ nav #navContent .mobileNav {
     display: none;
 }
 
-a {
-    text-decoration: none;
-}
-
 /*
  * MAIN PAGE
  */
@@ -98,7 +94,7 @@ a {
     margin-right: 330px;
     color: black;
     font-size: 26px;
-    background: white
+    background: white;
 }
 
 #content #expenseHeader {
@@ -108,8 +104,90 @@ a {
     margin-right: 330px;
     color: white;
     font-size: 26px;
-    background: #434343
+    background: #434343;
 }
+
+#content #listBackground {
+    height: 250px;
+    padding: 20px 30px 0 30px;
+    margin-bottom: 30px;
+    margin-right: 330px;
+    margin-top: -30px;
+    color: black;
+    font-size: 26px;
+    background: white;
+}
+
+#content #listFormat{
+	list-style-type: none;
+	font-size: small;
+}
+
+#content #participantsHeader {
+    height: 50px;
+    width: 228px;
+    padding: 20px 30px 0 30px;
+    margin-bottom: 30px;
+    margin-right: 0px;
+    color: white;
+    font-size: 26px;
+    background: #434343;
+    float: right;
+}
+
+#content #addButtonFooter {
+    height: 50px;
+    width: 228px;
+    padding: 20px 30px 0 30px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    margin-top: -100px;
+    color: white;
+    font-size: 26px;
+    background: #0087AD;
+    float: right;
+    text-align: center;
+}
+
+
+#content #participantsListBackground {
+    height: 320px;
+    padding: 20px 30px 0 30px;
+    margin-bottom: 30px;
+    margin-right: 0px;
+    margin-top: 0px;
+    color: black;
+    font-size: 26px;
+    background: white;
+}
+
+
+#content #addButtonHeader {
+    height: 50px;
+    padding: 20px 30px 0 30px;
+    margin-bottom: 30px;
+    margin-right: 0px;
+    margin-top: -20px;
+    color: white;
+    font-size: 26px;
+    background: #0087AD;
+    float: right;
+}
+
+#content #editButtonHeader {
+    height: 50px;
+    padding: 20px 30px 0 30px;
+    margin-bottom: 30px;
+    margin-right: -30px;
+    margin-top: -20px;
+    line-height: 30px;
+    color: white;
+    text-align: center;
+    font-size: 35px;
+    background: #D9C099;
+    float: right;
+}
+
 
 #content #totalBalance.positive {
     background: #1FCC56;
@@ -147,7 +225,11 @@ a {
 
 #content #addExpenseButton {
     float: right;
-    width: 32%;
+    width:35px;
+    padding:10px;
+    background: #0087AD;
+    margin:10px;
+    text-align: center;
 }
 
 #content #newGroup {
@@ -275,9 +357,9 @@ a {
  * FORMS
  */
 
-.basicForm {
+#basicForm {
     position: relative;
-    max-width: 400px;
+    width: 400px;
     margin: auto;
     padding: 10px;
     padding-bottom: 50px;
@@ -287,12 +369,12 @@ a {
     border-radius: 15px;
 }
 
-.basicForm h1 {
+#basicForm h1 {
     color: #434343;
     margin: 25px 0 20px 60px;
 }
 
-.basicForm  input[type=text], .basicForm  input[type=password], .basicForm  input[type=email] {
+#basicForm  input[type=text], #basicForm  input[type=password], #basicForm  input[type=email] {
     display: block;
     position: absolute;
     width: 230px;
@@ -310,28 +392,24 @@ a {
     transition: background 0.3s ease-in;
 }
 
-.basicForm  input[type=text]:focus, .basicForm  input[type=password]:focus, .basicForm  input[type=email]:focus {
-    background: #EFF2FF;
-}
-
-.basicForm .preInput {
+#basicForm .preInput {
     position: absolute;
     width: 40px;
     height: 40px;
     background: #434343;
 }
 
-.basicForm .preInput span.icon {
+#basicForm .preInput span.icon {
     position: relative;
     top: 7px;
     left: 13px;
 }
 
-.basicForm .preInput span.mail {
+#basicForm .preInput span.mail {
     left: 11px;
 }
 
-.basicForm .inputField {
+#basicForm #mail, #basicForm #password {
     position: relative;
     height: 40px;
     width: 280px;
@@ -339,11 +417,7 @@ a {
     margin-bottom: 20px;
 }
 
-.basicForm input[type=submit] {
-    margin: auto;
-}
-
-.basicForm .button {
+#basicForm input[type=submit] {
     display: block;
     width: 280px;
     height: 50px;
@@ -352,6 +426,7 @@ a {
     color: white;
     font-size: 24px;
     outline: none;
+    margin: auto;
     -webkit-transition: all 0.3s ease-in;
     -moz-transition: all 0.3s ease-in;
     -o-transition: all 0.3s ease-in;
@@ -367,7 +442,7 @@ a {
     background: rgb(0, 114, 158);
 }
 
-.basicForm .button:active {
+#basicForm input[type=submit]:active {
     background: rgb(0, 76, 105);
 }
 
@@ -497,3 +572,6 @@ a {
 /*
  * Add Group
  */
+=======
+}
+>>>>>>> b8370f430e3c8c318fb5e1e77cc6e7dbce0d14b1
