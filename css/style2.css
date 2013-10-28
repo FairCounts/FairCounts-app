@@ -359,6 +359,10 @@ a {
     transition: all 0.3s ease-in;
 }
 
+.basicForm .button.basicButton {
+    background: #C0C0C0;
+}
+
 .basicForm .button:hover, .basicForm .button:focus {
     background: rgb(0, 114, 158);
 }
@@ -456,3 +460,40 @@ a {
 .signInUpForm #googleSignIn:hover {
     background: rgb(201, 31, 13);
 }
+
+/*
+ * PasswordChanged
+ */
+
+#passwordChanged {
+    padding: 50px 20px;
+    text-align:center;
+    font-size: 24px;
+    color: #434343;
+}
+
+#passwordChanged .button {
+    margin: auto;
+}
+
+#checkEmail {
+    padding: 50px 20px 0 10px;
+    text-align:center;
+    font-size: 24px;
+    color: #434343;
+}
+
+#confirmedRegistration {
+    padding: 50px 20px;
+    text-align:center;
+    font-size: 24px;
+    color: #434343;
+}
+
+#confirmedRegistration .button {
+    margin: auto;
+}
+
+/*
+ * Add Group
+ */
