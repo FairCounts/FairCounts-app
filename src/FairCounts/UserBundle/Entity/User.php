@@ -1,38 +1,27 @@
 <?php
+// src/FairCounts/UserBundle/Entity/User.php
 
 namespace FairCounts\UserBundle\Entity;
 
+use FOS\UserBundle\Entity\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="User")
- * @ORM\InheritanceType("JOINED")
- * @ORM\DiscriminatorColumn(name="type", type="string")
- * @ORM\DiscriminatorMap({
- *  "formUser"             =   "FormUser",
- *  "socialUser" 		   =   "SocialUser",
- *  "unregisteredUser"     =   "UnregisteredUser"
- * })
+ * @ORM\Table(name="fos_user")
  */
-abstract class User
+class User extends BaseUser
 {
-	/**
+    /**
      * @ORM\Id
      * @ORM\Column(type="integer")
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
-	
-	 /**
-     * Get id
-     *
-     * @return integer 
-     */
-    public function getId()
+    protected $id;
+
+    public function __construct()
     {
-        return $this->id;
+        parent::__construct();
+        // your own logic
     }
 }
-
-?>
