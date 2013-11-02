@@ -98,3 +98,6 @@
 .icon.user:before {
     content: "\E137";
 }
+
+.icon.remove:before {
+    content: "\E10f";
