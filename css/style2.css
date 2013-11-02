@@ -584,3 +584,7 @@ a {
 /*
 * Add Group
 */
+
+#addGroup ul {
+	list-style-type: none;
+}

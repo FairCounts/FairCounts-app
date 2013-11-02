@@ -94,3 +94,7 @@
 .icon.check:before {
     content: "\E029";
 }
+
+.icon.user:before {
+    content: "\E137";
+}
