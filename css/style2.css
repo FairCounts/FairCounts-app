@@ -585,19 +585,23 @@ a {
 * Add Group
 */
 
-#addGroup .inputField {
+#addGroup #groupPreInput .group {
+  left: 11px;
+}
+
+.withParticipants .inputField {
     width: 310px;
 }
 
-#addGroup input[type=text] {
+.withParticipants input[type=text] {
     width: 260px;
 }
 
-#addGroup #participantInput {
+.withParticipants #participantInput {
     width: 215px;
 }
 
-#addGroup #participantAddButton {
+.withParticipants #participantAddButton {
     position: absolute;
     right: 0;
     width: 28px;
@@ -613,25 +617,25 @@ a {
 	transition: background 0.3s ease-in;
 }
 
-#addGroup #participantAddButton:hover {
+.withParticipants #participantAddButton:hover {
     background: #4FAF4F;
 }
 
-#addGroup h2 {
+.withParticipants h2 {
     font-size: 22px;
     color: #434343;
     margin: 0 45px;
     padding: 0 0 10px;
 }
 
-#addGroup #participantsList {
+.withParticipants #participantsList {
     font-size: 18px;
     list-style-type: none;
     margin: 0 0 20px 0;
     padding: 0 60px;
 }
 
-#addGroup #participantsList li {
+.withParticipants #participantsList li {
     height: 24px;
     padding: 1px 5px;
     background: transparent;
@@ -648,11 +652,11 @@ a {
 	transition: background 0.3s ease-in;
 }
 
-#addGroup #participantsList li:hover {
+.withParticipants #participantsList li:hover {
     background: rgb(245, 245, 245);
 }
 
-#addGroup #participantsList .remove {
+.withParticipants #participantsList .remove {
     opacity: 0;
     float: right;
     margin-left: 5px;
@@ -666,10 +670,14 @@ a {
 	transition: color 0.3s ease-in, opacity 0.3s ease-in;
 }
 
-#addGroup #participantsList li:hover .remove {
+.withParticipants #participantsList li:hover .remove {
     opacity: 1;
 }
 
-#addGroup #participantsList .remove:hover {
+.withParticipants #participantsList .remove:hover {
     color: #CE3A15;
 }
+
+/*
+ * Add expense
+ */
