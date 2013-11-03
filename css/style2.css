@@ -1,11 +1,11 @@
 @font-face {
-	font-family: 'SourceSansProUltraLight';
-	src: url('../fonts/SourceSansPro/SourceSansPro-ExtraLight.eot?') format('eot'), url('../fonts/SourceSansPro/SourceSansPro-ExtraLight.woff') format('woff'), url('../fonts/SourceSansPro/SourceSansPro-ExtraLight.ttf') format('truetype');
+  font-family: 'SourceSansProUltraLight';
+  src: url('../fonts/SourceSansPro/SourceSansPro-ExtraLight.eot?') format('eot'), url('../fonts/SourceSansPro/SourceSansPro-ExtraLight.woff') format('woff'), url('../fonts/SourceSansPro/SourceSansPro-ExtraLight.ttf') format('truetype');
 }
 
 @font-face {
-	font-family: 'SourceSansProRegular';
-	src: url('../fonts/SourceSansPro/SourceSansPro-Regular.eot?') format('eot'), url('../fonts/SourceSansPro/SourceSansPro-Regular.woff') format('woff'), url('../fonts/SourceSansPro/SourceSansPro-Regular.ttf') format('truetype');
+  font-family: 'SourceSansProRegular';
+  src: url('../fonts/SourceSansPro/SourceSansPro-Regular.eot?') format('eot'), url('../fonts/SourceSansPro/SourceSansPro-Regular.woff') format('woff'), url('../fonts/SourceSansPro/SourceSansPro-Regular.ttf') format('truetype');
 }
 
 
@@ -14,57 +14,57 @@
 */
 
 body {
-	margin: 0;
-	background: #F2F2F2;
-	font-family: "SourceSansProRegular", sans-serif;
+  margin: 0;
+  background: #F2F2F2;
+  font-family: "SourceSansProRegular", sans-serif;
 }
 
 nav {
-	width: 100%;
-	height: 80px;
-	background: #434343;
+  width: 100%;
+  height: 80px;
+  background: #434343;
 }
 
 #navContent {
-	margin: auto;
+  margin: auto;
 }
 
 nav .linkList {
-	float: left;
-	padding-top: 14px;
+  float: left;
+  padding-top: 14px;
 }
 
 nav .linkList .link {
-	position: relative;
-	float: left;
-	margin: 0 20px 0 20px;
+  position: relative;
+  float: left;
+  margin: 0 20px 0 20px;
 }
 
 nav #navContent .user {
-	text-align: right;
-	color: white;
-	font-family: "SourceSansProUltraLight", sans-serif;
-	font-size: 24px;
-	padding-top: 22px;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	position: relative;
-	padding-right: 25px;
+  text-align: right;
+  color: white;
+  font-family: "SourceSansProUltraLight", sans-serif;
+  font-size: 24px;
+  padding-top: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  position: relative;
+  padding-right: 25px;
 }
 
 nav #navContent .user .down {
-	padding-left: 8px;
-	position: absolute;
-	right: 0px;
+  padding-left: 8px;
+  position: absolute;
+  right: 0px;
 }
 
 nav #navContent .mobileNav {
-	display: none;
+  display: none;
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 /*
@@ -72,289 +72,289 @@ a {
 */
 
 #content {
-	margin: auto;
-	padding: 30px 10px;
+  margin: auto;
+  padding: 30px 10px;
 }
 
 #content #totalBalance {
-	height: 50px;
-	padding: 20px 30px 0 30px;
-	margin-bottom: 30px;
-	color: white;
-	font-size: 26px;
+  height: 50px;
+  padding: 20px 30px 0 30px;
+  margin-bottom: 30px;
+  color: white;
+  font-size: 26px;
 }
 #content #groupBalance {
-	height: 50px;
-	padding: 20px 30px 0 30px;
-	margin-bottom: 30px;
-	color: white;
-	font-size: 26px;
+  height: 50px;
+  padding: 20px 30px 0 30px;
+  margin-bottom: 30px;
+  color: white;
+  font-size: 26px;
 }
 
 #content #groupName {
-	height: 50px;
-	padding: 20px 30px 0 30px;
-	margin-bottom: 30px;
-	margin-right: 330px;
-	color: black;
-	font-size: 26px;
-	background: white;
+  height: 50px;
+  padding: 20px 30px 0 30px;
+  margin-bottom: 30px;
+  margin-right: 330px;
+  color: black;
+  font-size: 26px;
+  background: white;
 }
 
 #content #expenseHeader {
-	height: 50px;
-	padding: 20px 30px 0 30px;
-	margin-bottom: 30px;
-	margin-right: 330px;
-	color: white;
-	font-size: 26px;
-	background: #434343;
+  height: 50px;
+  padding: 20px 30px 0 30px;
+  margin-bottom: 30px;
+  margin-right: 330px;
+  color: white;
+  font-size: 26px;
+  background: #434343;
 }
 
 #content #listBackground {
-	height: 250px;
-	padding: 20px 30px 0 30px;
-	margin-bottom: 30px;
-	margin-right: 330px;
-	margin-top: -30px;
-	color: black;
-	font-size: 26px;
-	background: white;
+  height: 250px;
+  padding: 20px 30px 0 30px;
+  margin-bottom: 30px;
+  margin-right: 330px;
+  margin-top: -30px;
+  color: black;
+  font-size: 26px;
+  background: white;
 }
 
 #content #listFormat{
-	list-style-type: none;
-	font-size: small;
+  list-style-type: none;
+  font-size: small;
 }
 
 #content #participantsHeader {
-	height: 50px;
-	width: 228px;
-	padding: 20px 30px 0 30px;
-	margin-bottom: 30px;
-	margin-right: 0px;
-	color: white;
-	font-size: 26px;
-	background: #434343;
-	float: right;
+  height: 50px;
+  width: 228px;
+  padding: 20px 30px 0 30px;
+  margin-bottom: 30px;
+  margin-right: 0px;
+  color: white;
+  font-size: 26px;
+  background: #434343;
+  float: right;
 }
 
 #content #addButtonFooter {
-	height: 50px;
-	width: 228px;
-	padding: 20px 30px 0 30px;
-	margin-bottom: 0px;
-	margin-right: 0px;
-	margin-top: -100px;
-	color: white;
-	font-size: 26px;
-	background: #0087AD;
-	float: right;
-	text-align: center;
+  height: 50px;
+  width: 228px;
+  padding: 20px 30px 0 30px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  margin-top: -100px;
+  color: white;
+  font-size: 26px;
+  background: #0087AD;
+  float: right;
+  text-align: center;
 }
 
 
 #content #participantsListBackground {
-	height: 320px;
-	padding: 20px 30px 0 30px;
-	margin-bottom: 30px;
-	margin-right: 0px;
-	margin-top: 0px;
-	color: black;
-	font-size: 26px;
-	background: white;
+  height: 320px;
+  padding: 20px 30px 0 30px;
+  margin-bottom: 30px;
+  margin-right: 0px;
+  margin-top: 0px;
+  color: black;
+  font-size: 26px;
+  background: white;
 }
 
 
 #content #addButtonHeader {
-	height: 50px;
-	padding: 20px 30px 0 30px;
-	margin-bottom: 30px;
-	margin-right: 0px;
-	margin-top: -20px;
-	color: white;
-	font-size: 26px;
-	background: #0087AD;
-	float: right;
+  height: 50px;
+  padding: 20px 30px 0 30px;
+  margin-bottom: 30px;
+  margin-right: 0px;
+  margin-top: -20px;
+  color: white;
+  font-size: 26px;
+  background: #0087AD;
+  float: right;
 }
 
 #content #editButtonHeader {
-	height: 50px;
-	padding: 20px 30px 0 30px;
-	margin-bottom: 30px;
-	margin-right: -30px;
-	margin-top: -20px;
-	line-height: 30px;
-	color: white;
-	text-align: center;
-	font-size: 35px;
-	background: #D9C099;
-	float: right;
+  height: 50px;
+  padding: 20px 30px 0 30px;
+  margin-bottom: 30px;
+  margin-right: -30px;
+  margin-top: -20px;
+  line-height: 30px;
+  color: white;
+  text-align: center;
+  font-size: 35px;
+  background: #D9C099;
+  float: right;
 }
 
 
 #content #totalBalance.positive {
-	background: #1FCC56;
+  background: #1FCC56;
 }
 
 #content #totalBalance.negative {
-	background: #F05348;
+  background: #F05348;
 }
 
 #content #totalBalance .totBalance {
-	float:right;
-	font-size: 40px;
-	margin-top: -10px;
+  float:right;
+  font-size: 40px;
+  margin-top: -10px;
 }
 
 #content #nameSpace .nameSpace {
-	float:right;
-	font-size: 40px;
-	margin-top: -10px;
+  float:right;
+  font-size: 40px;
+  margin-top: -10px;
 }
 
 #content #leftColumn {
-	width: 48%;
+  width: 48%;
 }
 
 #content #rightColumn {
-	float: right;
-	width: 48%;
+  float: right;
+  width: 48%;
 }
 
 #content #rightGroupColumn {
-	float: right;
-	width: 32%;
+  float: right;
+  width: 32%;
 }
 
 #content #addExpenseButton {
-	float: right;
-	width:35px;
-	padding:10px;
-	background: #0087AD;
-	margin:10px;
-	text-align: center;
+  float: right;
+  width:35px;
+  padding:10px;
+  background: #0087AD;
+  margin:10px;
+  text-align: center;
 }
 
 #content #newGroup {
-	width: 100%;
-	height: 40px;
-	background: #434343;
-	padding: 0 0 34px 0;
-	margin-bottom: 10px;
-	color: white;
-	font-size: 30px;
-	text-align: center;
+  width: 100%;
+  height: 40px;
+  background: #434343;
+  padding: 0 0 34px 0;
+  margin-bottom: 10px;
+  color: white;
+  font-size: 30px;
+  text-align: center;
 }
 
 #content span.emphasize {
-	font-size: 60px;
-	vertical-align: middle;
-	font-weight: bold;
-	margin-right: 10px;
+  font-size: 60px;
+  vertical-align: middle;
+  font-weight: bold;
+  margin-right: 10px;
 }
 
 #content div.folder {
-	width: 100%;
-	background: white;
-	margin: 20px 0;
+  width: 100%;
+  background: white;
+  margin: 20px 0;
 }
 
 #content .folder .folderBalance {
-	width: 100%;
-	height: 34px;
-	padding: 20px 0 10px 0;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	color: white;
-	font-size: 22px;
+  width: 100%;
+  height: 34px;
+  padding: 20px 0 10px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: white;
+  font-size: 22px;
 }
 
 #content .folder .folderBalance .folBalance {
-	float: right;
-	font-size: 36px;
-	margin: -10px 20px 0 0;  
+  float: right;
+  font-size: 36px;
+  margin: -10px 20px 0 0;  
 }
 
 #content .folder .folderBalance .folTitle {
-	margin-left: 20px;
+  margin-left: 20px;
 }
 
 #content .folder .folderBalance.positive {
-	background: #1FCC56;
+  background: #1FCC56;
 }
 
 #content .folder .folderBalance.negative {
-	background: #F05348;
+  background: #F05348;
 }
 
 #content .folder .expenses {
-	list-style: none;
-	margin: 0;
-	padding: 10px 10px 5px 20px;
-	color: #434343;
-	font-size: 18px;
+  list-style: none;
+  margin: 0;
+  padding: 10px 10px 5px 20px;
+  color: #434343;
+  font-size: 18px;
 }
 
 #content .folder .expenses .expBalance {
-	float: right;
-	margin-right: 10px;
+  float: right;
+  margin-right: 10px;
 }
 
 #content .folder .expenses li {
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	padding-top: 5px;
-	height: 26px;
-	border-bottom: 1px solid rgba(0,0,0,0.06);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-top: 5px;
+  height: 26px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 
 #content .folder .expenses .expBalance.positive {
-	color: #1FCC56;
+  color: #1FCC56;
 }
 
 #content .folder .expenses .expBalance.negative {
-	color: #F05348;
+  color: #F05348;
 }
 
 #content .folder .expenses .moreExpenses {
-	color: #A7A7A7;
-	font-family: "SourceSansProUltraLight", sans-serif;
-	font-style: italic;
-	border: none;
+  color: #A7A7A7;
+  font-family: "SourceSansProUltraLight", sans-serif;
+  font-style: italic;
+  border: none;
 }
 
 #content .folder .addExpense span.emphasize {
-	font-size: 30px;
-	vertical-align: middle;
-	line-height: 34px;
-	margin-right: 5px;
+  font-size: 30px;
+  vertical-align: middle;
+  line-height: 34px;
+  margin-right: 5px;
 }
 
 #content .folder .addExpense {
-	text-align: right;
-	color: #0087AD;
-	padding-bottom: 9px;
+  text-align: right;
+  color: #0087AD;
+  padding-bottom: 9px;
 }
 
 #content .folder .addExpense .plusExpense {
-	background: #0087AD;
-	width: 40px;
-	height: 40px;
-	float: right;
-	color: white;
-	font-size: 30px;
-	text-align: center;
-	border-radius: 5px 0 0 0;
-	margin: -10px 0 0 10px;
+  background: #0087AD;
+  width: 40px;
+  height: 40px;
+  float: right;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 5px 0 0 0;
+  margin: -10px 0 0 10px;
 }
 
 #content .stats {
-	width: 100%;
-	height: 300px;
-	background: white;
+  width: 100%;
+  height: 300px;
+  background: white;
 }
 
 /*
@@ -362,190 +362,198 @@ a {
 */
 
 .basicForm {
-	position: relative;
-	max-width: 400px;
-	margin: auto;
-	padding: 10px;
-	padding-bottom: 50px;
-	background: white;
-	-moz-border-radius: 15px;
-	-webkit-border-radius: 15px;
-	border-radius: 15px;
+  position: relative;
+  max-width: 400px;
+  margin: auto;
+  padding: 10px;
+  padding-bottom: 50px;
+  background: white;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
 }
 
 .basicForm h1 {
-	color: #434343;
-	margin: 25px 0 20px 60px;
+  color: #434343;
+  margin: 25px 0 20px 60px;
+}
+
+.basicForm h2 {
+  font-size: 22px;
+  color: #434343;
+  margin: 0 45px;
+  padding: 0 0 10px;
 }
 
 .basicForm  input[type=text], .basicForm  input[type=password], .basicForm  input[type=email] {
-	display: block;
-	position: absolute;
-	width: 230px;
-	height: 40px;
-	padding: 0 0 0 10px;
-	left: 40px;
-	background: #F7F7F7;
-	border: none;
-	outline: none;
-	font-size: 12px;
-	-webkit-transition: background 0.3s ease-in;
-	-moz-transition: background 0.3s ease-in;
-	-o-transition: background 0.3s ease-in;
-	-ms-transition: background 0.3s ease-in;
-	transition: background 0.3s ease-in;
+  display: block;
+  position: absolute;
+  width: 230px;
+  height: 40px;
+  padding: 0 0 0 10px;
+  left: 40px;
+  background: #F7F7F7;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-family: "SourceSansProUltraLight", "SourceSansProRegular", Helvetica, "Century Gothic", sans-serif;
+  -webkit-transition: background 0.3s ease-in;
+  -moz-transition: background 0.3s ease-in;
+  -o-transition: background 0.3s ease-in;
+  -ms-transition: background 0.3s ease-in;
+  transition: background 0.3s ease-in;
 }
 
 .basicForm  input[type=text]:focus, .basicForm  input[type=password]:focus, .basicForm  input[type=email]:focus {
-	background: #EFF2FF;
+  background: #EFF2FF;
 }
 
 .basicForm .preInput {
-	position: absolute;
-	width: 40px;
-	height: 40px;
-	background: #434343;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #434343;
 }
 
 .basicForm .preInput span.icon {
-	position: relative;
-	top: 7px;
-	left: 13px;
+  position: relative;
+  top: 7px;
+  left: 13px;
 }
 
 .basicForm .preInput span.mail {
-	left: 11px;
+  left: 11px;
 }
 
 .basicForm .inputField {
-	position: relative;
-	height: 40px;
-	width: 280px;
-	margin: auto;
-	margin-bottom: 20px;
+  position: relative;
+  height: 40px;
+  width: 280px;
+  margin: auto;
+  margin-bottom: 20px;
 }
 
 .basicForm input[type=submit] {
-	margin: auto;
+  margin: auto;
 }
 
 .basicForm .button {
-	display: block;
-	width: 280px;
-	height: 50px;
-	background: #0087AD;
-	border: none;
-	color: white;
-	font-size: 24px;
-	outline: none;
-	margin: auto;
-	-webkit-transition: all 0.3s ease-in;
-	-moz-transition: all 0.3s ease-in;
-	-o-transition: all 0.3s ease-in;
-	-ms-transition: all 0.3s ease-in;
-	transition: all 0.3s ease-in;
+  display: block;
+  width: 280px;
+  height: 50px;
+  background: #0087AD;
+  border: none;
+  color: white;
+  font-size: 24px;
+  outline: none;
+  margin: auto;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 .basicForm .button.basicButton {
-	background: #C0C0C0;
+  background: #C0C0C0;
 }
 
 .basicForm .button:hover, .basicForm .button:focus {
-	background: rgb(0, 114, 158);
+  background: rgb(0, 114, 158);
 }
 
 .basicForm input[type=submit]:active {
-	background: rgb(0, 76, 105);
+  background: rgb(0, 76, 105);
 }
 
 .signInUpForm {
-	max-width: 900px;
-	padding: 0;
-	padding-bottom: 45px;
+  max-width: 900px;
+  padding: 0;
+  padding-bottom: 45px;
 }
 
 .signInUpForm .formSignInUp {
-	float: left;
-	width: 450px;
-	left: 0;
+  float: left;
+  width: 450px;
+  left: 0;
 }
 
 .signInUpForm #socialNetworks {
-	float: right;
-	width: 449px;
-	right: 0;
-	margin-top: 50px;
-	border-left: 1px solid rgb(230, 230, 230);
+  float: right;
+  width: 449px;
+  right: 0;
+  margin-top: 50px;
+  border-left: 1px solid rgb(230, 230, 230);
 }
 
 #signUpForm #socialNetworks {
-	margin-top: 70px;
+  margin-top: 70px;
 }
 
 .signInUpForm #socialNetworks .button {
-	width: 320px;
-	margin: auto;
-	margin-top: 15px;
-	margin-bottom: 15px;
-	font-size: 22px;
-	font-family: "SourceSansProUltraLight", sans-serif;
+  width: 320px;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-family: "SourceSansProUltraLight", sans-serif;
 }
 
 .signInUpForm #socialNetworks .buttonContent {
-	display: inline-block;
-	height: 39px;
-	vertical-align: bottom;
-	color: white;
+  display: inline-block;
+  height: 39px;
+  vertical-align: bottom;
+  color: white;
 }
 
 .signInUpForm #socialNetworks .icon {
-	display: inline-block;
-	width: 40px;
-	height: 100%;
-	padding-left: 13px;
-	margin-right: 10px;
-	vertical-align: middle;
-	-webkit-box-shadow: 1px 0px 0px rgba(100,100,100,0.2);
-	-moz-box-shadow: 1px 0px 0px rgba(100,100,100,0.2);
-	-o-box-shadow: 1px 0px 0px rgba(100,100,100,0.2);
-	-ms-box-shadow: 1px 0px 0px rgba(100,100,100,0.2);
-	box-shadow: 1px 0px 0px rgba(100,100,100,0.2);
+  display: inline-block;
+  width: 40px;
+  height: 100%;
+  padding-left: 13px;
+  margin-right: 10px;
+  vertical-align: middle;
+  -webkit-box-shadow: 1px 0px 0px rgba(100,100,100,0.2);
+  -moz-box-shadow: 1px 0px 0px rgba(100,100,100,0.2);
+  -o-box-shadow: 1px 0px 0px rgba(100,100,100,0.2);
+  -ms-box-shadow: 1px 0px 0px rgba(100,100,100,0.2);
+  box-shadow: 1px 0px 0px rgba(100,100,100,0.2);
 }
 
 .signInUpForm #facebookSignIn .icon {
-	background: rgb(59, 89, 152);
+  background: rgb(59, 89, 152);
 }
 
 .signInUpForm #facebookSignIn {
-	background: rgb(60, 79, 121);
+  background: rgb(60, 79, 121);
 }
 
 .signInUpForm #facebookSignIn:hover {
-	background: rgb(36, 81, 182);
+  background: rgb(36, 81, 182);
 }
 
 .signInUpForm #twitterSignIn .icon {
-	background: rgb(0, 171, 240);
+  background: rgb(0, 171, 240);
 }
 
 .signInUpForm #twitterSignIn {
-	background: rgb(17, 160, 218);
+  background: rgb(17, 160, 218);
 }
 
 .signInUpForm #twitterSignIn:hover {
-	background: rgb(0, 178, 250);
+  background: rgb(0, 178, 250);
 }
 
 .signInUpForm #googleSignIn .icon {
-	background: rgb(193, 50, 34);
+  background: rgb(193, 50, 34);
 }
 
 .signInUpForm #googleSignIn {
-	background: rgb(161, 49, 37);
+  background: rgb(161, 49, 37);
 }
 
 .signInUpForm #googleSignIn:hover {
-	background: rgb(201, 31, 13);
+  background: rgb(201, 31, 13);
 }
 
 /*
@@ -553,32 +561,32 @@ a {
 */
 
 #passwordChanged {
-	padding: 50px 20px;
-	text-align:center;
-	font-size: 24px;
-	color: #434343;
+  padding: 50px 20px;
+  text-align:center;
+  font-size: 24px;
+  color: #434343;
 }
 
 #passwordChanged .button {
-	margin: auto;
+  margin: auto;
 }
 
 #checkEmail {
-	padding: 50px 20px 0 10px;
-	text-align:center;
-	font-size: 24px;
-	color: #434343;
+  padding: 50px 20px 0 10px;
+  text-align:center;
+  font-size: 24px;
+  color: #434343;
 }
 
 #confirmedRegistration {
-	padding: 50px 20px;
-	text-align:center;
-	font-size: 24px;
-	color: #434343;
+  padding: 50px 20px;
+  text-align:center;
+  font-size: 24px;
+  color: #434343;
 }
 
 #confirmedRegistration .button {
-	margin: auto;
+  margin: auto;
 }
 
 /*
@@ -590,94 +598,200 @@ a {
 }
 
 .withParticipants .inputField {
-    width: 310px;
+  width: 310px;
 }
 
 .withParticipants input[type=text] {
-    width: 260px;
+  width: 260px;
 }
 
 .withParticipants #participantInput {
-    width: 215px;
+  width: 215px;
 }
 
 .withParticipants #participantAddButton {
-    position: absolute;
-    right: 0;
-    width: 28px;
-    height: 40px;
-    padding-left: 12px;
-    background: #1FCC56;
-    color: white;
-    font-size: 30px;
-    -webkit-transition: background 0.3s ease-in;
-	-moz-transition: background 0.3s ease-in;
-	-o-transition: background 0.3s ease-in;
-	-ms-transition: background 0.3s ease-in;
-	transition: background 0.3s ease-in;
+  position: absolute;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  background: #1FCC56;
+  color: white;
+  font-size: 30px;
+  -webkit-transition: background 0.3s ease-in;
+  -moz-transition: background 0.3s ease-in;
+  -o-transition: background 0.3s ease-in;
+  -ms-transition: background 0.3s ease-in;
+  transition: background 0.3s ease-in;
 }
 
 .withParticipants #participantAddButton:hover {
-    background: #4FAF4F;
+  background: #4FAF4F;
 }
 
-.withParticipants h2 {
-    font-size: 22px;
-    color: #434343;
-    margin: 0 45px;
-    padding: 0 0 10px;
+.withParticipants #participantRemoveButton {
+  position: absolute;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  background: #F05348;
+  color: white;
+  font-size: 30px;
+  -webkit-transition: background 0.3s ease-in;
+  -moz-transition: background 0.3s ease-in;
+  -o-transition: background 0.3s ease-in;
+  -ms-transition: background 0.3s ease-in;
+  transition: background 0.3s ease-in;
 }
 
+.withParticipants #participantRemoveButton:hover {
+  background: #CA190D;
+}
+
+
+
+/*
 .withParticipants #participantsList {
-    font-size: 18px;
-    list-style-type: none;
-    margin: 0 0 20px 0;
-    padding: 0 60px;
+font-size: 18px;
+list-style-type: none;
+margin: 0 0 20px 0;
+padding: 0 60px;
 }
 
 .withParticipants #participantsList li {
-    height: 24px;
-    padding: 1px 5px;
-    background: transparent;
-    -moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-    border-radius: 10px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-	white-space: nowrap;
-    -webkit-transition: background 0.3s ease-in;
-	-moz-transition: background 0.3s ease-in;
-	-o-transition: background 0.3s ease-in;
-	-ms-transition: background 0.3s ease-in;
-	transition: background 0.3s ease-in;
+height: 24px;
+padding: 1px 5px;
+background: transparent;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+border-radius: 10px;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+-webkit-transition: background 0.3s ease-in;
+-moz-transition: background 0.3s ease-in;
+-o-transition: background 0.3s ease-in;
+-ms-transition: background 0.3s ease-in;
+transition: background 0.3s ease-in;
 }
 
 .withParticipants #participantsList li:hover {
-    background: rgb(245, 245, 245);
+background: rgb(245, 245, 245);
 }
 
 .withParticipants #participantsList .remove {
-    opacity: 0;
-    float: right;
-    margin-left: 5px;
-    margin-top: -1px;
-    vertical-align: middle;
-    color: #434343;
-    -webkit-transition: color 0.3s ease-in, opacity 0.3s ease-in;
-	-moz-transition: color 0.3s ease-in, opacity 0.3s ease-in;
-	-o-transition: color 0.3s ease-in, opacity 0.3s ease-in;
-	-ms-transition: color 0.3s ease-in, opacity 0.3s ease-in;
-	transition: color 0.3s ease-in, opacity 0.3s ease-in;
+opacity: 0;
+float: right;
+margin-left: 5px;
+margin-top: -1px;
+vertical-align: middle;
+color: #434343;
+-webkit-transition: color 0.3s ease-in, opacity 0.3s ease-in;
+-moz-transition: color 0.3s ease-in, opacity 0.3s ease-in;
+-o-transition: color 0.3s ease-in, opacity 0.3s ease-in;
+-ms-transition: color 0.3s ease-in, opacity 0.3s ease-in;
+transition: color 0.3s ease-in, opacity 0.3s ease-in;
 }
 
 .withParticipants #participantsList li:hover .remove {
-    opacity: 1;
+opacity: 1;
 }
 
 .withParticipants #participantsList .remove:hover {
-    color: #CE3A15;
+color: #CE3A15;
+}
+*/
+
+.withParticipants .participantField {
+  margin-bottom: 2px;
+}
+
+.withParticipants #participantsList {
+  list-style-type: none;
+  width: 310px;
+  margin: auto;
+  padding: 0 0 20px;
+}
+
+.withParticipants #participantsList li {
+  position: relative;
+  width: 270px;
+  height: 40px;
+  margin: 0 0 2px 40px;
+}
+
+.withParticipants #participantsList li .participantName {
+  background: #F7F7F7;
+  width: 205px;
+  height: 29px;
+  padding: 11px 10px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+  font-family: "SourceSansProUltraLight";
+  color: #434343;
 }
 
 /*
- * Add expense
- */
+* Add expense
+*/
+
+#amountPreInput {
+  color: white;
+  font-size: 22px;
+  text-align: center;
+  line-height: 41px;
+}
+
+#addExpense .userList {
+  list-style-type: none;
+  width: 280px;
+  margin: auto;
+  padding: 0 0 20px;
+}
+
+#addExpense .userList li {
+  position: relative;
+  height: 40px;
+  margin: 0 0 2px 0;
+}
+
+#addExpense .userList li .participantName {
+  background: #F2F2F2;
+  width: 215px;
+  height: 29px;
+  padding: 11px 10px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+  font-family: "SourceSansProUltraLight";
+  color: #434343;
+}
+
+#addExpense #participantCheckButton {
+  position: absolute;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  background: #F2F2F2;
+  color: #434343;
+  line-height: 40px;
+  -webkit-transition: background 0.3s ease-in;
+  -moz-transition: background 0.3s ease-in;
+  -o-transition: background 0.3s ease-in;
+  -ms-transition: background 0.3s ease-in;
+  transition: background 0.3s ease-in;
+}
+
+#addExpense li:hover #participantCheckButton {
+  background: #C0C0C0;
+}
+
+#addExpense #participantCheckButton.checked {
+  background: #1FCC56;
+  color: white;
+}

@@ -1,103 +1,104 @@
 @font-face {
-    font-family: 'LigatureSymbols';
-    src: url('../fonts/LigatureSymbols/LigatureSymbols-2.11.eot?') format('eot'), url('../fonts/LigatureSymbols/LigatureSymbols-2.11.woff') format('woff'), url('../fonts/LigatureSymbols/LigatureSymbols-2.11.ttf') format('truetype');
+  font-family: 'LigatureSymbols';
+  src: url('../fonts/LigatureSymbols/LigatureSymbols-2.11.eot?') format('eot'), url('../fonts/LigatureSymbols/LigatureSymbols-2.11.woff') format('woff'), url('../fonts/LigatureSymbols/LigatureSymbols-2.11.ttf') format('truetype');
 }
 
 /**
- * Icon font
- */
+* Icon font
+*/
 .icon:before {
-    font-family: "LigatureSymbols";
-    -webkit-font-smoothing: antialiased;
+  font-family: "LigatureSymbols";
+  -webkit-font-smoothing: antialiased;
 }
 
 .icon-single:before {
-    display: block;
+  display: block;
 }
 
 .icon-darkgrey:before {
-    color: #434343;
+  color: #434343;
 }
 
 .icon-white:before {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .icon-green:before {
-    color: #1FCC56;
+  color: #1FCC56;
 }
 
 .icon-20:before {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .icon-22:before {
-    font-size: 22px;
+  font-size: 22px;
 }
 
 .icon-40:before {
-    font-size: 40px;
+  font-size: 40px;
 }
 
 .icon-160:before {
-    font-size: 160px;
+  font-size: 160px;
 }
 
 .icon.home:before {
-    content: "\E072";
+  content: "\E072";
 }
 
 .icon.group:before {
-    content: "\E05c";
+  content: "\E05c";
 }
 
 .icon.stats:before {
-    content: "\E05b";
+  content: "\E05b";
 }
 
 .icon.down:before {
-    content: "\E03e";
+  content: "\E03e";
 }
 
 .icon.info:before {
-    content: "\E075";
+  content: "\E075";
 }
 
 .icon.menu:before {
-    content: "\E08e";
+  content: "\E08e";
 }
 
 .icon.mail:before {
-    content: "\E08a";
+  content: "\E08a";
 }
 
 .icon.lock:before {
-    content: "\E086";
+  content: "\E086";
 }
 
 .icon.draw:before {
-    content: "\E09f";
+  content: "\E09f";
 }
 
 .icon.facebook:before {
-    content: "\E047";
+  content: "\E047";
 }
 
 .icon.twitter:before {
-    content: "\E12f";
+  content: "\E12f";
 }
 
 .icon.gplus:before {
-    content: "\E05a";
+  content: "\E05a";
 }
 
 .icon.check:before {
-    content: "\E029";
+  content: "\E029";
 }
 
 .icon.user:before {
-    content: "\E137";
+  content: "\E137";
 }
 
 .icon.remove:before {
-    content: "\E10f";
+  content: "\E10f";
+}

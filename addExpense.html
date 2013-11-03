@@ -1,55 +1,56 @@
 <!DOCTYPE html>
 <html lang="en" ng-app>
-	<head>
-		<meta charset="utf-8">
-		<title>FairCounts</title>
-		<link href="css/style2.css" rel="stylesheet" media="screen">
-		<link href="css/styleComputer.css" rel="stylesheet" media="screen and (min-width: 920px)">
-		<link href="css/styleTablet.css" rel="stylesheet" media="screen and (max-width: 919px) and (min-width : 480px)">
-		<link href="css/styleSmartphone.css" rel="stylesheet" media="screen and (max-width: 480px)">
-		<link href="css/icons.css" rel="stylesheet" media="screen">
-	</head>
-	<body ng-controller="FairCountsController">
-		<nav>
-			<div id="navContent">
-				<div class="linkList">
-					<div class="link"><span class="icon icon-single icon-white icon-40 home"></span></div>
-					<div class="link"><span class="icon icon-single icon-white icon-40 group"></span></div>
-					<div class="link"><span class="icon icon-single icon-white icon-40 stats"></span></div>
-					<div class="link"><span class="icon icon-single icon-white icon-40 info"></span></div>
-				</div>
-				<div class="user"><span class="name">John Doe</span><span class="icon icon-white icon-20 down"></span></div>
-				<div class="mobileNav"><span class="icon icon-white icon-40 menu"></span></div>
-			</div>
-		</nav>
-		<div id="content">
-			<div class="basicForm withParticipants" id="addExpense">
-				<h1>Add an expense</h1>
-				<div class="inputField">
-					<div id="groupPreInput" class="preInput"><span class="icon icon-white icon-22 lock"></span></div>
-					<input type="text" id="groupInput" placeholder="Expense name"/>
-				</div>
-				<div class="inputField">
-					<div id="amountPreInput" class="preInput"><span class="icon icon-white icon-22 user"></span></div>
-					<input type="text" id="amountInput" placeholder="Amount ($)"/>
-				</div>
-				<div class="inputField">
-					<div id="isOwedPreInput" class="preInput"><span class="icon icon-white icon-22 user"></span></div>
-					<input type="text" id="isOwedInput" placeholder="Person who paid"/>
-				</div>
-				<div class="inputField">
-					<div id="participantPreInput" class="preInput"><span class="icon icon-white icon-22 user"></span></div>
-					<input type="text" id="participantInput" placeholder="Participant name / email address"/>
-                    <a href="#"><div id="participantAddButton">+</div></a>
-				</div>
-				<h2>Participants:</h2>
-				<ul id="participantsList">
-					<li><span class="icon icon-22 remove"></span>John Doe</li>
-					<li><span class="icon icon-22 remove"></span>John Doe</li>
-					<li><span class="icon icon-22 remove"></span>John Doe</li>
-				</ul>
-				<a href="test.html"><input type="submit" class="button" value="Add"/></a>
-			</div>
-		</div>
-	</body>
+  <head>
+    <meta charset="utf-8">
+    <title>FairCounts</title>
+    <link href="css/style2.css" rel="stylesheet" media="screen">
+    <link href="css/styleComputer.css" rel="stylesheet" media="screen and (min-width: 920px)">
+    <link href="css/styleTablet.css" rel="stylesheet" media="screen and (max-width: 919px) and (min-width : 480px)">
+    <link href="css/styleSmartphone.css" rel="stylesheet" media="screen and (max-width: 480px)">
+    <link href="css/icons.css" rel="stylesheet" media="screen">
+  </head>
+  <body ng-controller="FairCountsController">
+    <nav>
+      <div id="navContent">
+        <div class="linkList">
+          <div class="link"><span class="icon icon-single icon-white icon-40 home"></span></div>
+          <div class="link"><span class="icon icon-single icon-white icon-40 group"></span></div>
+          <div class="link"><span class="icon icon-single icon-white icon-40 stats"></span></div>
+          <div class="link"><span class="icon icon-single icon-white icon-40 info"></span></div>
+        </div>
+        <div class="user"><span class="name">John Doe</span><span class="icon icon-white icon-20 down"></span></div>
+        <div class="mobileNav"><span class="icon icon-white icon-40 menu"></span></div>
+      </div>
+    </nav>
+    <div id="content">
+      <div class="basicForm" id="addExpense">
+        <h1>Add an expense</h1>
+        <div class="inputField">
+          <div id="groupPreInput" class="preInput"><span class="icon icon-white icon-22 lock"></span></div>
+          <input type="text" id="groupInput" placeholder="Expense name"/>
+        </div>
+        <div class="inputField">
+          <div id="amountPreInput" class="preInput">$</div>
+          <input type="text" id="amountInput" placeholder="Amount ($)"/>
+        </div>
+        <div class="inputField">
+          <div id="isOwedPreInput" class="preInput"><span class="icon icon-white icon-22 user"></span></div>
+          <input type="text" id="isOwedInput" placeholder="Person who paid"/>
+        </div>
+        <h2>Who paid?</h2>
+        <ul id="payerList" class="userList">
+          <li><div id="participantCheckButton" class="checked"><span class="icon icon-22 check"></span></div><div class="participantName">Théotime</div></li>
+          <li><div id="participantCheckButton"><span class="icon icon-22 check"></span></div><div class="participantName">Robert</div></li>
+          <li><div id="participantCheckButton"><span class="icon icon-22 check"></span></div><div class="participantName">Thomas</div></li>
+        </ul>
+        <h2>Who participated?</h2>
+        <ul id="participantsList" class="userList">
+          <li><a href="#"><div id="participantCheckButton"><span class="icon icon-22 check"></span></div></a><div class="participantName">Théotime</div></li>
+          <li><a href="#"><div id="participantCheckButton"><span class="icon icon-22 check"></span></div></a><div class="participantName">Robert</div></li>
+          <li><a href="#"><div id="participantCheckButton"><span class="icon icon-22 check"></span></div></a><div class="participantName">Thomas</div></li>
+        </ul>
+        <a href="test.html"><input type="submit" class="button" value="Add"/></a>
+      </div>
+    </div>
+  </body>
 </html>
