@@ -8,7 +8,6 @@
   src: url('../fonts/SourceSansPro/SourceSansPro-Regular.eot?') format('eot'), url('../fonts/SourceSansPro/SourceSansPro-Regular.woff') format('woff'), url('../fonts/SourceSansPro/SourceSansPro-Regular.ttf') format('truetype');
 }
 
-
 /*
 * COMMON
 */
@@ -38,6 +37,8 @@ nav .linkList .link {
   position: relative;
   float: left;
   margin: 0 20px 0 20px;
+  text-align: center;
+  color: white;
 }
 
 nav #navContent .user {
@@ -120,6 +121,15 @@ a {
   color: white;
   font-size: 30px;
   text-align: center;
+  -webkit-transition: background 0.3s ease-in;
+  -moz-transition: background 0.3s ease-in;
+  -o-transition: background 0.3s ease-in;
+  -ms-transition: background 0.3s ease-in;
+  transition: background 0.3s ease-in;
+}
+
+#content #newGroup:hover {
+  background: #0087AD;
 }
 
 #content span.emphasize {
@@ -195,16 +205,41 @@ a {
 }
 
 #content .folder .expenses .moreExpenses {
+  border: none;
+}
+
+#content .folder .expenses .moreExpenses a {
   color: #A7A7A7;
   font-family: "SourceSansProUltraLight", "Helvetica Neue", "Helvetica", "Century Gothic", sans-serif;
   font-style: italic;
-  border: none;
+  -webkit-transition: color 0.3s ease-in;
+  -moz-transition: color 0.3s ease-in;
+  -o-transition: color 0.3s ease-in;
+  -ms-transition: color 0.3s ease-in;
+  transition: color 0.3s ease-in;
+}
+
+#content .folder .expenses .moreExpenses a:hover {
+  color: #0087AD;
 }
 
 #content .folder .addExpense {
   padding-bottom: 9px;
   text-align: right;
   color: #0087AD;
+}
+
+#content .folder .addExpense span{
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in;
+  -moz-transition: opacity 0.3s ease-in;
+  -o-transition: opacity 0.3s ease-in;
+  -ms-transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
+}
+
+#content .folder .addExpense:hover span{
+  opacity: 1;
 }
 
 #content .folder .addExpense .plusExpense {
