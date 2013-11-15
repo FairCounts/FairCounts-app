@@ -39,6 +39,25 @@ nav .linkList .link {
   margin: 0 20px 0 20px;
   text-align: center;
   color: white;
+  -webkit-transition: top 0.2s ease-in-out;
+  transition: top 0.2s ease-in-out;
+}
+
+nav .linkList .link:hover {
+  top: -10px
+}
+
+nav .linkList .link .linkTitle {
+  position: relative;
+  top: -10px;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in, top 0.2s ease-in-out;
+  transition: opacity 0.3s ease-in, top 0.2s ease-in-out;
+}
+
+nav .linkList .link:hover .linkTitle {
+  top: 0px;
+  opacity: 1;
 }
 
 nav #navContent .user {
@@ -125,9 +144,6 @@ a {
   font-size: 30px;
   text-align: center;
   -webkit-transition: background 0.3s ease-in;
-  -moz-transition: background 0.3s ease-in;
-  -o-transition: background 0.3s ease-in;
-  -ms-transition: background 0.3s ease-in;
   transition: background 0.3s ease-in;
 }
 
