@@ -1,0 +1,97 @@
+#navContent {
+  width: 100%;
+}
+
+#content #rightColumn {
+  float: none;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#content #leftColumn {
+  width: 100%;
+}
+
+nav #navContent .mobileNav {
+  display: block;
+  padding-top: 16px;
+  padding-right: 36px;
+  float: right;
+}
+
+nav .linkList {
+  display: none;
+}
+
+nav #navContent .user {
+  display: none;
+}
+
+/**
+* Main page
+*/
+
+#content  #totalBalance {
+  padding: 0 20px;
+  font-size: 20px;
+}
+
+#content #totalBalance .totBalance {
+  font-size: 30px;
+}
+
+/**
+* Sign up / Sign in forms
+*/
+
+.signInUpForm {
+  padding-bottom: 10px;
+}
+
+.signInUpForm .formSignInUp {
+  float: none;
+  width: 100%;
+}
+
+.signInUpForm.basicForm h1 {
+  margin: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.signInUpForm #socialNetworks {
+  float: none;
+  width: auto;
+  margin-top: 30px;
+  border-left: none;
+  border-top: 1px solid rgb(230, 230, 230);
+}
+
+.signInUpForm #socialNetworks .button {
+  font-size: 16px;
+}
+
+.signInUpForm #socialNetworks .buttonContent {
+  height: 36px;
+}
+
+.signInUpForm #socialNetworks  #facebookSignIn {
+  margin-top: 30px;
+}
+
+#signUpForm #socialNetworks {
+  margin-top: 30px;
+}
+
+/**
+* Forms
+*/
+
+.basicForm h1 {
+  margin: 25px 0 20px 20px;
+  font-size: 30px;
+}
+
+.basicForm h2 {
+  margin: 0 0 0 30px;
+}

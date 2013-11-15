@@ -1,0 +1,7 @@
+parameters:
+#    fair_counts_main.example.class: FairCounts\Bundle\MainBundle\Example
+
+services:
+#    fair_counts_main.example:
+#        class: %fair_counts_main.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

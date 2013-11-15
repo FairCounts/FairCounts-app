@@ -1,3 +1,7 @@
+fair_counts_main:
+    resource: "@FairCountsMainBundle/Resources/config/routing.yml"
+    prefix:   /
+
 fair_counts_user:
     resource: "@FairCountsUserBundle/Resources/config/routing.yml"
     prefix:   /

@@ -17,7 +17,8 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new FOS\UserBundle\FOSUserBundle(),
-            new FairCounts\UserBundle\FairCountsUserBundle()
+            new FairCounts\UserBundle\FairCountsUserBundle(),
+            new FairCounts\MainBundle\FairCountsMainBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

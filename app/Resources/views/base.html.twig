@@ -1,13 +1,31 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<html lang="en" ng-app>
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}FairCount{% endblock %}</title>
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet" media="screen">
+    <link href="{{ asset('css/styleComputer.css') }}" rel="stylesheet" media="screen and (min-width: 920px)">
+    <link href="{{ asset('css/styleTablet.css') }}" rel="stylesheet" media="screen and (max-width: 919px) and (min-width : 480px)">
+    <link href="{{ asset('css/styleSmartphone.css') }}" rel="stylesheet" media="screen and (max-width: 480px)">
+    <link href="{{ asset('css/icons.css') }}" rel="stylesheet" media="screen">
+    {% block stylesheets %}{% endblock %}
+  </head>
+  <body ng-controller="FairCountsController">
+    <nav>
+      <div id="navContent">
+        <div class="linkList">
+          <div class="link"><span class="icon icon-single icon-white icon-40 home"></span><span class="linkTitle">Home</span></div>
+          <div class="link"><span class="icon icon-single icon-white icon-40 group"></span><span class="linkTitle">Groups</span></div>
+          <div class="link"><span class="icon icon-single icon-white icon-40 stats"></span><span class="linkTitle">Stats</span></div>
+          <div class="link"><span class="icon icon-single icon-white icon-40 info"></span><span class="linkTitle">About us</span></div>
+        </div>
+        <div class="user"><span class="name">John Doe</span><span class="icon icon-white icon-20 down"></span></div>
+        <div class="mobileNav"><span class="icon icon-white icon-40 menu"></span></div>
+      </div>
+    </nav>
+    <div id="content">
+      {% block body %}{% endblock %}
+      {% block javascripts %}{% endblock %}
+    </div>
+  </body>
 </html>
