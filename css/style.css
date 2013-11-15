@@ -83,6 +83,9 @@ a {
   color: white;
   font-size: 26px;
   line-height: 70px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 #content #totalBalance.positive {

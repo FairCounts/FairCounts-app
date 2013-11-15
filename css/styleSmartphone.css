@@ -28,6 +28,19 @@ nav #navContent .user {
 }
 
 /**
+ * Main page
+ */
+
+#content  #totalBalance {
+  padding: 0 20px;
+  font-size: 20px;
+}
+
+#content #totalBalance .totBalance {
+  font-size: 30px;
+}
+
+/**
  * Sign up / Sign in forms
  */
 
