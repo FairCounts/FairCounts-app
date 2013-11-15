@@ -53,3 +53,20 @@ nav #navContent .user {
     border-left: none;
     border-top: 1px solid rgb(230, 230, 230);
 }
+
+/**
+ * Forms
+ */
+
+.basicForm h1 {
+  margin: 25px 0 20px 20px;
+  font-size: 30px;
+}
+
+.basicForm h2 {
+  margin: 0 0 0 30px;
+}
+
+/**
+ * Add Expense
+ */

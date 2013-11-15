@@ -385,7 +385,7 @@ a {
   position: relative;
   max-width: 400px;
   margin: auto;
-  padding: 10px;
+  padding: 20px;
   padding-bottom: 50px;
   background: white;
   -moz-border-radius: 15px;
@@ -395,11 +395,12 @@ a {
 
 .basicForm h1 {
   margin: 25px 0 20px 60px;
+  font-size: 36px;
   color: #434343;
 }
 
 .basicForm h2 {
-  margin: 0 45px;
+  margin: 0 70px;
   padding: 0 0 10px;
   font-size: 22px;
   color: #434343;
@@ -408,7 +409,7 @@ a {
 .basicForm  input[type=text], .basicForm  input[type=password], .basicForm  input[type=email] {
   display: block;
   position: absolute;
-  width: 230px;
+  right: 0;
   height: 40px;
   padding: 0 0 0 10px;
   left: 40px;
@@ -447,8 +448,8 @@ a {
 
 .basicForm .inputField {
   position: relative;
+  max-width: 280px;
   height: 40px;
-  width: 280px;
   margin: auto;
   margin-bottom: 20px;
 }
@@ -459,7 +460,8 @@ a {
 
 .basicForm .button {
   display: block;
-  width: 280px;
+  width: 100%;
+  max-width: 280px;
   height: 50px;
   margin: auto;
   background: #0087AD;
@@ -713,7 +715,7 @@ a {
 
 #addExpense .userList {
   list-style-type: none;
-  width: 280px;
+  max-width: 280px;
   margin: auto;
   padding: 0 0 20px;
 }
@@ -725,10 +727,11 @@ a {
 }
 
 #addExpense .userList li .participantName {
+  position: relative;
   background: #F2F2F2;
-  width: 215px;
   height: 29px;
   padding: 11px 10px 0;
+  margin-right: 45px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
