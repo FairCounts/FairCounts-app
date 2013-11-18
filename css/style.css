@@ -385,6 +385,7 @@ a {
   position: relative;
   max-width: 400px;
   margin: auto;
+  margin-bottom: 20px;
   padding: 20px;
   padding-bottom: 50px;
   background: white;

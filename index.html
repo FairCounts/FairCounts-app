@@ -1,60 +1,116 @@
 <!DOCTYPE html>
 <html lang="en" ng-app>
-    <head>
-        <meta charset="utf-8">
-        <title>FairCounts</title>
-        <link href="css/style.css" rel="stylesheet" media="screen">
-        <link href="css/styleComputer.css" rel="stylesheet" media="screen and (min-width: 920px)">
-        <link href="css/styleTablet.css" rel="stylesheet" media="screen and (max-width: 919px) and (min-width : 480px)">
-        <link href="css/styleSmartphone.css" rel="stylesheet" media="screen and (max-width: 480px)">
-        <link href="css/icons.css" rel="stylesheet" media="screen">
-    </head>
-    <body ng-controller="FairCountsController">
-        <nav>
-            <div id="navContent">
-                <div class="linkList">
-                    <div class="link"><span class="icon icon-single icon-white icon-40 home"></span><span class="linkTitle">Home</span></div>
-                    <div class="link"><span class="icon icon-single icon-white icon-40 group"></span><span class="linkTitle">Groups</span></div>
-                    <div class="link"><span class="icon icon-single icon-white icon-40 stats"></span><span class="linkTitle">Stats</span></div>
-                    <div class="link"><span class="icon icon-single icon-white icon-40 info"></span><span class="linkTitle">About us</span></div>
-                </div>
-                <div class="user"><span class="name">John Doe</span><span class="icon icon-white icon-20 down"></span></div>
-                <div class="mobileNav"><span class="icon icon-white icon-40 menu"></span></div>
-            </div>
-        </nav>
-        <div id="content">
-            <div id="totalBalance" class="positive"><span class="totBalance">+15.20$</span><span>Total balance</span></div>
-            <div id="rightColumn">
-                <div class="stats"></div>
-            </div>
-            <div id="leftColumn">
-                <a href="#"><div id="newGroup"><span class="emphasize">+</span> New group</div></a>
-                <div class="folder">
-                    <div class="positive folderBalance">
-                        <span class="folBalance">+5.03$</span>
-                        <span class="folTitle">John's Birthday</span>
-                    </div>
-                    <ul class="expenses">
-                        <li><span class="expBalance negative">-10$</span>Presents</li>
-                        <li><span class="expBalance positive">+13$</span>Food</li>
-                        <li class="moreExpenses"><a href="#">2 more ...</a></li>
-                    </ul>
-                    <a href="#"><div class="addExpense"><span>Add an expense</span> <div class="plusExpense">+</div></div></a>
-                </div>
-                <div class="folder">
-                    <div class="negative folderBalance">
-                        <span class="folBalance">-8.28$</span>
-                        <span class="folTitle">New York</span>
-                    </div>
-                    <ul class="expenses">
-                        <li><span class="expBalance negative">-10$</span>Shake Shack</li>
-                        <li><span class="expBalance positive">+13$</span>Empire State Building</li>
-                        <li class="moreExpenses"><a href="#">4 more ...</a></li>
-                    </ul>
-                    <a href="#"><div class="addExpense"><span>Add an expense</span> <div class="plusExpense">+</div></div></a>
-                </div>
-            </div>
-            
+  <head>
+    <meta charset="utf-8">
+    <title>FairCounts</title>
+    <link href="css/style.css" rel="stylesheet" media="screen">
+    <link href="css/styleComputer.css" rel="stylesheet" media="screen and (min-width: 920px)">
+    <link href="css/styleTablet.css" rel="stylesheet" media="screen and (max-width: 919px) and (min-width : 480px)">
+    <link href="css/styleSmartphone.css" rel="stylesheet" media="screen and (max-width: 480px)">
+    <link href="css/icons.css" rel="stylesheet" media="screen">
+  </head>
+  <body ng-controller="FairCountsController">
+    <nav>
+      <div id="navContent">
+        <div class="linkList">
+          <div class="link"><span class="icon icon-single icon-white icon-40 home"></span><span class="linkTitle">Home</span></div>
+          <div class="link"><span class="icon icon-single icon-white icon-40 group"></span><span class="linkTitle">Groups</span></div>
+          <div class="link"><span class="icon icon-single icon-white icon-40 stats"></span><span class="linkTitle">Stats</span></div>
+          <div class="link"><span class="icon icon-single icon-white icon-40 info"></span><span class="linkTitle">About us</span></div>
         </div>
-    </body>
+        <div class="user"><span class="name">John Doe</span><span class="icon icon-white icon-20 down"></span></div>
+        <div class="mobileNav"><span class="icon icon-white icon-40 menu"></span></div>
+      </div>
+    </nav>
+    <!--
+    Main page
+    -->
+    <div id="content">
+      <div id="totalBalance" class="positive"><span class="totBalance">+15.20$</span><span>Total balance</span></div>
+      <div id="rightColumn">
+        <div class="stats"></div>
+      </div>
+      <div id="leftColumn">
+        <a href="#" ng-click="showAddNewGroup = ! showAddNewGroup"><div id="newGroup"><span class="emphasize">+</span> New group</div></a>
+        <div class="folder">
+          <div class="positive folderBalance">
+            <span class="folBalance">+5.03$</span>
+            <span class="folTitle">John's Birthday</span>
+          </div>
+          <ul class="expenses">
+            <li><span class="expBalance negative">-10$</span>Presents</li>
+            <li><span class="expBalance positive">+13$</span>Food</li>
+            <li class="moreExpenses"><a href="#">2 more ...</a></li>
+          </ul>
+          <a href="#"><div class="addExpense"><span>Add an expense</span> <div class="plusExpense">+</div></div></a>
+        </div>
+        <div class="folder">
+          <div class="negative folderBalance">
+            <span class="folBalance">-8.28$</span>
+            <span class="folTitle">New York</span>
+          </div>
+          <ul class="expenses">
+            <li><span class="expBalance negative">-10$</span>Shake Shack</li>
+            <li><span class="expBalance positive">+13$</span>Empire State Building</li>
+            <li class="moreExpenses"><a href="#">4 more ...</a></li>
+          </ul>
+          <a href="#"><div class="addExpense"><span>Add an expense</span> <div class="plusExpense">+</div></div></a>
+        </div>
+      </div>
+    </div>
+    <!--
+    Create a new group
+    -->
+    <div class="basicForm withParticipants larger" id="addGroup" ng-show="showAddNewGroup">
+      <h1>Create a group</h1>
+      <div class="inputField">
+        <div id="groupPreInput" class="preInput"><span class="icon icon-white icon-22 group"></span></div>
+        <input type="text" id="groupInput" placeholder="Group name"/>
+      </div>
+      <form ng-submit="addParticipant()">
+      <div class="inputField participantField">
+        <div id="participantPreInput" class="preInput"><span class="icon icon-white icon-22 user"></span></div>
+        <input type="text" id="participantInput" placeholder="Participant name / email address" ng-model="participantName"/>
+        <input type="submit" id="participantAddButton" value="+"></input>
+      </div>
+      </form>
+      <!--<h2>Participants:</h2>-->
+      <ul id="participantsList">
+        <li><a href="#"><div id="participantRemoveButton">-</div></a><div class="participantName">John Doe With A Very Very Very Very Very Long Name Seriously</div></li>
+        <li><a href="#"><div id="participantRemoveButton">-</div></a><div class="participantName">John Doe</div></li>
+        <li><a href="#"><div id="participantRemoveButton">-</div></a><div class="participantName">John Doe</div></li>
+        <li ng-repeat="participant in participants">
+          <a href="#"><div id="participantRemoveButton">-</div></a><div class="participantName">{{participants.name}}</div>
+        </li>
+      </ul>
+      <a href="index.html"><input type="submit" class="button" value="Create"/></a>
+    </div>
+    <!--
+    Add an expense
+    -->
+    <div class="basicForm" id="addExpense">
+      <h1>Add an expense</h1>
+      <div class="inputField">
+        <div id="groupPreInput" class="preInput"><span class="icon icon-white icon-22 lock"></span></div>
+        <input type="text" id="groupInput" placeholder="Expense name"/>
+      </div>
+      <div class="inputField">
+        <div id="amountPreInput" class="preInput">$</div>
+        <input type="text" id="amountInput" placeholder="Amount ($)"/>
+      </div>
+      <h2>Who paid?</h2>
+      <ul id="payerList" class="userList">
+        <li><div id="participantCheckButton" class="checked"><span class="icon icon-22 check"></span></div><div class="participantName">Théotime</div></li>
+        <li><div id="participantCheckButton"><span class="icon icon-22 check"></span></div><div class="participantName">Robert</div></li>
+        <li><div id="participantCheckButton"><span class="icon icon-22 check"></span></div><div class="participantName">Thomas</div></li>
+      </ul>
+      <h2>Who participated?</h2>
+      <ul id="participantsList" class="userList">
+        <li><a href="#"><div id="participantCheckButton"><span class="icon icon-22 check"></span></div></a><div class="participantName">Théotime</div></li>
+        <li><a href="#"><div id="participantCheckButton"><span class="icon icon-22 check"></span></div></a><div class="participantName">Robert</div></li>
+        <li><a href="#"><div id="participantCheckButton"><span class="icon icon-22 check"></span></div></a><div class="participantName">Thomas</div></li>
+      </ul>
+      <a href="index.html"><input type="submit" class="button" value="Add"/></a>
+    </div>
+  </body>
 </html>
