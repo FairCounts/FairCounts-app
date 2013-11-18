@@ -347,15 +347,15 @@ a {
 }
 
 #content #editButtonHeader {
-  float: right;
-  height: 50px;
-  padding: 20px 30px 0 30px;
-  margin-bottom: -20px -30px 30px 0;
-  background: #D9C099;
-  line-height: 30px;
-  color: white;
-  text-align: center;
-  font-size: 35px;
+    float: right;
+    height: 50px;
+    padding: 20px 25px 0 25px;
+    margin: -20px -30px 0px 0px;
+    background: #D9C099;
+    line-height: 30px;
+    color: white;
+    text-align: center;
+    font-size: 35px;
 }
 
 #content #listFormat{
