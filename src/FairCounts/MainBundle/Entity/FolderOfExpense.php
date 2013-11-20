@@ -31,6 +31,7 @@ class FolderOfExpense
 	
 	/**
 	 * @var string
+	 * @ORM\Column(type="string")
 	 */
 	private $status; 
 	

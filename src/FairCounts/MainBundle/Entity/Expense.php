@@ -30,17 +30,20 @@ class Expense
     private $userWhoOweMoney;
 	
 	/**
-	 * @var integer
+	 * @var float
+	 * @ORM\Column(type="float")
 	 */
 	private $amount; 
 	
 	/**
 	 * @var \DateTime
+	 * @ORM\Column(type="date")
 	 */
 	private $date; 
 	
 	/**
 	 * @var string
+	 * @ORM\Column(type="string")
 	 */
 	private $label; 
 
@@ -54,16 +57,31 @@ class Expense
         return $this->id;
     }
 	
+	/**
+     * Get Amount
+     *
+     * @return float 
+     */
 	public function getAmount()
 	{
 		return $this->amount;
 	}
 	
+	/**
+     * Get Date
+     *
+     * @return \DateTime 
+     */
 	public function getDate()
 	{
 		return $this->date;
 	}
 	
+	/**
+     * Get Label
+     *
+     * @return string
+     */
 	public function getLabel()
 	{
 		return $this->label;
