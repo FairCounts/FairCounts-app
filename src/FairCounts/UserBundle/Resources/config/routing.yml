@@ -1,3 +1,11 @@
 fair_counts_user_homepage:
     pattern:  /user/{name}
     defaults: { _controller: FairCountsUserBundle:Default:index }
+
+fair_counts_user_homagepage2:
+    pattern:  /userTest/{name}
+    defaults: { _controller: FairCountsUserBundle:Default:test }
+
+fair_counts_user_homagepage3:
+    pattern:  /createUser/{name}
+    defaults: { _controller: FairCountsUserBundle:Default:addUser }
