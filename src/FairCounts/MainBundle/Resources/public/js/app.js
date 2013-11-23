@@ -14,6 +14,10 @@ fairCounts.config(function ($routeProvider) {
       .when('/addExpense', {
         controller: 'addExpenseController',
         templateUrl: './partialViews/addExpense.html.twig'
+      })
+      .when('/group', {
+        controller: 'groupController',
+        templateUrl: './partialViews/group.html.twig'
       });
 
 });
@@ -61,6 +65,9 @@ controllers.newGroupController = function ($scope) {
 };
 
 controllers.addExpenseController = function ($scope) {
+};
+
+controllers.groupController = function ($scope) {
 };
 
 fairCounts.controller(controllers);

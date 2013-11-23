@@ -35,6 +35,10 @@
   font-size: 22px;
 }
 
+.icon-30:before {
+  font-size: 30px;
+}
+
 .icon-40:before {
   font-size: 40px;
 }

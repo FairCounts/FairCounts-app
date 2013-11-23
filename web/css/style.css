@@ -283,36 +283,103 @@ a {
  * GROUP PAGE
  */
 
-#content #groupName {
-  width: 510px;
-  height: 50px;
-  padding: 20px 30px 0 30px;
-  margin-bottom: 30px;
-  color: black;
-  font-size: 26px;
-  background: white;
+.groupView {
+  width: 900px;
+  margin: auto;
+  padding: 30px 10px;
 }
 
-#content #expenseHeader {
-  height: 50px;
-  padding: 20px 30px 0 30px;
+.groupView #groupName {
+  width: 520px;
+  height: 70px;
+  padding: 0 30px;
   margin-bottom: 30px;
-  margin-right: 330px;
+  background: white;
+  line-height: 70px;
+  color: #434343;
+  font-size: 26px;
+}
+
+.groupView #groupBalance {
+  float: right;
+  width: 240px;
+  height: 70px;
+  padding: 0 30px;
+  line-height: 70px;
   color: white;
-  font-size: 26px;
+  font-size: 40px;
+  text-align: right;
+}
+
+.groupView #groupBalance.positive {
+  background: #1FCC56;
+}
+
+.groupView #groupBalance.negative {
+  background: #F05348;
+}
+
+.groupView #groupExpenses {
+  width: 580px;
+}
+
+.groupView #expenseHeader {
+  height: 70px;
+  padding: 0 0 0 30px;
   background: #434343;
-}
-
-#content #listBackground {
-  height: 250px;
-  padding: 20px 30px 0 30px;
-  margin: -30px 330px 30px 0;
-  background: white;
-  color: black;
+  color: white;
+  line-height: 70px;
   font-size: 26px;
 }
 
-#content #participantsHeader {
+.groupView #expensesList {
+  padding: 20px 30px;
+  background: white;
+  color: #434343;
+  font-size: 26px;
+}
+
+.groupView #expensesList ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  font-size: 20px;
+}
+
+.groupView #expensesList li {
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.groupView #expensesList li:last-child {
+  border: none; 
+}
+
+.groupView #expensesList .detailsExpense {
+  float: right;
+  font-size: 18px;
+}
+
+.groupView .expenseAmount.positive {
+  color: #1FCC56;
+}
+
+.groupView .expenseAmount.negative {
+  color: #F05348;
+}
+
+.groupView .expenseDate {
+  margin: 0 15px;
+}
+
+.groupView #expensesList .group {
+  margin-right: 2px;
+}
+
+.groupView #participantsHeader {
   float: right;
   width: 228px;
   height: 50px;
@@ -324,7 +391,45 @@ a {
   font-size: 26px;
 }
 
-#content #addButtonFooter {
+.groupView #addButtonHeader {
+  float: right;
+  width: 70px;
+  height: 70px;
+  padding: 0;
+  background: #0087AD;
+  line-height: 70px;
+  color: white;
+  font-size: 40px;
+  text-align: center;
+}
+
+.groupView #editButtonHeader {
+  float: right;
+  width: 70px;
+  height: 70px;
+  padding: 0;
+  margin-bottom: -20px -30px 30px 0;
+  background: #D9C099;
+  line-height: 70px;
+  color: white;
+  text-align: center;
+}
+
+.groupView #listFormat{
+  list-style-type: none;
+  font-size: small;
+}
+
+.groupView #participantsListBackground {
+  height: 320px;
+  padding: 20px 30px 0 30px;
+  margin: 0 0 30px 0;
+  background: white;
+  color: black;
+  font-size: 26px;
+}
+
+.groupView #addButtonFooter {
   float: right;
   width: 228px;
   height: 50px;
@@ -334,47 +439,6 @@ a {
   color: white;
   font-size: 26px;
   text-align: center;
-}
-
-#content #addButtonHeader {
-  float: right;
-  height: 50px;
-  padding: 20px 30px 0 30px;
-  margin: -20px 0 30px 0;
-  background: #0087AD;
-  color: white;
-  font-size: 26px;
-}
-
-#content #editButtonHeader {
-  float: right;
-  height: 50px;
-  padding: 20px 30px 0 30px;
-  margin-bottom: -20px -30px 30px 0;
-  background: #D9C099;
-  line-height: 30px;
-  color: white;
-  text-align: center;
-  font-size: 35px;
-}
-
-#content #listFormat{
-  list-style-type: none;
-  font-size: small;
-}
-
-#content #participantsListBackground {
-  height: 320px;
-  padding: 20px 30px 0 30px;
-  margin: 0 0 30px 0;
-  background: white;
-  color: black;
-  font-size: 26px;
-}
-
-#content #nameSpace .nameSpace {
-  float: right;
-  font-size: 40px;
 }
 
 /*

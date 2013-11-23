@@ -1,0 +1,60 @@
+<!--
+Display the expenses linked to a group
+-->
+<div class="groupView" ng-controller="groupController">
+  <div id="groupBalance" class="positive">+5.03$</div>
+  <div id="groupName">John's Birthday</div>
+  
+  <!--<div id="rightGroupColumn"> 
+    <div id="participantsHeader"><span class="nameSpace">Participants</span>
+      <div id="editButtonHeader"><span class="icon icon-single icon-white draw"></span></div>
+    </div>
+    <div id="participantsListBackground"><span class="nameSpace"></span></div>
+    <div id="addButtonFooter"><span>+</span></div>           
+  </div>-->   
+  
+  <div id="groupExpenses">
+      
+    <div id="expenseHeader">
+      Expenses
+      <div id="editButtonHeader"><span class="icon icon-single icon-white icon-30 draw"></span></div>
+      <div id="addButtonHeader"><span>+</span></div>
+    </div>
+    <div id="expensesList">
+      <ul>
+        <li>
+          <span class="detailsExpense">
+            <span class="expenseAmount negative">-10$</span>
+            <span class="expenseDate">09/28/2013</span>
+            <span class="icon icon-darkgrey icon-22 group"></span>4
+          </span>
+          Present
+        </li>
+        <li>
+          <span class="detailsExpense">
+            <span class="expenseAmount positive">+13$</span>
+            <span class="expenseDate">09/27/2013</span>
+            <span class="icon icon-darkgrey icon-22 group"></span>4
+          </span>
+          Food
+        </li>
+        <li>
+          <span class="detailsExpense">
+            <span class="expenseAmount negative">-4.32$</span>
+            <span class="expenseDate">09/27/2013</span>
+            <span class="icon icon-darkgrey icon-22 group"></span>4
+          </span>
+          Drinks
+        </li>
+        <li>
+          <span class="detailsExpense">
+            <span class="expenseAmount positive">+3.8$</span>
+            <span class="expenseDate">09/26/2013</span>
+            <span class="icon icon-darkgrey icon-22 group"></span>4
+          </span>
+          Balloons
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
