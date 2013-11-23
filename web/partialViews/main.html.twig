@@ -1,13 +1,13 @@
 <!--
 Main page
 -->
-<div id="content">
+<div id="content" ng-controller="mainController">
   <div id="totalBalance" class="positive"><span class="totBalance">+15.20$</span><span>Total balance</span></div>
   <div id="rightColumn">
     <div class="stats"></div>
   </div>
   <div id="leftColumn">
-    <a href="#" ng-click="showAddNewGroup = ! showAddNewGroup"><div id="newGroup"><span class="emphasize">+</span> New group</div></a>
+    <a href="#"><div id="newGroup"><span class="emphasize">+</span> New group</div></a>
     <div class="folder">
       <div class="positive folderBalance">
         <span class="folBalance">+5.03$</span>
@@ -18,7 +18,7 @@ Main page
         <li><span class="expBalance positive">+13$</span>Food</li>
         <li class="moreExpenses"><a href="#">2 more ...</a></li>
       </ul>
-      <a href="#" ng-click="showAddNewExpense = ! showAddNewExpense"><div class="addExpense"><span>Add an expense</span> <div class="plusExpense">+</div></div></a>
+      <a href="#"><div class="addExpense"><span>Add an expense</span> <div class="plusExpense">+</div></div></a>
     </div>
     <div class="folder">
       <div class="negative folderBalance">
@@ -30,7 +30,7 @@ Main page
         <li><span class="expBalance positive">+13$</span>Empire State Building</li>
         <li class="moreExpenses"><a href="#">4 more ...</a></li>
       </ul>
-      <a href="#" ng-click="showAddNewExpense = ! showAddNewExpense"><div class="addExpense"><span>Add an expense</span> <div class="plusExpense">+</div></div></a>
+      <a href="#"><div class="addExpense"><span>Add an expense</span> <div class="plusExpense">+</div></div></a>
     </div>
   </div>
 </div>

@@ -1,0 +1,23 @@
+<!--
+Create a new group
+-->
+<div class="basicForm withParticipants larger" id="addGroup" ng-controller="newGroupController">
+  <h1>Create a group</h1>
+  <div class="inputField">
+    <div id="groupPreInput" class="preInput"><span class="icon icon-white icon-22 group"></span></div>
+    <input type="text" id="groupInput" placeholder="Group name"/>
+  </div>
+  <div class="inputField participantField">
+    <div id="participantPreInput" class="preInput"><span class="icon icon-white icon-22 user"></span></div>
+    <form ng-submit="addParticipant()">
+      <input type="text" id="participantInput" placeholder="Participant name / email address" ng-model="participantName"/>
+      <input type="submit" id="participantAddButton" value="+"></input>
+    </form>
+  </div>
+  <ul id="participantsList">
+    <li ng-repeat="participant in participants">
+      <button id="participantRemoveButton" ng-click="removeParticipant($index)"/>-</button><div class="participantName">{% verbatim %}{{participant.name}}{% endverbatim %}</div>
+    </li>
+  </ul>
+  <a href="index.html"><input type="submit" class="button" value="Create"/></a>
+</div>

@@ -1,4 +1,18 @@
-var fairCounts = angular.module('FairCounts', []);
+var fairCounts = angular.module('FairCounts', ['ngRoute']);
+
+fairCounts.config(function ($routeProvider) {
+
+    $routeProvider
+      .when('/', {
+        controller: 'mainController',
+        templateUrl: './partialViews/main.html.twig'
+      })
+      .when('/newGroup', {
+        controller: 'newGroupController',
+        templateUrl: './partialViews/newGroup.html.twig'
+      });
+
+});
 
 var controllers = {};
 

@@ -1,0 +1,27 @@
+<!--
+Add an expense
+-->
+<div class="basicForm" id="addExpense" ng-controller="addExpenseController">
+  <h1>Add an expense</h1>
+  <div class="inputField">
+    <div id="groupPreInput" class="preInput"><span class="icon icon-white icon-22 lock"></span></div>
+    <input type="text" id="groupInput" placeholder="Expense name"/>
+  </div>
+  <div class="inputField">
+    <div id="amountPreInput" class="preInput">$</div>
+    <input type="text" id="amountInput" placeholder="Amount ($)"/>
+  </div>
+  <h2>Who paid?</h2>
+  <ul id="payerList" class="userList">
+    <li><div id="participantCheckButton" class="checked"><span class="icon icon-22 check"></span></div><div class="participantName">Théotime</div></li>
+    <li><div id="participantCheckButton"><span class="icon icon-22 check"></span></div><div class="participantName">Robert</div></li>
+    <li><div id="participantCheckButton"><span class="icon icon-22 check"></span></div><div class="participantName">Thomas</div></li>
+  </ul>
+  <h2>Who participated?</h2>
+  <ul id="participantsList" class="userList">
+    <li><a href="#"><div id="participantCheckButton"><span class="icon icon-22 check"></span></div></a><div class="participantName">Théotime</div></li>
+    <li><a href="#"><div id="participantCheckButton"><span class="icon icon-22 check"></span></div></a><div class="participantName">Robert</div></li>
+    <li><a href="#"><div id="participantCheckButton"><span class="icon icon-22 check"></span></div></a><div class="participantName">Thomas</div></li>
+  </ul>
+  <a href="index.html"><input type="submit" class="button" value="Add"/></a>
+</div>
