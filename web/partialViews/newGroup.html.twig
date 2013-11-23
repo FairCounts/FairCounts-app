@@ -16,7 +16,7 @@ Create a new group
   </div>
   <ul id="participantsList">
     <li ng-repeat="participant in participants">
-      <button id="participantRemoveButton" ng-click="removeParticipant($index)"/>-</button><div class="participantName">{% verbatim %}{{participant.name}}{% endverbatim %}</div>
+      <button id="participantRemoveButton" ng-click="removeParticipant($index)"/>-</button><div class="participantName">{{participant.name}}</div>
     </li>
   </ul>
   <a href="index.html"><input type="submit" class="button" value="Create"/></a>

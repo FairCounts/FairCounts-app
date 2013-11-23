@@ -10,6 +10,10 @@ fairCounts.config(function ($routeProvider) {
       .when('/newGroup', {
         controller: 'newGroupController',
         templateUrl: './partialViews/newGroup.html.twig'
+      })
+      .when('/addExpense', {
+        controller: 'addExpenseController',
+        templateUrl: './partialViews/addExpense.html.twig'
       });
 
 });
