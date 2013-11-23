@@ -27,6 +27,34 @@ nav #navContent .user {
   display: none;
 }
 
+ul.mobileNavList {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 80px;
+  margin: 0;
+  padding: 10px 0 0 0;
+  list-style-type: none;
+  color: white;
+  opacity: 0;
+}
+
+nav:hover ul.mobileNavList, ul.mobileNavList:hover {
+  display: block;
+  opacity: 1;
+}
+
+ul.mobileNavList li {
+  height: 40px;
+  background: #434343;
+  line-height: 40px;
+  text-align: center;
+  margin-bottom: 4px;
+  padding: 0px 20px;
+  border-bottom: 1px solid black;
+  box-shadow: 0 0 3px black;
+}
+
 /**
 * Main page
 */

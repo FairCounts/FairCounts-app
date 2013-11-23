@@ -9,7 +9,6 @@
     <link href="{{ asset('css/styleSmartphone.css') }}" rel="stylesheet" media="screen and (max-width: 480px)">
     <link href="{{ asset('css/icons.css') }}" rel="stylesheet" media="screen">
     <script src="{{ asset('js/angular.min.js') }}"></script>
-    <script src="{{ asset('js/app.js') }}"></script>
     {% block stylesheets %}{% endblock %}
   </head>
   <body ng-controller="FairCountsController">
@@ -23,6 +22,11 @@
         </div>
         <div class="user"><span class="name">John Doe</span><span class="icon icon-white icon-20 down"></span></div>
         <div class="mobileNav"><span class="icon icon-white icon-40 menu"></span></div>
+        <ul class="mobileNavList">
+          <a><li>Sign In</li></a>
+          <a><li>Sign Up</li></a>
+          <a><li>Log Out</li></a>
+        </ul>
       </div>
     </nav>
     {% block body %}{% endblock %}

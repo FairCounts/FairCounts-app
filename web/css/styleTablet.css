@@ -2,7 +2,15 @@
     width: 100%;
 }
 
+nav #navContent .user {
+  margin-right: 20px;
+}
+
 #content {
     padding: 0;
     margin: 30px 10px;
+}
+
+.mobileNavList {
+  display: none;
 }

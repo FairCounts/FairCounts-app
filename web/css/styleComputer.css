@@ -6,6 +6,10 @@
     width: 900px;
 }
 
+.mobileNavList {
+  display: none;
+}
+
 /**
  * Sign up / Sign in forms
  */

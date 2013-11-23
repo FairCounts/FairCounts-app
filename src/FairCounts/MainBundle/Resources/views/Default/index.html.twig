@@ -1,5 +1,6 @@
 {% extends '::base.html.twig' %}
 {% block body %}
+<div ng-view></div>
 <!--
 Main page
 -->
@@ -87,4 +88,8 @@ Add an expense
   </ul>
   <a href="index.html"><input type="submit" class="button" value="Add"/></a>
 </div>
+{% endblock %}
+
+{% block javascripts %}
+  <script src="{{ asset('bundles/faircountsmain/js/app.js') }}"></script>
 {% endblock %}

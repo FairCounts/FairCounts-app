@@ -1,4 +1,4 @@
-function FairCountsController($scope) {
+function FairCountsController($scope, $location) {
   $scope.participants = [{name: "John Doe With A Very Very Very Very Very Long Name Seriously"}, 
                         {name: "John Doe"},
                         {name: "John Doe"}];
@@ -6,6 +6,7 @@ function FairCountsController($scope) {
   $scope.addParticipant = function() {
     $scope.participants.push({name:$scope.participantName});
     $scope.participantName = '';
+    $location.path('/newGroup');
   };
 
   $scope.removeParticipant = function(index) {
