@@ -293,7 +293,7 @@ a {
   width: 520px;
   height: 70px;
   padding: 0 30px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   background: white;
   line-height: 70px;
   color: #434343;
@@ -379,18 +379,6 @@ a {
   margin-right: 2px;
 }
 
-.groupView #participantsHeader {
-  float: right;
-  width: 228px;
-  height: 50px;
-  padding: 20px 30px 0 30px;
-  margin-bottom: 30px;
-  margin-right: 0px;
-  background: #434343;
-  color: white;
-  font-size: 26px;
-}
-
 .groupView #addButtonHeader {
   float: right;
   width: 70px;
@@ -401,6 +389,15 @@ a {
   color: white;
   font-size: 40px;
   text-align: center;
+  -webkit-transition: background 0.3s ease-in;
+  -moz-transition: background 0.3s ease-in;
+  -o-transition: background 0.3s ease-in;
+  -ms-transition: background 0.3s ease-in;
+  transition: background 0.3s ease-in;
+}
+
+.groupView #addButtonHeader:hover {
+  background: rgb(0, 114, 158);
 }
 
 .groupView #editButtonHeader {
@@ -408,37 +405,82 @@ a {
   width: 70px;
   height: 70px;
   padding: 0;
-  margin-bottom: -20px -30px 30px 0;
   background: #D9C099;
   line-height: 70px;
   color: white;
   text-align: center;
+  -webkit-transition: background 0.3s ease-in;
+  -moz-transition: background 0.3s ease-in;
+  -o-transition: background 0.3s ease-in;
+  -ms-transition: background 0.3s ease-in;
+  transition: background 0.3s ease-in;
 }
 
-.groupView #listFormat{
-  list-style-type: none;
-  font-size: small;
+.groupView #editButtonHeader:hover {
+  background: #B6A282;
 }
 
-.groupView #participantsListBackground {
-  height: 320px;
-  padding: 20px 30px 0 30px;
-  margin: 0 0 30px 0;
-  background: white;
-  color: black;
-  font-size: 26px;
-}
-
-.groupView #addButtonFooter {
+.groupView #groupParticipants {
   float: right;
-  width: 228px;
-  height: 50px;
-  padding: 20px 30px 0 30px;
-  margin: -100px 0 0 0;
-  background: #0087AD;
+  width: 300px;
+  background: white;
+}
+
+.groupView #participantsHeader {
+  height: 70px;
+  padding: 0 0 0 30px;
+  background: #434343;
+  line-height: 70px;
   color: white;
   font-size: 26px;
+}
+
+.groupView #participantsList ul {
+  margin: 0;
+  padding: 10px 20px;
+  list-style-type: none;
+}
+
+.groupView #participantsList li {
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.groupView #participantsList li:last-child {
+  border: none;
+}
+
+.groupView #participantsList li .participantBalance {
+  float: right;
+}
+
+.groupView #participantsList li .participantBalance.positive {
+  color: #1FCC56;
+}
+
+.groupView #participantsList li .participantBalance.negative {
+  color: #F05348;
+}
+
+.groupView #addParticipant {
+  height: 70px;
+  background: #0087AD;
+  color: white;
+  line-height: 70px;
+  font-size: 40px;
   text-align: center;
+  -webkit-transition: background 0.3s ease-in;
+  -moz-transition: background 0.3s ease-in;
+  -o-transition: background 0.3s ease-in;
+  -ms-transition: background 0.3s ease-in;
+  transition: background 0.3s ease-in;
+}
+
+.groupView #addParticipant:hover {
+  background: rgb(0, 114, 158);
 }
 
 /*
