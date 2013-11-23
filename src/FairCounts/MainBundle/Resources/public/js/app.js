@@ -1,18 +1,8 @@
-function FairCountsController($scope, $location) {
-  $scope.participants = [{name: "John Doe With A Very Very Very Very Very Long Name Seriously"}, 
-                        {name: "John Doe"},
-                        {name: "John Doe"}];
-  
-  $scope.addParticipant = function() {
-    $scope.participants.push({name:$scope.participantName});
-    $scope.participantName = '';
-    $location.path('/newGroup');
-  };
+var fairCounts = angular.module('FairCounts', []);
 
-  $scope.removeParticipant = function(index) {
-    $scope.participants.splice( $scope.participants.indexOf(index), 1 );
-  };
-  
+var controllers = {};
+
+controllers.mainController = function ($scope) {
   $scope.expenses = [
     {
       name: "New York",
@@ -33,4 +23,26 @@ function FairCountsController($scope, $location) {
       paid: false
     }
   ];
-}
+};
+
+controllers.newGroupController = function ($scope) {
+  $scope.participants = [{name: "John Doe With A Very Very Very Very Very Long Name Seriously"}, 
+                        {name: "John Doe"},
+                        {name: "John Doe"}];
+  
+  $scope.addParticipant = function() {
+    if ($scope.participantName && $scope.participantName !== "") {
+      $scope.participants.push({name:$scope.participantName});
+      $scope.participantName = '';
+    }
+  };
+
+  $scope.removeParticipant = function(index) {
+    $scope.participants.splice( $scope.participants.indexOf(index), 1 );
+  };
+};
+
+controllers.addExpenseController = function ($scope) {
+};
+
+fairCounts.controller(controllers);

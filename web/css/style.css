@@ -662,7 +662,8 @@ a {
   text-align: center;
   background: #F05348;
   color: white;
-  font-size: 30px;
+  font-size: 24px;
+  border: none;
   -webkit-transition: background 0.3s ease-in;
   -moz-transition: background 0.3s ease-in;
   -o-transition: background 0.3s ease-in;
