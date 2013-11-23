@@ -68,6 +68,35 @@ controllers.addExpenseController = function ($scope) {
 };
 
 controllers.groupController = function ($scope) {
+  $scope.participants = [
+    {id: 1, name: "Albert Doe", balance: -10}, 
+    {id: 2, name: "Robert Doe", balance: 9.25},
+    {id: 23, name: "John Smith", balance: -1.45},
+    {id: 45, name: "Liza Brown", balance: -10}
+  ];
+  
+  $scope.expenses = [
+    {name: "Present", balance: -10, date: "09/28/2013", participants: [1, 2, 45, 23]},
+    {name: "Food", balance: 13, date: "09/27/2013", participants: [1, 2, 45, 23]},
+    {name: "Drinks", balance: -4.32, date: "09/27/2013", participants: [1, 2, 45, 23]},
+    {name: "Balloons", balance: 3.8, date: "09/26/2013", participants: [1, 2, 45, 23]},
+  ]
+  
+  $scope.positiveBalance = function (participant) {
+    if (participant.balance >= 0) {
+      return "positive";
+    } else {
+      return "negative";
+    }
+  };
+    
+  $scope.positiveExpenseBalance = function (expense) {
+    if (expense.balance >= 0) {
+      return "positive";
+    } else {
+      return "negative";
+    }
+  };
 };
 
 fairCounts.controller(controllers);

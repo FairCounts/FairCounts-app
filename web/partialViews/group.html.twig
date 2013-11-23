@@ -13,10 +13,7 @@ Display the expenses linked to a group
     </div>
     <div id="participantsList">
       <ul>
-        <li><span class="participantBalance negative">-10$</span>Albert Doe</li>
-        <li><span class="participantBalance positive">+9.25$</span>Robert Doe</li>
-        <li><span class="participantBalance negative">-1.45$</span>John Smith</li>
-        <li><span class="participantBalance negative">-10$</span>Liza Brown</li>
+        <li ng-repeat="participant in participants"><span class="participantBalance {{ positiveBalance(participant) }}">{{ participant.balance }}$</span>{{ participant.name }}</li>
       </ul>
       <div id="addParticipant">+</div>
     </div>
@@ -31,37 +28,13 @@ Display the expenses linked to a group
     </div>
     <div id="expensesList">
       <ul>
-        <li>
+        <li ng-repeat="expense in expenses | orderBy:date">
           <span class="detailsExpense">
-            <span class="expenseAmount negative">-10$</span>
-            <span class="expenseDate">09/28/2013</span>
-            <span class="icon icon-darkgrey icon-22 group"></span>4
+            <span class="expenseAmount {{ positiveExpenseBalance(expense) }}">{{ expense.balance }}$</span>
+            <span class="expenseDate">{{ expense.date}}</span>
+            <span class="icon icon-darkgrey icon-22 group"></span>{{ expense.participants.length }}
           </span>
-          Present
-        </li>
-        <li>
-          <span class="detailsExpense">
-            <span class="expenseAmount positive">+13$</span>
-            <span class="expenseDate">09/27/2013</span>
-            <span class="icon icon-darkgrey icon-22 group"></span>4
-          </span>
-          Food
-        </li>
-        <li>
-          <span class="detailsExpense">
-            <span class="expenseAmount negative">-4.32$</span>
-            <span class="expenseDate">09/27/2013</span>
-            <span class="icon icon-darkgrey icon-22 group"></span>4
-          </span>
-          Drinks
-        </li>
-        <li>
-          <span class="detailsExpense">
-            <span class="expenseAmount positive">+3.8$</span>
-            <span class="expenseDate">09/26/2013</span>
-            <span class="icon icon-darkgrey icon-22 group"></span>4
-          </span>
-          Balloons
+          {{ expense.name }}
         </li>
       </ul>
     </div>
