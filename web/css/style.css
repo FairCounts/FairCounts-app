@@ -41,6 +41,7 @@ nav .linkList .link {
   color: white;
   -webkit-transition: top 0.2s ease-in-out;
   transition: top 0.2s ease-in-out;
+  cursor: pointer;
 }
 
 nav .linkList .link:hover {
@@ -88,6 +89,7 @@ a {
 
 button {
   outline: none;
+  cursor: pointer;
 }
 
 /*
@@ -302,12 +304,30 @@ button {
   line-height: 70px;
   color: #434343;
   font-size: 26px;
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.groupView #groupName #editGroupNameIcon {
+  float:right;
+  opacity: 0;
+  -webkit-transition: opacity 0.1s ease-in;
+  -moz-transition: opacity 0.1s ease-in;
+  -o-transition: opacity 0.1s ease-in;
+  -ms-transition: opacity 0.1s ease-in;
+  transition: opacity 0.1s ease-in;
+}
+
+.groupView #groupName:hover #editGroupNameIcon {
+  opacity: 1;
 }
 
 .groupView #groupNameEdit {
   position: relative;
   width: 580px;
-  height: 70px;
+  height: 70px; 
   margin-bottom: 20px;
 }
 
@@ -326,22 +346,35 @@ button {
   outline: none;
 }
 
-.groupView #groupNameEdit #confirmGroupName{
+.groupView .squareButton {
   width: 70px;
   height: 70px;
-  float: right;
-  background: #1FCC56;
+  border: none;
   text-align: center;
   line-height: 70px;
+  -webkit-transition: background 0.2s ease-in;
+  -moz-transition: background 0.2s ease-in;
+  -o-transition: background 0.2s ease-in;
+  -ms-transition: background 0.2s ease-in;
+  transition: background 0.2s ease-in;
 }
 
-.groupView #groupNameEdit #cancelGroupName{
-  width: 70px;
-  height: 70px;
+.groupView #groupNameEdit #confirmGroupName {
+  float: right;
+  background: #1FCC56;
+}
+
+.groupView #groupNameEdit #confirmGroupName:hover {
+  background: #20A249;
+}
+
+.groupView #groupNameEdit #cancelGroupName {
   float: right;
   background: #F05348;
-  text-align: center;
-  line-height: 70px;
+}
+
+.groupView #groupNameEdit #cancelGroupName:hover {
+  background: #CC4C43;
 }
 
 .groupView #groupBalance {
@@ -425,39 +458,19 @@ button {
 
 .groupView #addButtonHeader {
   float: right;
-  width: 70px;
-  height: 70px;
-  padding: 0;
   background: #0087AD;
-  line-height: 70px;
   color: white;
   font-size: 40px;
-  text-align: center;
-  -webkit-transition: background 0.3s ease-in;
-  -moz-transition: background 0.3s ease-in;
-  -o-transition: background 0.3s ease-in;
-  -ms-transition: background 0.3s ease-in;
-  transition: background 0.3s ease-in;
 }
 
 .groupView #addButtonHeader:hover {
   background: rgb(0, 114, 158);
 }
 
-.groupView #editButtonHeader {
+.groupView .editButtonHeader {
   float: right;
-  width: 70px;
-  height: 70px;
-  padding: 0;
   background: #D9C099;
-  line-height: 70px;
   color: white;
-  text-align: center;
-  -webkit-transition: background 0.3s ease-in;
-  -moz-transition: background 0.3s ease-in;
-  -o-transition: background 0.3s ease-in;
-  -ms-transition: background 0.3s ease-in;
-  transition: background 0.3s ease-in;
 }
 
 .groupView #editButtonHeader:hover {
@@ -486,6 +499,7 @@ button {
 }
 
 .groupView #participantsList li {
+  position: relative;
   padding: 5px 0;
   border-bottom: 1px solid rgba(0,0,0,0.05);
   overflow: hidden;
@@ -509,6 +523,43 @@ button {
   color: #F05348;
 }
 
+.groupView #newParticipantForm {
+  position: relative;
+  height: 30px;
+  margin-bottom: 5px;
+}
+
+.groupView #newParticipant {
+  position: absolute;
+  right: 60px;
+  left: 0;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  padding-left: 5px;
+  background: #F7F7F7;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-family: "SourceSansProUltraLight", "SourceSansProRegular", Helvetica, "Century Gothic", sans-serif;
+}
+
+.groupView .addParticipantButton {
+  float: right;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  margin: 0;
+  line-height: 30px;
+  border: none;
+  color: white;
+  -webkit-transition: background 0.2s ease-in;
+  -moz-transition: background 0.2s ease-in;
+  -o-transition: background 0.2s ease-in;
+  -ms-transition: background 0.2s ease-in;
+  transition: background 0.2s ease-in;
+}
+
 .groupView #addParticipant {
   height: 70px;
   background: #0087AD;
@@ -521,6 +572,22 @@ button {
   -o-transition: background 0.3s ease-in;
   -ms-transition: background 0.3s ease-in;
   transition: background 0.3s ease-in;
+}
+
+.groupView #confirmNewParticipant {
+  background: #1FCC56;
+}
+
+.groupView #confirmNewParticipant:hover {
+  background: #20A249;
+}
+
+.groupView #cancelNewParticipant {
+  background: #F05348;
+}
+
+.groupView #cancelNewParticipant:hover {
+  background: #CC4C43;
 }
 
 .groupView #addParticipant:hover {

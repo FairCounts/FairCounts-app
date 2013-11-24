@@ -3,24 +3,31 @@ Display the expenses linked to a group
 -->
 <div class="groupView" ng-controller="groupController">
   <div id="groupBalance" class="positive">+5.03$</div>
-  <div id="groupName" ng-hide="showGroupNameInput" ng-click="changeGroupName()">{{ group.name }}</div>
+  <div id="groupName" ng-hide="showGroupNameInput" ng-click="changeGroupName()">
+    <span id="editGroupNameIcon" class="icon icon-single icon-darkgrey icon-30 draw"></span>
+    {{ group.name }}
+  </div>
   <div id="groupNameEdit" ng-show="showGroupNameInput">
     <input id="groupNameInput" type="text" value="{{ group.name }}" ng-model="groupName"/>
-    <div id="cancelGroupName" ng-click="cancelGroupName()"><span class="icon icon-single icon-white icon-30 remove"></span></div>
-    <div id="confirmGroupName" ng-click="confirmGroupName()"><span class="icon icon-single icon-white icon-30 check"></span></div>
+    <button id="cancelGroupName" class="squareButton" ng-click="cancelGroupName()"><span class="icon icon-single icon-white icon-30 remove"></span></button>
+    <button id="confirmGroupName" class="squareButton" ng-click="confirmGroupName()"><span class="icon icon-single icon-white icon-30 check"></span></button>
   </div>
   
   <div id="groupParticipants"> 
     <div id="participantsHeader">
-      <div id="editButtonHeader"><span class="icon icon-single icon-white icon-30 draw"></span></div>
-      
+      <div class="squareButton editButtonHeader"><span class="icon icon-single icon-white icon-30 draw"></span></div>
       Participants
     </div>
     <div id="participantsList">
       <ul>
         <li ng-repeat="participant in participants"><span class="participantBalance {{ positiveBalance(participant) }}">{{ participant.balance }}$</span>{{ participant.name }}</li>
       </ul>
-      <div id="addParticipant">+</div>
+    <div id="newParticipantForm" ng-show="showAddParticipantInput">
+        <input type="text" id="newParticipant" placeholder="Participant name / email address" ng-model="newParticipant"/>
+        <button id="cancelNewParticipant" class="addParticipantButton" ng-click="cancelAddParticipant()"><span class="icon icon-single remove"></span></button>
+        <button id="confirmNewParticipant" class="addParticipantButton" ng-click="confirmAddParticipant()">+</button>
+      </div>
+      <div id="addParticipant" ng-click="addParticipant()">+</div>
     </div>
             
   </div>
@@ -28,8 +35,8 @@ Display the expenses linked to a group
   <div id="groupExpenses">
     <div id="expenseHeader">
       Expenses
-      <div id="editButtonHeader"><span class="icon icon-single icon-white icon-30 draw"></span></div>
-      <a href="./app_dev.php#/addExpense"><div id="addButtonHeader">+</div></a>
+      <div class="squareButton editButtonHeader"><span class="icon icon-single icon-white icon-30 draw"></span></div>
+      <a href="./app_dev.php#/addExpense"><div id="addButtonHeader" class="squareButton">+</div></a>
     </div>
     <div id="expensesList">
       <ul>

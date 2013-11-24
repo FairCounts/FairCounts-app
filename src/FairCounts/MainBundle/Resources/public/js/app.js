@@ -69,6 +69,7 @@ controllers.addExpenseController = function ($scope) {
 
 controllers.groupController = function ($scope) {
   $scope.showGroupNameInput = false;
+  $scope.showAddParticipantInput = false;
   
   $scope.group = {
     id: 1,
@@ -123,6 +124,22 @@ controllers.groupController = function ($scope) {
     $scope.showGroupNameInput = false;
     $scope.groupName = $scope.group.name;
   };
+    
+  $scope.addParticipant = function () {
+    $scope.showAddParticipantInput = true;
+  }
+    
+  $scope.confirmAddParticipant = function () {
+    $scope.showAddParticipantInput = false;
+    $scope.participants.push({id:0, name:$scope.newParticipant, balance:0});
+    $scope.newParticipant = "";
+  };
+    
+  $scope.cancelAddParticipant = function () {
+    $scope.showAddParticipantInput = false;
+    $scope.newParticipant = "";
+  };
+    
 };
 
 fairCounts.controller(controllers);
