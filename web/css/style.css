@@ -86,6 +86,10 @@ a {
   text-decoration: none;
 }
 
+button {
+  outline: none;
+}
+
 /*
 * MAIN PAGE
 */
@@ -298,6 +302,46 @@ a {
   line-height: 70px;
   color: #434343;
   font-size: 26px;
+}
+
+.groupView #groupNameEdit {
+  position: relative;
+  width: 580px;
+  height: 70px;
+  margin-bottom: 20px;
+}
+
+.groupView #groupNameInput {
+  position: absolute;
+  height: 70px;
+  padding: 0 30px;
+  margin: 0;
+  left: 0;
+  right: 140px;
+  border: none;
+  line-height: 70px;
+  font-family: "SourceSansProRegular", Helvetica, "Century Gothic", sans-serif;
+  font-size: 26px;
+  color: #434343;
+  outline: none;
+}
+
+.groupView #groupNameEdit #confirmGroupName{
+  width: 70px;
+  height: 70px;
+  float: right;
+  background: #1FCC56;
+  text-align: center;
+  line-height: 70px;
+}
+
+.groupView #groupNameEdit #cancelGroupName{
+  width: 70px;
+  height: 70px;
+  float: right;
+  background: #F05348;
+  text-align: center;
+  line-height: 70px;
 }
 
 .groupView #groupBalance {

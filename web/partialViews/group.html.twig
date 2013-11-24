@@ -3,7 +3,12 @@ Display the expenses linked to a group
 -->
 <div class="groupView" ng-controller="groupController">
   <div id="groupBalance" class="positive">+5.03$</div>
-  <div id="groupName">John's Birthday</div>
+  <div id="groupName" ng-hide="showGroupNameInput" ng-click="changeGroupName()">{{ group.name }}</div>
+  <div id="groupNameEdit" ng-show="showGroupNameInput">
+    <input id="groupNameInput" type="text" value="{{ group.name }}" ng-model="groupName"/>
+    <div id="cancelGroupName" ng-click="cancelGroupName()"><span class="icon icon-single icon-white icon-30 remove"></span></div>
+    <div id="confirmGroupName" ng-click="confirmGroupName()"><span class="icon icon-single icon-white icon-30 check"></span></div>
+  </div>
   
   <div id="groupParticipants"> 
     <div id="participantsHeader">
@@ -24,7 +29,7 @@ Display the expenses linked to a group
     <div id="expenseHeader">
       Expenses
       <div id="editButtonHeader"><span class="icon icon-single icon-white icon-30 draw"></span></div>
-      <div id="addButtonHeader">+</div>
+      <a href="./app_dev.php#/addExpense"><div id="addButtonHeader">+</div></a>
     </div>
     <div id="expensesList">
       <ul>

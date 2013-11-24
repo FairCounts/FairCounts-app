@@ -68,6 +68,18 @@ controllers.addExpenseController = function ($scope) {
 };
 
 controllers.groupController = function ($scope) {
+  $scope.showGroupNameInput = false;
+  
+  $scope.group = {
+    id: 1,
+    name: "John's Birthday",
+    participants: [
+      1,2,23,45
+    ]
+  };
+  
+  $scope.groupName = $scope.group.name;
+  
   $scope.participants = [
     {id: 1, name: "Albert Doe", balance: -10}, 
     {id: 2, name: "Robert Doe", balance: 9.25},
@@ -80,7 +92,7 @@ controllers.groupController = function ($scope) {
     {name: "Food", balance: 13, date: "09/27/2013", participants: [1, 2, 45, 23]},
     {name: "Drinks", balance: -4.32, date: "09/27/2013", participants: [1, 2, 45, 23]},
     {name: "Balloons", balance: 3.8, date: "09/26/2013", participants: [1, 2, 45, 23]},
-  ]
+  ];
   
   $scope.positiveBalance = function (participant) {
     if (participant.balance >= 0) {
@@ -96,6 +108,20 @@ controllers.groupController = function ($scope) {
     } else {
       return "negative";
     }
+  };
+    
+  $scope.changeGroupName = function () {
+    $scope.showGroupNameInput = true;
+  };
+    
+  $scope.confirmGroupName = function () {
+    $scope.group.name = $scope.groupName;
+    $scope.showGroupNameInput = false;
+  };
+  
+  $scope.cancelGroupName = function () {
+    $scope.showGroupNameInput = false;
+    $scope.groupName = $scope.group.name;
   };
 };
 
