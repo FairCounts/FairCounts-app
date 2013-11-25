@@ -127,6 +127,15 @@ controllers.groupController = function ($scope) {
   
   $scope.groupName = $scope.group.name;
   
+  $scope.users = [
+    {id: 1, name: "Albert Doe", email:"albert.doe@gmail.com"},
+    {id: 2, name: "Robert Doe", email:"robert.doe@yahoo.com"},
+    {id: 23, name: "John Smith", email:"john.smith@live.com"},
+    {id: 45, name: "Liza Brown", email:"liza.brown@hotmail.com"},
+    {id: 66, name: "John Doe", email:"john.doe@gmail.com"},
+    {id: 24, name: "Jane Doe", email:"jane.doe@gmail.com"},
+  ];
+  
   $scope.participants = [
     {id: 1, name: "Albert Doe", balance: -10}, 
     {id: 2, name: "Robert Doe", balance: 9.25},
@@ -173,12 +182,26 @@ controllers.groupController = function ($scope) {
     
   $scope.addParticipant = function () {
     $scope.showAddParticipantInput = true;
-  }
+    // Delete users that already participates in the group
+    $scope.potentialParticipants = $scope.users.filter(function(element) {
+      var duplicate = false;
+      for (var i=0; i<$scope.participants.length; i++) {
+        if (element.id === $scope.participants[i].id) {
+          duplicate = true;
+        }
+      }
+      if (!duplicate) {
+        return element;
+      }
+    });
+  };
     
   $scope.confirmAddParticipant = function () {
-    $scope.showAddParticipantInput = false;
-    $scope.participants.push({id:0, name:$scope.newParticipant, balance:0});
-    $scope.newParticipant = "";
+    if ($scope.newParticipant !== "") {
+      $scope.showAddParticipantInput = false;
+      $scope.participants.push({id:0, name:$scope.newParticipant, balance:0});
+      $scope.newParticipant = "";
+    }
   };
     
   $scope.cancelAddParticipant = function () {

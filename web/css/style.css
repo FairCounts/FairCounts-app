@@ -492,13 +492,13 @@ button {
   font-size: 26px;
 }
 
-.groupView #participantsList ul {
+.groupView ul#currentParticipants {
   margin: 0;
   padding: 10px 20px;
   list-style-type: none;
 }
 
-.groupView #participantsList li {
+.groupView #currentParticipants li {
   position: relative;
   padding: 5px 0;
   border-bottom: 1px solid rgba(0,0,0,0.05);
@@ -507,25 +507,24 @@ button {
   white-space: nowrap;
 }
 
-.groupView #participantsList li:last-child {
+.groupView #currentParticipants li:last-child {
   border: none;
 }
 
-.groupView #participantsList li .participantBalance {
+.groupView #currentParticipants li .participantBalance {
   float: right;
 }
 
-.groupView #participantsList li .participantBalance.positive {
+.groupView #currentParticipants li .participantBalance.positive {
   color: #1FCC56;
 }
 
-.groupView #participantsList li .participantBalance.negative {
+.groupView #currentParticipants li .participantBalance.negative {
   color: #F05348;
 }
 
 .groupView #newParticipantForm {
   position: relative;
-  height: 30px;
   margin-bottom: 5px;
 }
 
@@ -542,6 +541,10 @@ button {
   outline: none;
   font-size: 14px;
   font-family: "SourceSansProUltraLight", "SourceSansProRegular", Helvetica, "Century Gothic", sans-serif;
+}
+
+.groupView #newParticipantInput {
+  height: 30px;
 }
 
 .groupView .addParticipantButton {
@@ -593,6 +596,30 @@ button {
 
 .groupView #addParticipant:hover {
   background: rgb(0, 114, 158);
+}
+
+.groupView ul#potentialParticipants {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 14px;
+  font-family: "SourceSansProUltraLight", "SourceSansProRegular", Helvetica, "Century Gothic", sans-serif;
+  list-style-type: none;
+}
+
+.groupView ul#potentialParticipants li {
+  background: #434343;
+  padding: 2px 5px;
+  margin-bottom: 1px;
+  -webkit-transition: background 0.3s ease-in;
+  -moz-transition: background 0.3s ease-in;
+  -o-transition: background 0.3s ease-in;
+  -ms-transition: background 0.3s ease-in;
+  transition: background 0.3s ease-in;
+}
+
+.groupView ul#potentialParticipants li:hover {
+  background: #6F6C6C;
 }
 
 /*
