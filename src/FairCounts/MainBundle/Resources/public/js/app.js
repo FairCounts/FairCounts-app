@@ -65,6 +65,52 @@ controllers.newGroupController = function ($scope) {
 };
 
 controllers.addExpenseController = function ($scope) {
+  $scope.groupParticipants = [
+    {id: 1, name: "Albert Doe"}, 
+    {id: 2, name: "Robert Doe"},
+    {id: 23, name: "John Smith"},
+    {id: 45, name: "Liza Brown"}
+  ];
+  
+  $scope.payers = [1];
+  
+  $scope.expenseParticipants = [1,2,45];
+  
+  $scope.isPayer = function(groupParticipant) {
+    if ($scope.payers.indexOf(groupParticipant.id) !== -1) {
+        return "checked";
+    }
+    return "";
+  }
+  
+  $scope.isExpenseParticipant = function(groupParticipant) {
+    if ($scope.expenseParticipants.indexOf(groupParticipant.id) !== -1) {
+        return "checked";
+    }
+    return "";
+  }
+  
+  $scope.payerClicked = function(groupParticipant) {
+    if ($scope.payers.indexOf(groupParticipant.id) === -1) {
+      $scope.payers.push(groupParticipant.id);
+    } else {
+      var index = $scope.payers.indexOf(groupParticipant.id);
+      if (index >= 0) {
+        $scope.payers.splice(index, 1);
+      }
+    }
+  }
+  
+  $scope.participantClicked = function(groupParticipant) {
+    if ($scope.expenseParticipants.indexOf(groupParticipant.id) === -1) {
+      $scope.expenseParticipants.push(groupParticipant.id);
+    } else {
+      var index = $scope.expenseParticipants.indexOf(groupParticipant.id);
+      if (index >= 0) {
+        $scope.expenseParticipants.splice(index, 1);
+      }
+    }
+  }
 };
 
 controllers.groupController = function ($scope) {

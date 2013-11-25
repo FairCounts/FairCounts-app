@@ -13,15 +13,17 @@ Add an expense
   </div>
   <h2>Who paid?</h2>
   <ul id="payerList" class="userList">
-    <li><div id="participantCheckButton" class="checked"><span class="icon icon-22 check"></span></div><div class="participantName">Théotime</div></li>
-    <li><div id="participantCheckButton"><span class="icon icon-22 check"></span></div><div class="participantName">Robert</div></li>
-    <li><div id="participantCheckButton"><span class="icon icon-22 check"></span></div><div class="participantName">Thomas</div></li>
+    <li ng-repeat="groupParticipant in groupParticipants" ng-click="payerClicked(groupParticipant)">
+      <div id="participantCheckButton" class="{{ isPayer(groupParticipant) }}"><span class="icon icon-22 check"></span></div>
+      <div class="participantName">{{ groupParticipant.name }}</div>
+    </li>
   </ul>
   <h2>Who participated?</h2>
   <ul id="participantsList" class="userList">
-    <li><a href="#"><div id="participantCheckButton"><span class="icon icon-22 check"></span></div></a><div class="participantName">Théotime</div></li>
-    <li><a href="#"><div id="participantCheckButton"><span class="icon icon-22 check"></span></div></a><div class="participantName">Robert</div></li>
-    <li><a href="#"><div id="participantCheckButton"><span class="icon icon-22 check"></span></div></a><div class="participantName">Thomas</div></li>
+    <li ng-repeat="groupParticipant in groupParticipants" ng-click="participantClicked(groupParticipant)">
+      <div id="participantCheckButton" class="{{ isExpenseParticipant(groupParticipant) }}"><span class="icon icon-22 check"></span></div>
+      <div class="participantName">{{ groupParticipant.name }}</div>
+    </li>
   </ul>
-  <a href="index.html"><input type="submit" class="button" value="Add"/></a>
+  <a href="#"><input type="submit" class="button" value="Add"/></a>
 </div>
