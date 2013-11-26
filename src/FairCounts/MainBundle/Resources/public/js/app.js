@@ -213,7 +213,11 @@ controllers.groupController = function ($scope) {
     $scope.showAddParticipantInput = false;
     $scope.participants.push({id:user.id, name:user.name, balance:0});
     $scope.newParticipant = "";
-  }
+  };
+  
+  $scope.refuseDeleteParticipant = function() {
+    alert("You can't remove a user that participates in at least one expense.")
+  };
     
 };
 

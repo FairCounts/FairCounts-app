@@ -15,12 +15,11 @@ Display the expenses linked to a group
   
   <div id="groupParticipants"> 
     <div id="participantsHeader">
-      <div class="squareButton editButtonHeader"><span class="icon icon-single icon-white icon-30 draw"></span></div>
       Participants
     </div>
     <div id="participantsList">
       <ul id="currentParticipants">
-        <li ng-repeat="participant in participants"><span class="participantBalance {{ positiveBalance(participant) }}">{{ participant.balance }}$</span>{{ participant.name }}</li>
+        <li ng-repeat="participant in participants"><span class="icon icon-single icon-18 remove" ng-click="refuseDeleteParticipant()"></span><span class="participantBalance {{ positiveBalance(participant) }}">{{ participant.balance }}$</span>{{ participant.name }}</li>
       </ul>
     <div id="newParticipantForm" ng-show="showAddParticipantInput">
         <div id="newParticipantInput">

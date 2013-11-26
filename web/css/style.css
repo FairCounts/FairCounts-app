@@ -490,7 +490,7 @@ button {
   color: white;
 }
 
-.groupView #editButtonHeader:hover {
+.groupView .editButtonHeader:hover {
   background: #B6A282;
 }
 
@@ -538,6 +538,19 @@ button {
 
 .groupView #currentParticipants li .participantBalance.negative {
   color: #F05348;
+}
+
+.groupView #currentParticipants li .remove {
+  float: right;
+  margin-left: 5px;
+  opacity: 0.5;
+  color: #434343;
+  cursor: pointer;
+}
+
+.groupView #currentParticipants li .remove.active {
+  color: #F05348;
+  opacity: 1;
 }
 
 .groupView #newParticipantForm {
