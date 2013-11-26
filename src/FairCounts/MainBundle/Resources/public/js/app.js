@@ -182,7 +182,7 @@ controllers.groupController = function ($scope) {
     
   $scope.addParticipant = function () {
     $scope.showAddParticipantInput = true;
-    // Delete users that already participates in the group
+    // Display a list of potential participants (all users in the db - those already participating)
     $scope.potentialParticipants = $scope.users.filter(function(element) {
       var duplicate = false;
       for (var i=0; i<$scope.participants.length; i++) {
@@ -208,6 +208,12 @@ controllers.groupController = function ($scope) {
     $scope.showAddParticipantInput = false;
     $scope.newParticipant = "";
   };
+
+  $scope.addParticipantFromList = function (user) {
+    $scope.showAddParticipantInput = false;
+    $scope.participants.push({id:user.id, name:user.name, balance:0});
+    $scope.newParticipant = "";
+  }
     
 };
 
