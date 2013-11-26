@@ -150,6 +150,9 @@ button {
   font-size: 30px;
   text-align: center;
   -webkit-transition: background 0.3s ease-in;
+  -moz-transition: background 0.3s ease-in;
+  -o-transition: background 0.3s ease-in;
+  -ms-transition: background 0.3s ease-in;
   transition: background 0.3s ease-in;
 }
 
@@ -179,6 +182,11 @@ button {
   white-space: nowrap;
   color: white;
   font-size: 22px;
+  -webkit-transition: background 0.3s ease-in;
+  -moz-transition: background 0.3s ease-in;
+  -o-transition: background 0.3s ease-in;
+  -ms-transition: background 0.3s ease-in;
+  transition: background 0.3s ease-in;
 }
 
 #content .folder .folderBalance .folBalance {
@@ -197,6 +205,14 @@ button {
 
 #content .folder .folderBalance.negative {
   background: #F05348;
+}
+
+#content .folder .folderBalance.positive:hover {
+  background: #434343;
+}
+
+#content .folder .folderBalance.negative:hover {
+  background: #434343;
 }
 
 #content .folder .expenses {
