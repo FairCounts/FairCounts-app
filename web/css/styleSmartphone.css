@@ -23,7 +23,7 @@ nav .linkList {
   display: none;
 }
 
-nav #navContent .user {
+nav #navContent #userMenu {
   display: none;
 }
 
