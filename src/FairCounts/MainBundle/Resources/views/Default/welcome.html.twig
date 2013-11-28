@@ -1,0 +1,21 @@
+{% extends '::base.html.twig' %}
+{% block menuFull %}
+  <a href="{{ path("fos_user_registration_register") }}"><li>Sign up</li></a>
+  <a href="{{ path("fos_user_security_login") }}"><li>Sign in</li></a>
+{% endblock %}
+{% block menuMobile %}
+  <a href="{{ path("fos_user_registration_register") }}"><li>Sign up</li></a>
+  <a href="{{ path("fos_user_security_login") }}"><li>Sign in</li></a>
+{% endblock %}
+{% block body %}
+<!--
+Welcome page
+-->
+<div id="welcome">
+  <h1>Welcome to FairCounts!</h1>
+  <h2>Why FairCounts?</h2>
+  <p>Today, when friends invite each other, some people buy the food, the drinks or any necessary item and the rest manage to reimburse every person they owe money. This process is generally fastidious, long and unsecure (someone could forget to pay back and didn’t get his/her calculation right). With FairCounts, once every expense is entered and linked to the participants, every guest can know how much money they owe. No calculation is needed, the app does it automatically. It also optimizes the balance so that each user only pays back one person at most.</p>
+  <p>FairCounts will solve the problem of tracking debts between friends and makes sure that organizing events is easier. It enables every participants to know what the expenses are and how much money they should bring, even before the event starts. FairCounts can also be used for longer events such as a trip in a foreign country. Every participant writes down the expenses linked with the group and because the balance is permanently displayed, the person that owes the more money will pay the next shared expense to even out his/her balance.</p>
+  <a href="{{ path("fos_user_registration_register") }}"><div class="button">Sign up!</div></a>
+</div>
+{% endblock %}

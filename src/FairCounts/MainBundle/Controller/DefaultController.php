@@ -10,4 +10,9 @@ class DefaultController extends Controller
     {
         return $this->render('FairCountsMainBundle:Default:index.html.twig', array());
     }
+    
+    public function welcomeAction()
+    {
+        return $this->render('FairCountsMainBundle:Default:welcome.html.twig', array());
+    }
 }

@@ -1,6 +1,6 @@
 {% extends '::base.html.twig' %}
 {% block body %}
-  <div ng-view></div>
+  <div ng-view ng-animate="{enter: 'enter-animation', leave: 'leave-animation'}"></div>
 {% endblock %}
 
 {% block javascripts %}

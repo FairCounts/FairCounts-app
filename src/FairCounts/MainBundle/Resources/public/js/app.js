@@ -1,4 +1,4 @@
-var fairCounts = angular.module('FairCounts', ['ngRoute']);
+var fairCounts = angular.module('FairCounts', ['ngRoute', 'ngAnimate']);
 
 fairCounts.config(function ($routeProvider) {
 

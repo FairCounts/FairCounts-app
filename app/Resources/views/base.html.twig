@@ -10,6 +10,7 @@
     <link href="{{ asset('css/icons.css') }}" rel="stylesheet" media="screen">
     <script src="{{ asset('js/angular.min.js') }}"></script>
     <script src="{{ asset('js/angular-route.min.js') }}"></script>
+    <script src="{{ asset('js/angular-animate.min.js') }}"></script>
     {% block stylesheets %}{% endblock %}
   </head>
   <body>
@@ -24,15 +25,18 @@
         <div id="userMenu">
           <div class="user"><span class="name">John Doe</span><span class="icon icon-white icon-20 down"></span></div>
           <ul class="desktopNavList">
+            {% block menuFull %}
             <a><li>Change password</li></a>
             <a><li>Log Out</li></a>
+            {% endblock %}
           </ul>
         </div>
         <div class="mobileNav"><span class="icon icon-white icon-40 menu"></span></div>
         <ul class="mobileNavList">
-          <a><li>Sign In</li></a>
-          <a><li>Sign Up</li></a>
+          {% block menuMobile %}
+          <a><li>Change password</li></a>
           <a><li>Log Out</li></a>
+          {% endblock %}
         </ul>
       </div>
     </nav>

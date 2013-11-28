@@ -1,0 +1,51 @@
+{% extends '::base.html.twig' %}
+{% block menuFull %}
+  <a href="{{ path("fos_user_registration_register") }}"><li>Sign up</li></a>
+  <a href="{{ path("fos_user_security_login") }}"><li>Sign in</li></a>
+{% endblock %}
+{% block menuMobile %}
+  <a href="{{ path("fos_user_registration_register") }}"><li>Sign up</li></a>
+  <a href="{{ path("fos_user_security_login") }}"><li>Sign in</li></a>
+{% endblock %}
+{% block body %}
+<div id="content">
+    <div id="signUpForm" class="basicForm signInUpForm">
+        <div class="formSignInUp">
+            <h1>Sign up</h1>
+            <div class="inputField">
+                <div id="mailPreInput" class="preInput"><span class="icon icon-white icon-22 mail"></span></div>
+                <input type="email" id="mailInput" placeholder="Email address"/>
+            </div>
+            <div class="inputField">
+                <div id="passwordPreInput" class="preInput"><span class="icon icon-white icon-22 lock"></span></div>
+                <input type="password" id="passwordInput" placeholder="Password"/>
+            </div>
+            <div class="inputField">
+                <div id="passwordPreInput" class="preInput"><span class="icon icon-white icon-22 lock"></span></div>
+                <input type="password" id="passwordConfirmationInput" placeholder="Password confirmation"/>
+            </div>
+            <input type="submit" class="button" value="Sign up"/>
+        </div>
+        <div id="socialNetworks">
+            <div id="facebookSignIn" class="button">
+                <a href="#">
+                    <span class="icon icon-white icon-40 facebook"></span>
+                    <span class="buttonContent">Sign up with Facebook</span>
+                </a>
+            </div>
+            <div id="googleSignIn" class="button">
+                <a href="#">
+                    <span class="icon icon-white icon-40 gplus"></span>
+                    <span class="buttonContent">Sign up with Google</span>
+                </a>
+            </div>
+            <div id="twitterSignIn" class="button">
+                <a href="#">
+                    <span class="icon icon-white icon-40 twitter"></span>
+                    <span class="buttonContent">Sign up with Twitter</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

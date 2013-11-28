@@ -20,16 +20,23 @@ nav #navContent .user {
   right: 0;
 }
 
-ul.desktopNavList {
-  display: none;
-  position: absolute;
-  width: 200px;
-  right: 5px;
-  margin: 0;
-  padding: 5px 0 0 0;
-  list-style-type: none;
+ul.desktopNavList a {
   color: white;
-  opacity: 0;
+}
+
+ul.desktopNavList li {
+  height: 40px;
+  background: #434343;
+  line-height: 40px;
+  text-align: center;
+  margin-bottom: 4px;
+  padding: 0px 20px;
+  border-bottom: 1px solid black;
+  box-shadow: 0 0 3px black;
+}
+
+ul.desktopNavList li:hover {
+  background: #6F6F6F;
 }
 
 #userMenu:hover ul.desktopNavList, ul.desktopNavList:hover {

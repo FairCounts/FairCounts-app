@@ -36,6 +36,7 @@ nav .linkList {
 nav .linkList .link {
   position: relative;
   float: left;
+  top: 0;
   margin: 0 20px 0 20px;
   text-align: center;
   color: white;
@@ -94,12 +95,79 @@ button {
 }
 
 /*
+* WELCOME
+*/
+#welcome {
+  width: 860px;
+  margin: auto;
+  padding: 20px;
+  background: white;
+  text-align: justify;
+}
+
+#welcome h1 {
+  text-align: center;
+  margin: 5px 0 0 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+#welcome h2 {
+}
+
+#welcome p {
+  text-indent: 20px;
+}
+
+#welcome .button {
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  background: #0087AD;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  -webkit-transition: background 0.3s ease-in;
+  -moz-transition: background 0.3s ease-in;
+  -o-transition: background 0.3s ease-in;
+  -ms-transition: background 0.3s ease-in;
+  transition: background 0.3s ease-in;
+}
+
+#welcome .button:hover {
+  background: rgb(0, 114, 158);
+}
+
+/*
 * MAIN PAGE
 */
 
 #content {
   margin: auto;
   padding: 30px 10px;
+}
+
+/* see http://www.youtube.com/watch?v=cF_JsA9KsDM */
+.leave-animation-setup, .enter-animation-setup {
+  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+  -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+  -ms-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+  -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+}
+
+.enter-animation-setup {
+  opacity: 0;
+}
+
+.enter-animation-setup.enter-animation-start {
+  opacity: 1;
+}
+
+.leave-animation-setup.leave-animation-start {
+  opacity: 0;
 }
 
 #content #totalBalance {

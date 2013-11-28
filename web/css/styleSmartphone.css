@@ -34,6 +34,7 @@ ul.mobileNavList {
   top: 80px;
   margin: 0;
   padding: 10px 0 0 0;
+  z-index: 20;
   list-style-type: none;
   color: white;
   opacity: 0;
