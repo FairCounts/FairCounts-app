@@ -334,8 +334,13 @@ button {
   border: none;
 }
 
-#content .folder .expenses .moreExpenses a {
+#content .folder .expenses .moreExpenses button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
   color: #A7A7A7;
+  font-size: 18px;
   font-family: "SourceSansProUltraLight", "Helvetica Neue", "Helvetica", "Century Gothic", sans-serif;
   font-style: italic;
   -webkit-transition: color 0.3s ease-in;
@@ -345,13 +350,14 @@ button {
   transition: color 0.3s ease-in;
 }
 
-#content .folder .expenses .moreExpenses a:hover {
+#content .folder .expenses .moreExpenses button:hover {
   color: #0087AD;
 }
 
 #content .folder .addExpense {
-  padding-bottom: 9px;
+  height: 40px;
   text-align: right;
+  line-height: 40px;
   color: #0087AD;
 }
 
@@ -372,7 +378,7 @@ button {
   float: right;
   width: 40px;
   height: 40px;
-  margin: -10px 0 0 10px;
+  margin: 0 0 0 10px;
   border-radius: 5px 0 0 0;
   background: #0087AD;
   color: white;

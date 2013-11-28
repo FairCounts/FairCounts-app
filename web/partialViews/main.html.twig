@@ -8,29 +8,16 @@ Main page
   </div>
   <div id="leftColumn">
     <a href="./app_dev.php#/newGroup"><div id="newGroup"><span class="emphasize">+</span> New group</div></a>
-    <div class="folder">
+    <div class="folder" ng-repeat="group in groups">
       <a href="./app_dev.php#/group">
-        <div class="positive folderBalance">
-          <span class="folBalance">+5.03$</span>
-          <span class="folTitle">John's Birthday</span>
+        <div class="{{ positiveGroupBalance(group) }} folderBalance">
+          <span class="folBalance">{{ group.balance }}$</span>
+          <span class="folTitle">{{ group.name}}</span>
         </div>
       </a>
-      <ul class="expenses">
-        <li><span class="expBalance negative">-10$</span>Presents</li>
-        <li><span class="expBalance positive">+13$</span>Food</li>
-        <li class="moreExpenses"><a href="#">2 more ...</a></li>
-      </ul>
-      <a href="./app_dev.php#/addExpense"><div class="addExpense"><span>Add an expense</span> <div class="plusExpense">+</div></div></a>
-    </div>
-    <div class="folder">
-      <div class="negative folderBalance">
-        <span class="folBalance">-8.28$</span>
-        <span class="folTitle">New York</span>
-      </div>
-      <ul class="expenses">
-        <li><span class="expBalance negative">-10$</span>Shake Shack</li>
-        <li><span class="expBalance positive">+13$</span>Empire State Building</li>
-        <li class="moreExpenses"><a href="#">4 more ...</a></li>
+      <ul class="expenses" >
+        <li ng-repeat="expense in group.expenses | limitTo:getLimit(group) "><span class="expBalance {{ positiveExpenseBalance(expense) }}">{{ expense.balance}}$</span>{{ expense.name }}</li>
+        <li class="moreExpenses" ng-show="showButtonMoreExpenses(group)"><button ng-click="displayAllExpenses(group)">{{ undisplayedExpenses(group) }} more ...</button></li>
       </ul>
       <a href="./app_dev.php#/addExpense"><div class="addExpense"><span>Add an expense</span> <div class="plusExpense">+</div></div></a>
     </div>

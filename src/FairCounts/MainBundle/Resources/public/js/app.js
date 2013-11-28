@@ -25,27 +25,69 @@ fairCounts.config(function ($routeProvider) {
 var controllers = {};
 
 controllers.mainController = function ($scope) {
-  $scope.expenses = [
-    {
-      name: "New York",
-      amount: 10,
-      currency: "$",
-      paid: false
-    },
-    {
-      name: "Drinks at URI",
-      amount: 50,
-      currency: "$",
-      paid: false
-    },
-    {
-      name: "Boston housing",
-      amount: 50,
-      currency: "$",
-      paid: false
+  $scope.groups = [
+    {id:1,
+    name: "John's Birthday",
+    balance: "5.03",
+    expenses: [
+      {name:"Presents", balance: "-10"},
+      {name:"Food", balance: "13"},
+      {name:"Drinks ", balance: "-4.32"},
+      {name:"Balloons ", balance: "3.8"}
+    ]}, 
+    {id:2,
+    name: "New York",
+    balance: "-8.28",
+    expenses: [
+      {name:"Shake Shack", balance: "-10"},
+      {name:"Empire State Building", balance: "13"},
+      {name:"MOMA ", balance: "8.23"},
+      {name:"Hot Dog ", balance: "-2.33"},
+      {name:"Top of the Rock ", balance: "11.27"},
+      {name:"Metropolitan ", balance: "-28.45"}
+    ]}];
+  
+  $scope.groupsWithExpensesDisplayed = [];
+  
+  $scope.positiveGroupBalance = function (group) {
+    if (group.balance >= 0) {
+      return "positive";
+    } else {
+      return "negative";
     }
-  ];
-};
+  };
+  
+  $scope.positiveExpenseBalance = function (expense) {
+    if (expense.balance >= 0) {
+      return "positive";
+    } else {
+      return "negative";
+    }
+  };
+  
+  $scope.undisplayedExpenses = function (group) {
+    return group.expenses.length-2;
+  }
+  
+  $scope.getLimit = function(group) {
+    if ($scope.groupsWithExpensesDisplayed.indexOf(group.id) > -1) {
+      return 99999;
+    }
+    return 2;
+  }
+  
+  $scope.displayAllExpenses = function(group) {
+    $scope.groupsWithExpensesDisplayed.push(group.id);
+    $scope.displayButtonMoreExpenses = false;
+  }
+  
+  $scope.showButtonMoreExpenses = function(group) {
+    if ($scope.groupsWithExpensesDisplayed.indexOf(group.id) > -1) {
+      return false;
+    }
+    return true;
+  }
+}
 
 controllers.newGroupController = function ($scope) {
   $scope.participants = [{name: "John Doe With A Very Very Very Very Very Long Name Seriously"}, 
