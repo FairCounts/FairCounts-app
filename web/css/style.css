@@ -94,11 +94,27 @@ button {
   cursor: pointer;
 }
 
+#notLoggedMenu {
+  line-height: 70px;
+  text-align: right;
+  font-family: 'SourceSansProUltraLight';
+  font-size: 22px;
+}
+
+#notLoggedMenu a {
+  color: white;
+  margin-left: 15px;
+}
+
+#notLoggedMenu a:hover {
+  color: #03C8FF;
+}
+
 /*
 * WELCOME
 */
 #welcome {
-  width: 860px;
+  max-width: 860px;
   margin: auto;
   padding: 20px;
   background: white;
