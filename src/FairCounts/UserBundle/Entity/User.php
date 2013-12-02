@@ -18,6 +18,33 @@ class User extends BaseUser
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
+	
+	/**
+     * @var integer
+     * @ORM\ManyToMany(targetEntity="FairCounts\MainBundle\Entity\Expense", inversedBy="usersWhoPaid", cascade={"persist"})
+	 * @ORM\JoinTable(name="user_paidExpense",
+     * joinColumns={@ORM\JoinColumn(name="id_user", referencedColumnName="id")},
+     * inverseJoinColumns={@ORM\JoinColumn(name="id_expense", referencedColumnName="id")})
+     */
+    private $expensesPaid;
+	
+	/**
+     * @var integer
+     * @ORM\ManyToMany(targetEntity="FairCounts\MainBundle\Entity\Expense", inversedBy="usersWhoOweMoney", cascade={"persist"})
+	 * @ORM\JoinTable(name="user_oweExpense",
+     * joinColumns={@ORM\JoinColumn(name="id_user", referencedColumnName="id")},
+     * inverseJoinColumns={@ORM\JoinColumn(name="id_expense", referencedColumnName="id")})
+     */
+    private $expensesOwe;
+	
+	/**
+     * @var integer
+     * @ORM\ManyToMany(targetEntity="FairCounts\MainBundle\Entity\FolderOfExpense", inversedBy="users", cascade={"persist"})
+	 * @ORM\JoinTable(name="user_folder",
+     * joinColumns={@ORM\JoinColumn(name="id_user", referencedColumnName="id")},
+     * inverseJoinColumns={@ORM\JoinColumn(name="id_folder", referencedColumnName="id")})
+     */
+    private $foldersOfExpense;
 
     public function __construct()
     {

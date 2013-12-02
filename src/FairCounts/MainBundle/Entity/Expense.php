@@ -24,10 +24,24 @@ class Expense
 
     /**
      * @var integer
-     * @ORM\ManyToOne(targetEntity="FairCounts\UserBundle\Entity\User")
-     * @ORM\JoinColumn(nullable=true)
+     * @ORM\ManyToMany(targetEntity="FairCounts\UserBundle\Entity\User", mappedBy="expensesOwe", cascade={"persist"})
      */
-    private $userWhoOweMoney;
+    private $usersWhoOweMoney;
+	
+	/**
+     * @var integer
+     * @ORM\ManyToMany(targetEntity="FairCounts\UserBundle\Entity\User", mappedBy="expensesPaid", cascade={"persist"})
+     */
+    private $usersWhoPaid;
+	
+	/**
+     * @var integer
+     * @ORM\ManyToOne(targetEntity="FairCounts\MainBundle\Entity\FolderOfExpense", inversedBy="expenses", cascade={"persist"})
+	 * @ORM\JoinTable(name="folder_expense",
+     * joinColumns={@ORM\JoinColumn(name="id_expense", referencedColumnName="id")},
+     * inverseJoinColumns={@ORM\JoinColumn(name="id_folder", referencedColumnName="id")})
+     */
+    private $folderOfExpense;
 	
 	/**
 	 * @var float

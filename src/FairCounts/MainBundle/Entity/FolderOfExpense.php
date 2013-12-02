@@ -24,10 +24,17 @@ class FolderOfExpense
 
     /**
      * @var integer
-     * @ORM\ManyToOne(targetEntity="FairCounts\MainBundle\Entity\Expense")
-     * @ORM\JoinColumn(nullable=true)
+     * @ORM\OneToMany(targetEntity="FairCounts\MainBundle\Entity\Expense", mappedBy="folderOfExpense", cascade={"persist"})
      */
     private $expenses;
+	
+	
+	/**
+     * @var integer
+     * @ORM\ManyToMany(targetEntity="FairCounts\UserBundle\Entity\User", mappedBy="foldersOfExpense", cascade={"persist"})
+     */
+	private $users;
+	
 	
 	/**
 	 * @var string
