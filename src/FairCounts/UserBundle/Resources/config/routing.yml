@@ -7,5 +7,9 @@ fair_counts_user_homagepage2:
     defaults: { _controller: FairCountsUserBundle:Default:test }
 
 fair_counts_user_homagepage3:
-    pattern:  /createUser/{name}
+    pattern:  /createUser/{username}/{password}/{email}
     defaults: { _controller: FairCountsUserBundle:Default:addUser }
+
+fair_counts_user_homagepage4:
+    pattern:  /login/{username}/{password}/
+    defaults: { _controller: FairCountsUserBundle:Default:login }

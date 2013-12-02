@@ -20,18 +20,33 @@ class DefaultController extends Controller
 		return $this->render('FairCountsUserBundle:Default:index.html.twig', array('name' => $user->getEmail()));
 	}
 	
-	public function addUserAction($name){
+	public function addUserAction($username, $password, $email){
 		$userManager = $this->get('fos_user.user_manager');
 		
 		$user = $userManager->createUser();
-		$user->setUsername($name);
-		$user->setPassword("toto");
-		$user->setEmail('john.doe@example.com');
+		$user->setUsername($username);
+		$user->setPassword($password);
+		$user->setEmail($email);
 
 		$userManager->updateUser($user);
 		
 		$this->getDoctrine()->getEntityManager()->flush();
 
-		return $this->render('FairCountsUserBundle:Default:index.html.twig', array('name' => $name));
+		return $this->render('FairCountsUserBundle:Default:index.html.twig', array('name' => $username));
+	}
+	
+	public function loginAction($username, $password){
+		$userManager = $this->get('fos_user.user_manager');
+		
+		$user = $userManager->findUserByUsername($username);
+		
+		if($user != null){
+			if($user->getPassword() == $password){
+				return $this->render('FairCountsUserBundle:Default:index.html.twig', array('name' => $user->getEmail()));
+			}
+			
+		}
+		
+		return $this->render('FairCountsUserBundle:Default:index.html.twig', array('name' => "error"));
 	}
 }
