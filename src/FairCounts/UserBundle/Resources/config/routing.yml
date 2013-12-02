@@ -13,3 +13,7 @@ fair_counts_user_homagepage3:
 fair_counts_user_homagepage4:
     pattern:  /login/{username}/{password}/
     defaults: { _controller: FairCountsUserBundle:Default:login }
+
+fair_counts_user_homagepage5:
+    pattern:  /folders
+    defaults: { _controller: FairCountsUserBundle:Default:getUserFolders }

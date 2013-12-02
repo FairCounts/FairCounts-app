@@ -38,15 +38,39 @@ class DefaultController extends Controller
 	public function loginAction($username, $password){
 		$userManager = $this->get('fos_user.user_manager');
 		
+		$session = $this->getRequest()->getSession();
+		
 		$user = $userManager->findUserByUsername($username);
 		
 		if($user != null){
 			if($user->getPassword() == $password){
+			
+				$session->set('userLogin', $username);
+			
+				// TODO: Rediriger vers la page d'accueil
 				return $this->render('FairCountsUserBundle:Default:index.html.twig', array('name' => $user->getEmail()));
 			}
 			
 		}
 		
+		// TODO: Rediriger vers page d'erreur
+		return $this->render('FairCountsUserBundle:Default:index.html.twig', array('name' => "error"));
+	}
+	
+	public function getUserFoldersAction(){
+		
+		$session = $this->getRequest()->getSession();
+		$userManager = $this->get('fos_user.user_manager');
+		
+		$username = $session->get('userLogin');
+		
+		if($username != null){
+			$user = $userManager->findUserByUsername($username);
+			
+			return $this->render('FairCountsUserBundle:Default:index.html.twig', array('name' => $user->getNumberOfFolders()));
+		}
+		
+		// TODO: Rediriger vers page d'erreur
 		return $this->render('FairCountsUserBundle:Default:index.html.twig', array('name' => "error"));
 	}
 }
