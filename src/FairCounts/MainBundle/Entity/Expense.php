@@ -108,6 +108,10 @@ class Expense
 		return $this->label;
 	}
 	
+	public function setAmount($newAmount){
+		$this->amount = $newAmount;
+	}
+	
 	/**
      * AddUserWhoOwesMoney
      *

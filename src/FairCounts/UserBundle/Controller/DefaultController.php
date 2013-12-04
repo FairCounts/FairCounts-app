@@ -75,4 +75,35 @@ class DefaultController extends Controller
 			$em->flush();
 		}
 	}
+	
+	public function createExpenseAction(){
+		$user = $this->container->get('security.context')->getToken()->getUser();
+		
+		if($user != null){
+		
+			$amount = $this->getRequest()->query->get('folderLabel'); // Récupération du montant
+			$folder = $this->getRequest()->query->get('folder'); // Récupération du folder
+			
+			// TODO: Verification à faire sur le folder
+			// Etre sur que l'user courant est membre du folder
+			
+			$usersWhoPaid = $this->getRequest()->query->get('usersWhoPaid'); 
+			$usersWhoOweMoney = $this->getRequest()->query->get('usersWhoOweMoney');
+		
+			$expense = new Expense(); // On créer un nouvel objet expense
+			$expense->setAmount($amount);
+
+			foreach( $usersWhoOweMoney as $user ) {
+				$expense->addUserWhoOwesMoney($user);
+			}
+			
+			foreach( $usersWhoPaid as $user ) {
+				$expense->addUserWhoPaid($user);
+			}
+
+			$em = $this->getDoctrine()->getManager();
+			$em->persist($expense);
+			$em->flush();
+		}
+	}
 }
