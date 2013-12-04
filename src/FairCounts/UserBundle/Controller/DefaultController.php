@@ -24,8 +24,8 @@ class DefaultController extends Controller
 		$userManager = $this->get('fos_user.user_manager');
 		
 		$user = $userManager->createUser();
-		$user->setUsername($username);
-		$user->sePlainPassword($password);
+		$user->setUsername($email);
+		$user->setPlainPassword($password);
 		$user->setEmail($email);
 
 		$userManager->updateUser($user);
