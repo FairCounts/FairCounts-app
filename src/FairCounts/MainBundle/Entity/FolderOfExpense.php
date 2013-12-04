@@ -12,6 +12,13 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class FolderOfExpense
 {
+	public function __construct()
+    {
+        $this->expenses = new \Doctrine\Common\Collections\ArrayCollection();
+		
+		$this->users = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
     /**
      * @var integer
      *
@@ -77,4 +84,38 @@ class FolderOfExpense
 	{
 		return $this->label;
 	}
+	
+	public function setLabel($newLabel){
+		$this->label = $newLabel;
+	}
+	
+	public function setStatus($newStatus){
+		$this->status = $newStatus;
+	}
+	
+	/**
+     * Add expense
+     *
+     * @param \FairCounts\MainBundle\Entity\Expense $expenses
+     * @return FolderOfExpense
+     */
+    public function addExpense(\FairCounts\MainBundle\Entity\Expense $exp)
+    {
+        $this->expenses[] = $exp;
+
+        return $this;
+    }
+	
+	/**
+     * Add user
+     *
+     * @param \FairCounts\UserBundle\Entity\User $users
+     * @return FolderOfExpense
+     */
+    public function addUser(\FairCounts\UserBundle\Entity\User $user)
+    {
+        $this->users[] = $user;
+
+        return $this;
+    }
 }

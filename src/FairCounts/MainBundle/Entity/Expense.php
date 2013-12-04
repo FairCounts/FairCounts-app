@@ -12,6 +12,13 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Expense
 {
+	public function __construct()
+    {
+        $this->usersWhoOweMoney = new \Doctrine\Common\Collections\ArrayCollection();
+		
+		$this->usersWhoPaid = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
     /**
      * @var integer
      *
@@ -100,4 +107,30 @@ class Expense
 	{
 		return $this->label;
 	}
+	
+	/**
+     * AddUserWhoOwesMoney
+     *
+     * @param \FairCounts\UserBundle\Entity\User $users
+     * @return Expense
+     */
+    public function addUserWhoOwesMoney(\FairCounts\UserBundle\Entity\User $user)
+    {
+        $this->usersWhoOweMoney[] = $user;
+
+        return $this;
+    }
+	
+	/**
+     * AddUserWhoPaid
+     *
+     * @param \FairCounts\UserBundle\Entity\User $users
+     * @return Expense
+     */
+    public function addUserWhoPaid(\FairCounts\UserBundle\Entity\User $user)
+    {
+        $this->usersWhoPaid[] = $user;
+
+        return $this;
+    }
 }

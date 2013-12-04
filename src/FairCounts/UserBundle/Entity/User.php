@@ -62,4 +62,12 @@ class User extends BaseUser
 	public function getNumberOfFolders(){
 		return $foldersOfExpense;
 	}
+	
+	public function setName($newName){
+		$name = $newName;
+	}
+	
+	public function getName(){
+		return $name;
+	}
 }
