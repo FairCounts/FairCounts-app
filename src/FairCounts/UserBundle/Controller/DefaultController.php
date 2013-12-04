@@ -3,6 +3,8 @@
 namespace FairCounts\UserBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use FairCounts\MainBundle\Entity\FolderOfExpense;
+use FairCounts\MainBundle\Entity\Expense;
 
 class DefaultController extends Controller
 {
@@ -27,6 +29,7 @@ class DefaultController extends Controller
 		$user->setUsername($email);
 		$user->setPlainPassword($password);
 		$user->setEmail($email);
+		$user->setEnabled(true);
 
 		$userManager->updateUser($user);
 		
@@ -34,33 +37,7 @@ class DefaultController extends Controller
 
 		return $this->render('FairCountsUserBundle:Default:index.html.twig', array('name' => $username));
 	}
-	
-	public function loginAction($username, $password){
-		$userManager = $this->get('fos_user.user_manager');
-		
-		$session = $this->getRequest()->getSession();
-		
-		$user = $userManager->findUserByUsername($username);
-		
-		if($user != null){
-			
-			$encoder_service = $this->get('security.encoder_factory');
-			$encoder = $encoder_service->getEncoder($user);
-			$encoded_pass = $encoder->encodePassword($password, $user->getSalt());
-		
-			if($user->getPassword() == $encoded_pass){
-			
-				$session->set('userLogin', $username);
-			
-				// TODO: Rediriger vers la page d'accueil
-				return $this->render('FairCountsUserBundle:Default:index.html.twig', array('name' => $user->getEmail()));
-			}
-		}
-		
-		// TODO: Rediriger vers page d'erreur
-		return $this->render('FairCountsUserBundle:Default:index.html.twig', array('name' => "error"));
-	}
-	
+
 	public function getUserFoldersAction(){
 		
 		$session = $this->getRequest()->getSession();
@@ -76,5 +53,57 @@ class DefaultController extends Controller
 		
 		// TODO: Rediriger vers page d'erreur
 		return $this->render('FairCountsUserBundle:Default:index.html.twig', array('name' => "error"));
+	}
+	
+	public function createFolderAction(){
+		$user = $this->container->get('security.context')->getToken()->getUser();
+		
+		if($user != null){
+		
+			$label = $this->getRequest()->query->get('folderLabel'); // Récupération du label du formulaire
+			$users = $this->getRequest()->query->get('memberUsers'); // Récupération des users du formulaire
+		
+			$folder = new FolderOfExpense(); // On créer un nouvel objet folder
+			$folder->setLabel($label);
+
+			foreach( $users as $user ) { // On ajoute tous les users membres
+				$folder->addUser($user);
+			}
+
+			$em = $this->getDoctrine()->getManager();
+			$em->persist($folder);
+			$em->flush();
+		}
+	}
+	
+	public function createExpenseAction(){
+		$user = $this->container->get('security.context')->getToken()->getUser();
+		
+		if($user != null){
+		
+			$amount = $this->getRequest()->query->get('folderLabel'); // Récupération du montant
+			$folder = $this->getRequest()->query->get('folder'); // Récupération du folder
+			
+			// TODO: Verification à faire sur le folder
+			// Etre sur que l'user courant est membre du folder
+			
+			$usersWhoPaid = $this->getRequest()->query->get('usersWhoPaid'); 
+			$usersWhoOweMoney = $this->getRequest()->query->get('usersWhoOweMoney');
+		
+			$expense = new Expense(); // On créer un nouvel objet expense
+			$expense->setAmount($amount);
+
+			foreach( $usersWhoOweMoney as $user ) {
+				$expense->addUserWhoOwesMoney($user);
+			}
+			
+			foreach( $usersWhoPaid as $user ) {
+				$expense->addUserWhoPaid($user);
+			}
+
+			$em = $this->getDoctrine()->getManager();
+			$em->persist($expense);
+			$em->flush();
+		}
 	}
 }
