@@ -2,6 +2,8 @@ parameters:
 #    fair_counts_user.example.class: FairCounts\UserBundle\Example
 
 services:
-#    fair_counts_user.example:
-#        class: %fair_counts_user.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]
+    fair_counts_user.registration.form.type:
+        class: FairCounts\UserBundle\Form\Type\RegistrationFormType
+        arguments: [%fos_user.model.user.class%]
+        tags:
+            - { name: form.type, alias: fair_counts_user_registration }

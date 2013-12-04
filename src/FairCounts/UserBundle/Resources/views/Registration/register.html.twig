@@ -17,22 +17,22 @@
         {% endif %}
         <div class="inputField">
           <div class="preInput"><span class="icon icon-white icon-22 user"></span></div>
-          {{ form_widget(form.username, {'attr': {'placeholder': 'Name'} }) }}
-          <input type="text" id="nameInput" placeholder="First Name and Last Name"/>
+          {{ form_widget(form.name, {'attr': {'placeholder': 'Name'} }) }}
         </div>
         <div class="inputField">
           <div class="preInput"><span class="icon icon-white icon-22 mail"></span></div>
-          <input type="email" id="mailInput" placeholder="Email address"/>
+          {{ form_widget(form.email, {'attr': {'placeholder': 'Email address'} }) }}
         </div>
         <div class="inputField">
           <div class="preInput"><span class="icon icon-white icon-22 lock"></span></div>
-          <input type="password" id="passwordInput" placeholder="Password"/>
+          {{ form_widget(form.plainPassword.first, {'attr': {'placeholder': 'Password'} }) }}
         </div>
         <div class="inputField">
           <div class="preInput"><span class="icon icon-white icon-22 lock"></span></div>
-          <input type="password" id="passwordConfirmationInput" placeholder="Password confirmation"/>
+          {{ form_widget(form.plainPassword.second, {'attr': {'placeholder': 'Password confirmation'} }) }}
         </div>
-        <input type="submit" class="button" value="Sign up"/>
+        <input type="submit" class="button" name="submit" value="Sign up"/>
+        {{ form_end(form) }}
       </form>
     </div>
     <div id="socialNetworks">

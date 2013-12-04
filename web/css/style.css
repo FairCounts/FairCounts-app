@@ -891,6 +891,23 @@ button {
   left: 0;
 }
 
+.signInUpForm .formSignInUp a {
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+  color: #808080;
+  font-family: "SourceSansProUltraLight";
+  -webkit-transition: color 0.2s linear;
+  -moz-transition: color 0.2s linear;
+  -o-transition: color 0.2s linear;
+  -ms-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+}
+
+.signInUpForm .formSignInUp a:hover {
+  color: #0087AD;
+}
+
 .signInUpForm #socialNetworks {
   float: right;
   width: 429px;

@@ -21,6 +21,12 @@ class User extends BaseUser
     protected $id;
 	
 	/**
+     * @Assert\NotBlank(groups={"Registration"})
+     * @Assert\Email(groups={"Registration"})
+     */
+    protected $email;
+	
+	/**
      * @ORM\Column(name="name", type="string", length=255)
      * @Assert\NotBlank(groups={"Registration"})
      */
@@ -62,4 +68,33 @@ class User extends BaseUser
 	public function getNumberOfFolders(){
 		return $foldersOfExpense;
 	}
+	
+	/**
+     * Set name
+     *
+     * @param string $name
+     * @return User
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+    
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string 
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+    
+    public function setEmail($email)
+    {
+       parent::setEmail($email);
+       $this->setUsername($email);
+    }
 }
