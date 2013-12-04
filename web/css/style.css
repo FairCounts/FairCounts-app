@@ -110,6 +110,17 @@ button {
   color: #03C8FF;
 }
 
+.clear:before, .clear:after {
+	content: "\0020";
+	display: block;
+	height: 0;
+	overflow: hidden;
+}
+	
+.clear:after {
+	clear: both;
+}
+
 /*
 * WELCOME
 */
@@ -771,6 +782,18 @@ button {
   padding: 0 0 10px;
   font-size: 22px;
   color: #434343;
+}
+
+.basicForm #errorBar {
+    position: relative;
+    max-width: 280px;
+    height: 40px;
+    margin: auto;
+    margin-bottom: 20px;
+    background: rgb(194, 41, 25);
+    color: white;
+    text-align: center;
+    line-height: 40px;
 }
 
 .basicForm  input[type=text], .basicForm  input[type=password], .basicForm  input[type=email] {

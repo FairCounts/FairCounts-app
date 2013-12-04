@@ -7,18 +7,23 @@
 {% endblock %}
 {% block body %}
 <div id="content">
-    <div id="signInForm" class="basicForm signInUpForm">
+    <div id="signInForm" class="basicForm signInUpForm clear">
         <div class="formSignInUp">
             <h1>Sign in</h1>
-            <div class="inputField">
-                <div id="mailPreInput" class="preInput"><span class="icon icon-white icon-22 mail"></span></div>
-                <input type="email" id="mailInput" placeholder="Email address"/>
-            </div>
-            <div class="inputField">
-                <div id="passwordPreInput" class="preInput"><span class="icon icon-white icon-22 lock"></span></div>
-                <input type="password" id="passwordInput" placeholder="Password"/>
-            </div>
-            <input type="submit" class="button" value="Sign in"/>
+            {% if error %}
+                <div id="errorBar">{{ error.message }}</div>
+            {% endif %}
+            <form action="{{ path('fos_user_security_check') }}" method="POST">
+                <div class="inputField">
+                    <div id="mailPreInput" class="preInput"><span class="icon icon-white icon-22 mail"></span></div>
+                    <input type="email" id="mailInput" name="_username" placeholder="Email address" value="{{ last_username }}"/>
+                </div>
+                <div class="inputField">
+                    <div id="passwordPreInput" class="preInput"><span class="icon icon-white icon-22 lock"></span></div>
+                    <input type="password" id="passwordInput" name="_password" placeholder="Password"/>
+                </div>
+                <input type="submit" class="button" value="Sign in"/>
+            </form>
         </div>
         <div id="socialNetworks">
             <div id="facebookSignIn" class="button">
