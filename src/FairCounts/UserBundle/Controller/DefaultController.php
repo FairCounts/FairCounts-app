@@ -24,8 +24,8 @@ class DefaultController extends Controller
 		$userManager = $this->get('fos_user.user_manager');
 		
 		$user = $userManager->createUser();
-		$user->setUsername($username);
-		$user->setPassword($password);
+		$user->setUsername($email);
+		$user->setPlainPassword($password);
 		$user->setEmail($email);
 
 		$userManager->updateUser($user);
@@ -43,14 +43,18 @@ class DefaultController extends Controller
 		$user = $userManager->findUserByUsername($username);
 		
 		if($user != null){
-			if($user->getPassword() == $password){
+			
+			$encoder_service = $this->get('security.encoder_factory');
+			$encoder = $encoder_service->getEncoder($user);
+			$encoded_pass = $encoder->encodePassword($password, $user->getSalt());
+		
+			if($user->getPassword() == $encoded_pass){
 			
 				$session->set('userLogin', $username);
 			
 				// TODO: Rediriger vers la page d'accueil
 				return $this->render('FairCountsUserBundle:Default:index.html.twig', array('name' => $user->getEmail()));
 			}
-			
 		}
 		
 		// TODO: Rediriger vers page d'erreur
