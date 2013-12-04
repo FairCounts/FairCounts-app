@@ -16,13 +16,14 @@
             <form action="{{ path('fos_user_security_check') }}" method="POST">
                 <div class="inputField">
                     <div id="mailPreInput" class="preInput"><span class="icon icon-white icon-22 mail"></span></div>
-                    <input type="email" id="mailInput" name="_username" placeholder="Email address" value="{{ last_username }}"/>
+                    <input type="email" id="mailInput" name="_username" placeholder="Email address" value="{{ last_username }}" required="required"/>
                 </div>
                 <div class="inputField">
                     <div id="passwordPreInput" class="preInput"><span class="icon icon-white icon-22 lock"></span></div>
-                    <input type="password" id="passwordInput" name="_password" placeholder="Password"/>
+                    <input type="password" id="passwordInput" name="_password" placeholder="Password" required="required"/>
                 </div>
-                <input type="submit" class="button" value="Sign in"/>
+                <input type="submit" class="button" name="_submit" value="Sign in"/>
+                <a href="{{ path('fos_user_resetting_request') }}">Password forgotten?</a>
             </form>
         </div>
         <div id="socialNetworks">

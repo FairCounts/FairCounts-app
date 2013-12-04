@@ -52,10 +52,3 @@ ul.desktopNavList li {
 ul.desktopNavList li:hover {
   background: #6F6F6F;
 }
-
-/**
- * Sign up / Sign in forms
- */
-#signUpForm {
-    height: 310px;
-}

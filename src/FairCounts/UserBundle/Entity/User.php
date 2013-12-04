@@ -5,6 +5,7 @@ namespace FairCounts\UserBundle\Entity;
 
 use FOS\UserBundle\Entity\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity
@@ -19,6 +20,12 @@ class User extends BaseUser
      */
     protected $id;
 	
+	/**
+     * @ORM\Column(name="name", type="string", length=255)
+     * @Assert\NotBlank(groups={"Registration"})
+     */
+    protected $name;
+    
 	/**
      * @var integer
      * @ORM\ManyToMany(targetEntity="FairCounts\MainBundle\Entity\Expense", inversedBy="usersWhoPaid", cascade={"persist"})

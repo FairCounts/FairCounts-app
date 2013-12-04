@@ -111,14 +111,14 @@ button {
 }
 
 .clear:before, .clear:after {
-	content: "\0020";
-	display: block;
-	height: 0;
-	overflow: hidden;
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
 }
-	
+
 .clear:after {
-	clear: both;
+  clear: both;
 }
 
 /*
@@ -404,8 +404,8 @@ button {
 }
 
 /*
- * GROUP PAGE
- */
+* GROUP PAGE
+*/
 
 .groupView {
   width: 900px;
@@ -785,18 +785,19 @@ button {
 }
 
 .basicForm #errorBar {
-    position: relative;
-    max-width: 280px;
-    height: 40px;
-    margin: auto;
-    margin-bottom: 20px;
-    background: rgb(194, 41, 25);
-    color: white;
-    text-align: center;
-    line-height: 40px;
+  position: relative;
+  max-width: 260px;
+  min-height: 40px;
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 0 10px;
+  background: rgb(194, 41, 25);
+  color: white;
+  text-align: center;
+  line-height: 40px;
 }
 
-.basicForm  input[type=text], .basicForm  input[type=password], .basicForm  input[type=email] {
+.basicForm  input[type=text], .basicForm  input[type=password], .basicForm  input[type=email], .basicForm  input[type=number] {
   display: block;
   position: absolute;
   right: 0;
@@ -816,7 +817,7 @@ button {
   transition: background 0.3s ease-in;
 }
 
-.basicForm  input[type=text]:focus, .basicForm  input[type=password]:focus, .basicForm  input[type=email]:focus {
+.basicForm  input[type=text]:focus, .basicForm  input[type=password]:focus, .basicForm  input[type=email]:focus, .basicForm  input[type=number]:focus {
   background: #EFF2FF;
 }
 
