@@ -131,10 +131,11 @@ button {
 */
 #welcome {
   max-width: 860px;
-  margin: auto;
+  margin: 20px auto;
   padding: 20px;
   background: white;
   text-align: justify;
+  border-radius: 10px;
 }
 
 #welcome h1 {
