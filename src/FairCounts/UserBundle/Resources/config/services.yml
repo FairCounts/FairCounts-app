@@ -7,3 +7,9 @@ services:
         arguments: [%fos_user.model.user.class%]
         tags:
             - { name: form.type, alias: fair_counts_user_registration }
+            
+    fair_counts_user.password_reset:
+        class: FairCounts\UserBundle\EventListener\PasswordResetListener
+        arguments: [ @router ]
+        tags:
+            - { name: kernel.event_subscriber }

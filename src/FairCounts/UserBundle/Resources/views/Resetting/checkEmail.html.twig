@@ -1,0 +1,15 @@
+{% extends '::base.html.twig' %}
+{% block userMenu %}
+<div id="notLoggedMenu">
+  <a href="{{ path("fos_user_registration_register") }}">Sign up</a> 
+  <a href="{{ path("fos_user_security_login") }}">Sign in</a>
+</div>
+{% endblock %}
+{% block body %}
+<div id="content">
+  <div class="basicForm" id="checkEmail">
+    An email has been sent to {{ email }}. <br/>It contains a link you must click to reset your password.<br/>
+    <span class="icon icon-single mail icon-grey icon-160"></span>
+  </div>
+</div>
+{% endblock %}

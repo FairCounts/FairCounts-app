@@ -24,16 +24,16 @@
         </div>
         {% block userMenu %}
         <div id="userMenu">
-          <div class="user"><span class="name">John Doe</span><span class="icon icon-white icon-20 down"></span></div>
+          <div class="user"><span class="name">{% if app.user %}{{ app.user.name }}{% else %}John Doe{% endif %}</span><span class="icon icon-white icon-20 down"></span></div>
           <ul class="desktopNavList">
-            <a><li>Change password</li></a>
+            <a href="{{ path('fos_user_change_password') }}"><li>Change password</li></a>
             <a href="{{ path('fos_user_security_logout') }}"><li>Log Out</li></a>
           </ul>
         </div>
         <div class="mobileNav"><span class="icon icon-white icon-40 menu"></span></div>
         <ul class="mobileNavList">
-          <a><li>Change password</li></a>
-          <a><li>Log Out</li></a> 
+          <a href="{{ path('fos_user_change_password') }}"><li>Change password</li></a>
+          <a href="{{ path('fos_user_security_logout') }}"><li>Log Out</li></a> 
         </ul>
         {% endblock %}
       </div>

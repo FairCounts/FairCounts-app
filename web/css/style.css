@@ -121,6 +121,11 @@ button {
   clear: both;
 }
 
+.basicForm.smallForm {
+  padding: 30px 10px;
+  text-align: center;
+}
+
 /*
 * WELCOME
 */
@@ -1177,4 +1182,14 @@ button {
 #addExpense #participantCheckButton.checked {
   background: #1FCC56;
   color: white;
+}
+
+/*
+* passwordAlreadyRequested
+*/
+
+#passwordAlreadyRequested {
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
 }

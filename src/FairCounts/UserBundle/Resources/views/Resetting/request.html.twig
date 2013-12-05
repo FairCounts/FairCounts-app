@@ -1,0 +1,24 @@
+{% extends '::base.html.twig' %}
+{% block userMenu %}
+<div id="notLoggedMenu">
+  <a href="{{ path("fos_user_registration_register") }}">Sign up</a> 
+  <a href="{{ path("fos_user_security_login") }}">Sign in</a>
+</div>
+{% endblock %}
+{% block body %}
+<div id="content">
+  <div class="basicForm smallForm">
+    <h1>Reset password</h1>
+    {% if invalid_username is defined %}
+    <div id="errorBar">Bad credentials</div>
+    {% endif %}
+    <form action="{{ path('fos_user_resetting_send_email') }}" method="POST">
+        <div class="inputField">
+          <div id="mailPreInput" class="preInput"><span class="icon icon-white icon-22 mail"></span></div>
+          <input type="email" id="mailInput" name="username" placeholder="Email address" required="required"/>
+        </div>
+      <input type="submit" id="submit" name="_submit" class="button" value="Valider"/>
+    </form>
+  </div>
+</div>
+{% endblock %}

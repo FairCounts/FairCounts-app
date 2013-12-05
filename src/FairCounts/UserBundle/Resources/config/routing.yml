@@ -17,3 +17,7 @@ fair_counts_user_homagepage4:
 fair_counts_user_homagepage5:
     pattern:  /folders
     defaults: { _controller: FairCountsUserBundle:Default:getUserFolders }
+
+fair_counts_password_reset:
+    pattern:  /resetting/password-reset
+    defaults: { _controller: FairCountsUserBundle:PasswordReset:passwordReset }
