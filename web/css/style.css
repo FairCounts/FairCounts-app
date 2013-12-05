@@ -782,6 +782,10 @@ button {
   color: #434343;
 }
 
+.basicForm.smallForm h1 {
+  margin: 10px 0 20px 0;
+}
+
 .basicForm h2 {
   margin: 0 70px;
   padding: 0 0 10px;
@@ -831,6 +835,7 @@ button {
   width: 40px;
   height: 40px;
   background: #434343;
+  text-align: left;
 }
 
 .basicForm .preInput span.icon {

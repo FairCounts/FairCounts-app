@@ -21,3 +21,7 @@ fair_counts_user_homagepage5:
 fair_counts_password_reset:
     pattern:  /resetting/password-reset
     defaults: { _controller: FairCountsUserBundle:PasswordReset:passwordReset }
+    
+fair_counts_password_changed:
+    pattern:  /profile/password-changed
+    defaults: { _controller: FairCountsUserBundle:PasswordChanged:passwordChanged }
