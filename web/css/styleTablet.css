@@ -56,3 +56,31 @@ ul.desktopNavList li {
 ul.desktopNavList li:hover {
   background: #6F6F6F;
 }
+
+.signInUpForm {
+  padding-bottom: 20px;
+}
+
+.signInUpForm .formSignInUp {
+  float: none;
+  width: 100%;
+}
+
+.signInUpForm.basicForm h1 {
+  margin: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#signUpForm #socialNetworks {
+  margin-top: 30px;
+}
+
+.signInUpForm #socialNetworks {
+  float: none;
+  width: auto;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-left: none;
+  border-top: 1px solid rgb(230, 230, 230);
+}

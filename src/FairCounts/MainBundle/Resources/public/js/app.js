@@ -103,12 +103,7 @@ controllers.newGroupController = function ($scope) {
     {id: 24, name: "Jane Doe", email:"jane.doe@gmail.com"},
   ];
   
-  $scope.participants = [
-    {id: 1, name: "Albert Doe", email:"albert.doe@gmail.com"}, 
-    {id: 2, name: "Robert Doe", email:"robert.doe@yahoo.com"},
-    {id: 23, name: "John Smith", email:"john.smith@live.com"},
-    {id: 45, name: "Liza Brown", email:"liza.brown@hotmail.com"}
-  ];
+  $scope.participants = [];
   
   $scope.potentialParticipants = [];
   var init = function () {
