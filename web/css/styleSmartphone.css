@@ -132,3 +132,17 @@ ul.mobileNavList a {
 .basicForm h2 {
   margin: 0 0 0 30px;
 }
+
+/**
+* Groups
+*/
+
+.groupView #groupBalance {
+  float: none;
+}
+
+.groupView #groupParticipants {
+  float: none;
+  width: auto;
+  margin-bottom: 20px;
+}

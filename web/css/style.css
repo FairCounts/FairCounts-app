@@ -414,13 +414,13 @@ button {
 */
 
 .groupView {
-  width: 900px;
+  max-width: 900px;
   margin: auto;
   padding: 30px 10px;
 }
 
 .groupView #groupName {
-  width: 520px;
+  max-width: 520px;
   height: 70px;
   padding: 0 30px;
   margin-bottom: 20px;
@@ -450,7 +450,7 @@ button {
 
 .groupView #groupNameEdit {
   position: relative;
-  width: 580px;
+  max-width: 580px;
   height: 70px; 
   margin-bottom: 20px;
 }
@@ -503,7 +503,7 @@ button {
 
 .groupView #groupBalance {
   float: right;
-  width: 240px;
+  min-width: 240px;
   height: 70px;
   padding: 0 30px;
   line-height: 70px;
@@ -521,7 +521,7 @@ button {
 }
 
 .groupView #groupExpenses {
-  width: 580px;
+  max-width: 580px;
 }
 
 .groupView #expenseHeader {
