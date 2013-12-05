@@ -300,7 +300,16 @@ controllers.groupController = function ($scope) {
   $scope.refuseDeleteParticipant = function() {
     alert("You can't remove a user that participates in at least one expense.")
   };
-    
+  
+  $scope.isInExpense = function(participant) {
+    for (var i=0; i<$scope.expenses.length; i++) {
+      var index = $scope.expenses[i].participants.indexOf(participant.id);
+      if (index >= 0) {
+        return "";
+      }
+    }
+    return "active";
+  }
 };
 
 fairCounts.controller(controllers);
