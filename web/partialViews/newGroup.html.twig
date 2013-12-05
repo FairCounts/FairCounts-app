@@ -14,6 +14,9 @@ Create a new group
       <input type="submit" id="participantAddButton" value="+"></input>
     </form>
   </div>
+  <ul id="potentialParticipants">
+      <li ng-repeat="user in potentialParticipants | filter:participantName" ng-click="addParticipantFromList($index)">{{ user.name}} ({{user.email}})</li>
+    </ul>
   <ul id="participantsList">
     <li ng-repeat="participant in participants">
       <button id="participantRemoveButton" ng-click="removeParticipant($index)"/>-</button><div class="participantName">{{participant.name}}</div>

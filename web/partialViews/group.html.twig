@@ -28,7 +28,7 @@ Display the expenses linked to a group
           <button id="confirmNewParticipant" class="addParticipantButton" ng-click="confirmAddParticipant()">+</button>
         </div>
         <ul id="potentialParticipants">
-          <li ng-repeat="user in potentialParticipants | filter:newParticipant" ng-click="addParticipantFromList(user)">{{ user.name}} ({{user.email}})</li>
+          <li ng-repeat="user in potentialParticipants | filter:newParticipant" ng-click="addParticipantFromList(user)">{{ user.name }} ({{user.email}})</li>
         </ul>
       </div>
       <div id="addParticipant" ng-click="addParticipant()">+</div>

@@ -24,6 +24,8 @@ fairCounts.config(function ($routeProvider) {
 
 var controllers = {};
 
+
+
 controllers.mainController = function ($scope) {
   $scope.groups = [
     {id:1,
@@ -89,10 +91,40 @@ controllers.mainController = function ($scope) {
   }
 }
 
+
+
 controllers.newGroupController = function ($scope) {
-  $scope.participants = [{name: "John Doe With A Very Very Very Very Very Long Name Seriously"}, 
-                        {name: "John Doe"},
-                        {name: "John Doe"}];
+  $scope.users = [
+    {id: 1, name: "Albert Doe", email:"albert.doe@gmail.com"},
+    {id: 2, name: "Robert Doe", email:"robert.doe@yahoo.com"},
+    {id: 23, name: "John Smith", email:"john.smith@live.com"},
+    {id: 45, name: "Liza Brown", email:"liza.brown@hotmail.com"},
+    {id: 66, name: "John Doe", email:"john.doe@gmail.com"},
+    {id: 24, name: "Jane Doe", email:"jane.doe@gmail.com"},
+  ];
+  
+  $scope.participants = [
+    {id: 1, name: "Albert Doe", email:"albert.doe@gmail.com"}, 
+    {id: 2, name: "Robert Doe", email:"robert.doe@yahoo.com"},
+    {id: 23, name: "John Smith", email:"john.smith@live.com"},
+    {id: 45, name: "Liza Brown", email:"liza.brown@hotmail.com"}
+  ];
+  
+  $scope.potentialParticipants = [];
+  var init = function () {
+     $scope.potentialParticipants = $scope.users.filter(function(element) {
+      var duplicate = false;
+      for (var i=0; i<$scope.participants.length; i++) {
+        if (element.id === $scope.participants[i].id) {
+          duplicate = true;
+        }
+      }
+      if (!duplicate) {
+        return element;
+      }
+    });
+  };
+  init();
   
   $scope.addParticipant = function() {
     if ($scope.participantName && $scope.participantName !== "") {
@@ -102,9 +134,20 @@ controllers.newGroupController = function ($scope) {
   };
 
   $scope.removeParticipant = function(index) {
-    $scope.participants.splice( $scope.participants.indexOf(index), 1 );
+    if($scope.participants[index].id) {
+      $scope.potentialParticipants.push($scope.participants[index]);
+    }
+    $scope.participants.splice(index, 1 );
+  };
+  
+  $scope.addParticipantFromList = function(index) {
+    $scope.participants.push($scope.potentialParticipants[index]);
+    $scope.potentialParticipants.splice(index, 1);
+    $scope.participantName = ""; 
   };
 };
+
+
 
 controllers.addExpenseController = function ($scope) {
   $scope.groupParticipants = [
@@ -154,6 +197,8 @@ controllers.addExpenseController = function ($scope) {
     }
   }
 };
+
+
 
 controllers.groupController = function ($scope) {
   $scope.showGroupNameInput = false;

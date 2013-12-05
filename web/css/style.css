@@ -1126,6 +1126,34 @@ button {
   color: #434343;
 }
 
+#addGroup ul#potentialParticipants {
+  max-width: 310px;
+  margin: 0 auto 10px auto;
+  padding: 0;
+  color: white;
+  font-size: 14px;
+  font-family: "SourceSansProUltraLight", "SourceSansProRegular", Helvetica, "Century Gothic", sans-serif;
+  list-style-type: none;
+}
+
+#addGroup ul#potentialParticipants li {
+  background: #434343;
+  height: 25px;
+  padding: 2px 5px;
+  margin-left: 40px;
+  margin-bottom: 1px;
+  line-height: 25px;
+  -webkit-transition: background 0.3s ease-in;
+  -moz-transition: background 0.3s ease-in;
+  -o-transition: background 0.3s ease-in;
+  -ms-transition: background 0.3s ease-in;
+  transition: background 0.3s ease-in;
+}
+
+#addGroup ul#potentialParticipants li:hover {
+  background: #6F6C6C;
+}
+
 /*
 * Add expense
 */
