@@ -20,6 +20,24 @@ nav #navContent .user {
   right: 0;
 }
 
+ul.desktopNavList {
+  display: none;
+  position: absolute;
+  width: 200px;
+  right: 10px;
+  margin: 0;
+  padding: 5px 0 0 0;
+  z-index: 20;
+  list-style-type: none;
+  color: white;
+  opacity: 0;
+}
+
+#userMenu:hover ul.desktopNavList, ul.desktopNavList:hover {
+  display: block;
+  opacity: 1;
+}
+
 ul.desktopNavList a {
   color: white;
 }
@@ -37,14 +55,4 @@ ul.desktopNavList li {
 
 ul.desktopNavList li:hover {
   background: #6F6F6F;
-}
-
-#userMenu:hover ul.desktopNavList, ul.desktopNavList:hover {
-  display: block;
-  opacity: 1;
-}
-
-ul.desktopNavList {
-  list-style-type: none;
-  color: white;
 }
