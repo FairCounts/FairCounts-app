@@ -1,3 +1,10 @@
+/**
+Creator: Theotime
+Collaborators: Robert
+Created on: 10/28/2013
+Description: This code handles the general style of the app.
+*/
+
 @font-face {
   font-family: 'SourceSansProUltraLight';
   src: url('../fonts/SourceSansPro/SourceSansPro-ExtraLight.eot?') format('eot'), url('../fonts/SourceSansPro/SourceSansPro-ExtraLight.woff') format('woff'), url('../fonts/SourceSansPro/SourceSansPro-ExtraLight.ttf') format('truetype');

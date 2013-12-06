@@ -1,3 +1,16 @@
+/**
+Creator: Theotime
+Collaborators: -
+Created on: 09/23/2013
+Description: This code handles the AngularJS part of the application. 
+- Dynamically add users in a group
+- Dynamically displays users for an expense
+- Handles the routing in the main features
+- Change the name of a group
+- Display hidden expenses
+- Delete users from a group
+*/
+
 var fairCounts = angular.module('FairCounts', ['ngRoute', 'ngAnimate']);
 
 fairCounts.config(function ($routeProvider) {

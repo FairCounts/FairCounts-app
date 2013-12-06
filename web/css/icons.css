@@ -1,3 +1,10 @@
+/**
+Creator: Theotime
+Collaborators: -
+Created on: 10/28/2013
+Description: This code handles the icons used on the website. It allows a nice rendering for every screen resolution.
+*/
+
 @font-face {
   font-family: 'LigatureSymbols';
   src: url('../fonts/LigatureSymbols/LigatureSymbols-2.11.eot?') format('eot'), url('../fonts/LigatureSymbols/LigatureSymbols-2.11.woff') format('woff'), url('../fonts/LigatureSymbols/LigatureSymbols-2.11.ttf') format('truetype');

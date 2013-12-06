@@ -1,10 +1,11 @@
+<!--
+Creator: Theotime
+Collaborators: -
+Created on: 11/28/2013
+Description: Welcome page for a user that is not logged in.
+-->
+
 {% extends '::base.html.twig' %}
-{% block userMenu %}
-  <div id="notLoggedMenu">
-    <a href="{{ path("fos_user_registration_register") }}">Sign up</a> 
-    <a href="{{ path("fos_user_security_login") }}">Sign in</a>
-  </div>
-{% endblock %}
 {% block body %}
 <!--
 Welcome page
